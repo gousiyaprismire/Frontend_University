@@ -23,7 +23,7 @@ const ContactUs = () => {
               rel="noopener noreferrer"
               className="view-large-map-link"
             >
-              View on Large Map
+              View on Large   Map
             </a>
           </div>
         </div>

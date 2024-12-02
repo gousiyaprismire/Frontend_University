@@ -21,4 +21,6 @@ const RulesAndRegulations = () => {
   );
 };
 
+
+
 export default RulesAndRegulations;

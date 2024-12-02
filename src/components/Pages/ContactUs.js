@@ -8,7 +8,7 @@ const ContactUs = () => {
         <div className="card map-card">
           <h4>Contact Us</h4>
           <div className="line"></div>
-          <h3>Keep In Touch</h3>
+          <h3>Keep In TOuch</h3>
 
           <div className="map-image-wrapper">
             {/* <img

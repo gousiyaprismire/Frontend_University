@@ -13,6 +13,8 @@ import Study from './components/Pages/Study';
 import Scholarship from './components/Pages/Scholarship';
 import Topbar from './components/Topbar';
 import VerificationScreen from './components/Pages/VerificationScreen';
+import Sports from './components/Pages/Sports';
+import LoginForm from './components/Pages/Login';
 
 const App = () => {
   return (
@@ -32,6 +34,8 @@ const App = () => {
       
         <div style={{ marginLeft: 240, flexGrow:1, padding: '16px', backgroundColor: '#ffffff', minHeight: '100vh', color: '#000', overflowY: 'auto' }}>
           <Routes>
+            <Route path="/Login" element={<LoginForm />} />
+            <Route path="/Sports" element={<Sports />} />
             <Route path="/college-map" element={<CollegeMap />} />
             <Route path="/faculty-info" element={<FacultyInfo />} />
             <Route path="/announcements" element={<Announcements />} />
@@ -43,6 +47,9 @@ const App = () => {
             <Route path="/logout" element={<LogOut />} />
             <Route path="/study" element={<Study />} />
             <Route path="/scholarship" element={<Scholarship />} />
+            
+            
+            
           </Routes>
         </div>
       </div>

@@ -12,6 +12,7 @@ import LogOut from './components/Pages/LogOut';
 import Study from './components/Pages/Study';
 import Scholarship from './components/Pages/Scholarship';
 import Topbar from './components/Topbar';
+import VerificationScreen from './components/Pages/VerificationScreen';
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/faculty-info" element={<FacultyInfo />} />
             <Route path="/announcements" element={<Announcements />} />
             <Route path="/hall-of-fame" element={<HallOfFame />} />
+            <Route path="/verification-screen" element={<VerificationScreen/>}/>
             <Route path="/rules-and-regulations" element={<RulesAndRegulations />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/contact-us" element={<ContactUs />} />

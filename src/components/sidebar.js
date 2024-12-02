@@ -10,6 +10,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import LoginIcon from '@mui/icons-material/Login';
 import SchoolIcon from '@mui/icons-material/School';
+import VerifiedIcon from '@mui/icons-material/Verified'; 
 
 const Sidebar = () => {
   const menuItems = [
@@ -17,12 +18,14 @@ const Sidebar = () => {
     { text: 'Faculty Info', icon: <GroupIcon />, path: '/faculty-info' },
     { text: 'Announcements', icon: <AnnouncementIcon />, path: '/announcements' },
     { text: 'Hall of Fame', icon: <StarIcon />, path: '/hall-of-fame' },
+    { text: 'Verification Screen', icon: <VerifiedIcon />, path: '/verification-screen' }, 
     { text: 'Rules & Regulations', icon: <RuleIcon />, path: '/rules-and-regulations' },
     { text: 'About Us', icon: <InfoIcon />, path: '/about-us' },
     { text: 'Contact Us', icon: <ContactMailIcon />, path: '/contact-us' },
     { text: 'LogOut', icon: <LoginIcon />, path: '/logout' },
     { text: 'Study', icon: <SchoolIcon />, path: '/study' },
-    { text: 'Scholarship', icon: <SchoolIcon />, path: '/scholarship'},
+    { text: 'Scholarship', icon: <SchoolIcon />, path: '/scholarship' },
+   
   ];
 
   return (
@@ -50,7 +53,6 @@ const Sidebar = () => {
         ))}
       </List>
     </Box>
-  
   );
 };
 

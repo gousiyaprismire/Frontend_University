@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/sidebar';
 import CollegeMap from './components/Pages/CollegeMapPage';
@@ -14,27 +14,24 @@ import Scholarship from './components/Pages/Scholarship';
 import Topbar from './components/Topbar';
 import VerificationScreen from './components/Pages/VerificationScreen';
 import Sports from './components/Pages/Sports';
-import LoginForm from './components/Pages/Login';
+import LoginPage from './components/Pages/LoginPage';
 
 const App = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
     <Router>
-      <div style={{ display: 'flex', flexDirection: 'column',   width: '250px',
-            backgroundColor: '#212121',
-            height: 'calc(100vh - 80px)',
-            position: 'fixed',
-            top: '80px',
-            flex: 1,
-            left: 0,
-            overflowY: 'auto',
-            zIndex: 9,}}>
-      <Sidebar />
-      <div style={{ display: 'flex', marginTop: '80px', }}>
-        <Topbar />
-      
-        <div style={{ marginLeft: 240, flexGrow:1, padding: '16px', backgroundColor: '#ffffff', minHeight: '100vh', color: '#000', overflowY: 'auto' }}>
+      <div style={{ display: 'flex', flexDirection: 'column',
+          }}>
+        <div style={{ display: 'flex', marginTop: '80px', }}>
+        {loggedIn &&
+          <Topbar />
+        }
+        {loggedIn &&
+          <Sidebar />
+        }
+        <div style={loggedIn ? {left: '25%', position:'relative', maxWidth: '70%', flexGrow:1, padding: '16px', backgroundColor: '#ffffff', minHeight: '100vh', color: '#000', overflowY: 'auto' } : {flexGrow:1, padding: '16px', backgroundColor: '#ffffff', minHeight: '100vh', color: '#000', overflowY: 'auto' }}>
           <Routes>
-            <Route path="/Login" element={<LoginForm />} />
+            <Route path="/" element={<LoginPage setLoggedIn={setLoggedIn} />} />
             <Route path="/Sports" element={<Sports />} />
             <Route path="/college-map" element={<CollegeMap />} />
             <Route path="/faculty-info" element={<FacultyInfo />} />
@@ -47,9 +44,6 @@ const App = () => {
             <Route path="/logout" element={<LogOut />} />
             <Route path="/study" element={<Study />} />
             <Route path="/scholarship" element={<Scholarship />} />
-            
-            
-            
           </Routes>
         </div>
       </div>

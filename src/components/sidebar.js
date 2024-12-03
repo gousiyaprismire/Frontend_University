@@ -14,7 +14,7 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 
 const Sidebar = () => {
   const menuItems = [
-    { text: 'Login', icon: <LoginIcon />, path: '/Login'},
+   
     { text: 'Sports', icon: <SchoolIcon />, path: '/Sports'},
     { text: 'College Map', icon: <MapIcon />, path: '/college-map' },
     { text: 'Faculty Info', icon: <GroupIcon />, path: '/faculty-info' },
@@ -33,11 +33,12 @@ const Sidebar = () => {
   return (
     <Box
       sx={{
-        width: 240,
-        height: '100vh',
+        width: 310,
+        height: '80vh',
         backgroundColor: '#121212',
         color: '#fff',
         position: 'fixed',
+        overflowY:'scroll'
       }}
     >
       <List>

@@ -119,6 +119,7 @@ p {
             </div>
           </div>
         </div>
+        
         <div className="col">
           <div className="card h-100">
             <img

@@ -5,7 +5,7 @@ const RulesAndRegulations = () => {
     <div>
       <h1>College Rules & Regulations</h1>
       <p>The college’s policies and guidelines are outlined below. Please read them carefully to understand the standards and expectations.</p>
-      {rules.length === 0 ? (
+      {/* {rules.length === 0 ? (
         <p>Loading...</p>
       ) : (
         <ul>
@@ -16,7 +16,7 @@ const RulesAndRegulations = () => {
             </li>
           ))}
         </ul>
-      )}
+      )} */}
     </div>
   );
 };

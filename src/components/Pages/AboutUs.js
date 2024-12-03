@@ -11,7 +11,6 @@ const AboutUs = () => {
           margin-top: 30px;
           font-size: 2.5rem;
           color: #333; 
-          
         }
 
         h2 {

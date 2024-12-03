@@ -18,8 +18,8 @@ const AboutUs = () => {
           margin-top: 30px;
           font-size: 2rem;
           color: #555;
-        }
-
+      }
+          
         img {
           display: block;
           margin: 0 auto;

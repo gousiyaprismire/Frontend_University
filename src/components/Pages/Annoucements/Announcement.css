@@ -1,0 +1,16 @@
+.announcement-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .announcement-item h2 {
+    margin-top: 0;
+  }
+  
+  .announcement-item p {
+    margin: 5px 0;
+  }

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/sidebar';
-import CollegeMap from './components/Pages/CollegeMapPage';
+import CollegeMap from './components/Pages/CollegeMaps/CollegeMapPage';
 import FacultyInfo from './components/Pages/FacultyInfo';
-import Announcements from './components/Pages/Announcements';
+import Announcements from './components/Pages/Annoucements/Announcements';
 import HallOfFame from './components/Pages/HallOfFame';
 import RulesAndRegulations from './components/Pages/RulesAndRegulations';
 import AboutUs from './components/Pages/AboutUs';

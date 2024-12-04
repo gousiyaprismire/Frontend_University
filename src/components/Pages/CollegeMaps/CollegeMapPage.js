@@ -1,5 +1,6 @@
 import React from 'react';
 import './CollegeMap.css';
+
 import classroom from '../../../images/classroom.jpg';
 import playground  from '../../../images/playground.jpg';
 import library from '../../../images/library.jpg';

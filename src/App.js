@@ -11,42 +11,84 @@ import ContactUs from './components/Pages/Contactus/ContactUs';
 import LogOut from './components/Pages/LogOut';
 import Study from './components/Pages/studyOptions/Study';
 import Scholarship from './components/Pages/Scholarship';
-import Topbar from './components/Topbar';
 import VerificationScreen from './components/Pages/VerificationScreen';
 import Sports from './components/Pages/Sports';
-import LoginPage from './components/Pages/LoginPage';
+import LoginPage from './components/Pages/Login/LoginPage';
+import Welcome from './components/Pages/Welcome';  
 
 const App = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);  
+
   return (
     <Router>
-      <div style={{ display: 'flex', flexDirection: 'column',
-          }}>
-        <div style={{ display: 'flex', marginTop: '80px', }}>
-        {loggedIn &&
-          <Topbar />
-        }
-        {loggedIn &&
-          <Sidebar />
-        }
-        <div style={loggedIn ? {left: '25%', position:'relative', maxWidth: '70%', flexGrow:1, padding: '16px', backgroundColor: '#ffffff', minHeight: '100vh', color: '#000', overflowY: 'auto' } : {flexGrow:1, padding: '16px', backgroundColor: '#ffffff', minHeight: '100vh', color: '#000', overflowY: 'auto' }}>
-          <Routes>
-            <Route path="/" element={<LoginPage setLoggedIn={setLoggedIn} />} />
-            <Route path="/Sports" element={<Sports />} />
-            <Route path="/college-map" element={<CollegeMap />} />
-            <Route path="/faculty-info" element={<FacultyInfo />} />
-            <Route path="/announcements" element={<Announcements />} />
-            <Route path="/hall-of-fame" element={<HallOfFame />} />
-            <Route path="/verification-screen" element={<VerificationScreen/>}/>
-            <Route path="/rules-and-regulations" element={<RulesAndRegulations />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/contact-us" element={<ContactUs />} />
-            <Route path="/logout" element={<LogOut />} />
-            <Route path="/study" element={<Study />} />
-            <Route path="/scholarship" element={<Scholarship />} />
-          </Routes>
+      <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+        
+        {loggedIn && (
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              backgroundColor: '#f5f5dc',  
+              color: '#000',
+              padding: '10px 20px',
+              height: '70px',
+              position: 'relative',  
+            }}
+          >
+            
+            <h1 style={{ marginLeft: '20px', fontSize: '24px' }}>University App</h1>
+
+            
+            {loggedIn && (
+              <div style={{ position: 'absolute', top: '10px', right: '20px' }}>
+                <Sidebar />
+              </div>
+            )}
+          </div>
+        )}
+
+        
+        <div style={{ display: 'flex', flex: 1 }}>
+          
+          <div
+            style={{
+              flex: 1,
+              backgroundColor: '#ffffff',
+              color: '#000',
+              overflowY: 'auto',
+            }}
+          >
+            <Routes>
+              
+              <Route
+                path="/"
+                element={loggedIn ? <Welcome /> : <LoginPage setLoggedIn={setLoggedIn} />}
+              />
+
+              
+              <Route path="/login" element={<LoginPage setLoggedIn={setLoggedIn} />} />
+
+              
+              {loggedIn && (
+                <>
+                  <Route path="/Sports" element={<Sports />} />
+                  <Route path="/college-map" element={<CollegeMap />} />
+                  <Route path="/faculty-info" element={<FacultyInfo />} />
+                  <Route path="/announcements" element={<Announcements />} />
+                  <Route path="/hall-of-fame" element={<HallOfFame />} />
+                  <Route path="/verification-screen" element={<VerificationScreen />} />
+                  <Route path="/rules-and-regulations" element={<RulesAndRegulations />} />
+                  <Route path="/about-us" element={<AboutUs />} />
+                  <Route path="/contact-us" element={<ContactUs />} />
+                  <Route path="/logout" element={<LogOut />} />
+                  <Route path="/study" element={<Study />} />
+                  <Route path="/scholarship" element={<Scholarship />} />
+                </>
+              )}
+            </Routes>
+          </div>
         </div>
-      </div>
       </div>
     </Router>
   );

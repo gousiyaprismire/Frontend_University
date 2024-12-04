@@ -93,7 +93,7 @@ const LoginPage = (props) => {
                     </Form.Item>
 
                     <Form.Item
-                      label="Phone Number"
+                      label="Mobile Number"
                       name="phone"
                       rules={[{ required: true, message: 'Please enter your phone number!' }]}
                     >
@@ -132,7 +132,7 @@ const LoginPage = (props) => {
                     </Form.Item>
 
                     <Form.Item
-                      label="Phone Number"
+                      label="Mobile Number"
                       name="phone"
                       rules={[{ required: true, message: 'Please enter your phone number!' }]}
                     >
@@ -143,7 +143,7 @@ const LoginPage = (props) => {
 
                 <Form.Item>
                   <Button type="primary" htmlType="submit" block>
-                    Login
+                    SignIn
                   </Button>
                 </Form.Item>
               </Form>

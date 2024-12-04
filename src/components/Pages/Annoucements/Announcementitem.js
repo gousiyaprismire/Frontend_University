@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './Announcement.css';
 const Announcementitem = ({title, content, date}) => {
   return (

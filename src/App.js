@@ -9,7 +9,6 @@ import RulesAndRegulations from './components/Pages/RulesAndRegulations';
 import AboutUs from './components/Pages/AboutUs';
 import ContactUs from './components/Pages/Contactus/ContactUs';
 import LogOut from './components/Pages/LogOut';
-
 import Study from './components/Pages/Study';
 import Scholarship from './components/Pages/Scholarship';
 import Topbar from './components/Topbar';

@@ -9,7 +9,7 @@
   
   .login-image {
     flex: 1;
-    background-image: url('/public/university1.jpg'); 
+    background-image: url('/public/image.jpg'); 
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
@@ -19,7 +19,7 @@
   .login-form {
     flex: 1;
     max-width: 400px;
-    background: #fff;
+    background: #f4b55e;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

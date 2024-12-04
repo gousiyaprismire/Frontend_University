@@ -14,7 +14,7 @@ import Scholarship from './components/Pages/Scholarship';
 import Topbar from './components/Topbar';
 import VerificationScreen from './components/Pages/VerificationScreen';
 import Sports from './components/Pages/Sports';
-import LoginPage from './components/Pages/LoginPage';
+import LoginPage from './components/Pages/Login/LoginPage';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);

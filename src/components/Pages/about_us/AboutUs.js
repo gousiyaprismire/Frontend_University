@@ -193,7 +193,6 @@ const AboutUs = () => {
       <br />
       <br />
       <br />
-      <br />
 
       </>
   );};

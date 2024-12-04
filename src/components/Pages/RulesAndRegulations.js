@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const RulesAndRegulations = () => {
+  const [rules, setRules] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:8080/api/college/rules')
+      .then(response => response.json())
+      .then(data => setRules(data))
+      .catch(error => console.error('Error fetching rules:', error));
+  }, []);
   return (
     <div>
       <h1>College Rules & Regulations</h1>
@@ -20,7 +28,5 @@ const RulesAndRegulations = () => {
     </div>
   );
 };
-
-
 
 export default RulesAndRegulations;

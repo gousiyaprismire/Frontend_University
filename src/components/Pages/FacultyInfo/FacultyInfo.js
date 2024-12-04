@@ -14,6 +14,8 @@ const defaultFaculty = [
     biodata: "Mr. Rakesh Kumar is an expert in Artificial Intelligence and Machine Learning. He has published several papers in reputed journals.",
     email: "rakeshkumar@college"
   },
+
+  
   {
     name: "Mr.Akram Syed",
     designation: "Associate Professor of Physics",

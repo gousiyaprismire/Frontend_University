@@ -25,6 +25,8 @@ const defaultRules = [
   
 ];
 
+
+
 const RulesAndRegulations = () => {
   const [rules, setRules] = useState(defaultRules);
 

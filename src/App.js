@@ -11,7 +11,7 @@ import ContactUs from './components/Pages/Contactus/ContactUs';
 import LogOut from './components/Pages/LogOut';
 import Study from './components/Pages/studyOptions/Study';
 import Scholarship from './components/Pages/Scholarship';
-import VerificationScreen from './components/Pages/VerificationScreen';
+import VerificationScreen from './components/Pages/Verification/VerificationScreen'
 import Sports from './components/Pages/Sports';
 import LoginPage from './components/Pages/Login/LoginPage';
 import Welcome from './components/Pages/Welcome';  

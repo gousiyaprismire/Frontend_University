@@ -1,6 +1,24 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { Layout, Menu, Button } from 'antd';
+import {
+  HomeOutlined,
+  AppstoreOutlined,
+  ReadOutlined,
+  TeamOutlined,
+  NotificationOutlined,
+  StarOutlined,
+  VerifiedOutlined,
+  FileProtectOutlined,
+  InfoCircleOutlined,
+  MailOutlined,
+  LoginOutlined,
+  LogoutOutlined,
+  BankOutlined,
+} from '@ant-design/icons';
 import Sidebar from './components/sidebar';
+import LoginPage from './components/Pages/Login/LoginPage';
+import Welcome from './components/Pages/Login/Welcome';
 import CollegeMap from './components/Pages/CollegeMaps/CollegeMapPage';
 import FacultyInfo from './components/Pages/FacultyInfo/FacultyInfo';
 import Announcements from './components/Pages/Annoucements/Announcements';
@@ -13,83 +31,124 @@ import Study from './components/Pages/studyOptions/Study';
 import Scholarship from './components/Pages/Scholarship';
 import VerificationScreen from './components/Pages/VerificationScreen';
 import Sports from './components/Pages/Sports';
-import LoginPage from './components/Pages/Login/LoginPage';
-import Welcome from './components/Pages/Welcome';  
+
+const { Header, Content } = Layout;
 
 const App = () => {
-  const [loggedIn, setLoggedIn] = useState(false);  
+  const [loggedIn, setLoggedIn] = useState(false); 
+  const [collapsed, setCollapsed] = useState(false); 
+
+  const toggleSidebar = () => {
+    setCollapsed(!collapsed);
+  };
+
+  const handleLogout = () => {
+    setLoggedIn(false);
+  };
+
+  const TopMenu = () => {
+    const location = useLocation(); 
+    const selectedKey = location.pathname;
+
+    return (
+      <Menu
+        mode="horizontal"
+        selectedKeys={[selectedKey]} 
+        style={{ flex: 1, backgroundColor: '#f5f5dc', borderBottom: 'none' }} 
+        onClick={(e) => {
+          if (e.key === '/logout') return handleLogout();
+          window.location.href = e.key;
+        }}
+      >
+        <Menu.Item key="/" icon={<HomeOutlined />}>
+          Home
+        </Menu.Item>
+        <Menu.Item key="/about-us" icon={<InfoCircleOutlined />}>
+          About Us
+        </Menu.Item>
+        <Menu.Item key="/contact-us" icon={<MailOutlined />}>
+          Contact Us
+        </Menu.Item>
+        {loggedIn && (
+          <Menu.Item key="/logout" icon={<LogoutOutlined />}>
+            Logout
+          </Menu.Item>
+        )}
+      </Menu>
+    );
+  };
 
   return (
     <Router>
-      <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      <Layout style={{ minHeight: '100vh' }}>
         
-        {loggedIn && (
+        <Header
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            backgroundColor: '#f5f5dc', // Beige color
+          }}
+        >
           <div
+            onClick={() => window.location.href = '/'}
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              backgroundColor: '#f5f5dc',  
               color: '#000',
-              padding: '10px 20px',
-              height: '70px',
-              position: 'relative',  
+              fontSize: '24px',
+              fontWeight: 'bold',
+              cursor: 'pointer',
             }}
           >
-            
-            <h1 style={{ marginLeft: '20px', fontSize: '24px' }}>University App</h1>
-
-            
-            {loggedIn && (
-              <div style={{ position: 'absolute', top: '10px', right: '20px' }}>
-                <Sidebar />
-              </div>
-            )}
+            <img src='/dayton.jpg' height="50" width="60"/>University of Dayton
           </div>
-        )}
+          <TopMenu />
+          {!loggedIn && (
+            <Button
+              type="primary"
+              icon={<LoginOutlined />}
+              onClick={() => window.location.href = '/login'}
+            >
+              Login
+            </Button>
+          )}
+        </Header>
 
-        
-        <div style={{ display: 'flex', flex: 1 }}>
+        <Layout>
           
-          <div
-            style={{
-              flex: 1,
-              backgroundColor: '#ffffff',
-              color: '#000',
-              overflowY: 'auto',
-            }}
-          >
+          <Sidebar collapsed={collapsed} toggleSidebar={toggleSidebar} loggedIn={loggedIn} />
+
+          
+          <Content style={{ padding: '20px', backgroundColor: '#f0f2f5' }}>
             <Routes>
               
-              <Route
-                path="/"
-                element={loggedIn ? <Welcome /> : <LoginPage setLoggedIn={setLoggedIn} />}
-              />
-
-              
+              <Route path="/" element={<Welcome />} />
               <Route path="/login" element={<LoginPage setLoggedIn={setLoggedIn} />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/contact-us" element={<ContactUs />} />
 
               
               {loggedIn && (
                 <>
-                  <Route path="/Sports" element={<Sports />} />
                   <Route path="/college-map" element={<CollegeMap />} />
                   <Route path="/faculty-info" element={<FacultyInfo />} />
                   <Route path="/announcements" element={<Announcements />} />
                   <Route path="/hall-of-fame" element={<HallOfFame />} />
-                  <Route path="/verification-screen" element={<VerificationScreen />} />
                   <Route path="/rules-and-regulations" element={<RulesAndRegulations />} />
-                  <Route path="/about-us" element={<AboutUs />} />
-                  <Route path="/contact-us" element={<ContactUs />} />
-                  <Route path="/logout" element={<LogOut />} />
+                  <Route path="/verification-screen" element={<VerificationScreen />} />
+                  <Route path="/sports" element={<Sports />} />
                   <Route path="/study" element={<Study />} />
                   <Route path="/scholarship" element={<Scholarship />} />
                 </>
               )}
+
+             
+              {!loggedIn && (
+                <Route path="/verification-screen" element={<Navigate to="/login" />} />
+              )}
             </Routes>
-          </div>
-        </div>
-      </div>
+          </Content>
+        </Layout>
+      </Layout>
     </Router>
   );
 };

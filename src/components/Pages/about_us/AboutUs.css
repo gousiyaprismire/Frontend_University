@@ -1,4 +1,5 @@
 
+
 h1 {
     text-align: center;
     margin-top: 30px;
@@ -6,7 +7,7 @@ h1 {
     color: #333;
   }
   
-  h2 {
+ .about-us h2 {
     text-align: center;
     margin-top: 30px;
     font-size: 2rem;
@@ -14,7 +15,7 @@ h1 {
   }
   
 
-  img {
+  .about-us img {
     display: block;
     margin: 0 auto;
     width: 90%;
@@ -22,7 +23,7 @@ h1 {
     object-fit: cover;
   }
   
-  p {
+  .about-us p {
     font-size: 16px;
     color: #333;
     line-height: 1.8;

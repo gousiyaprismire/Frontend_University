@@ -99,7 +99,7 @@ const App = () => {
               cursor: 'pointer',
             }}
           >
-            <img src='/dayton.jpg' height="50" width="60"/>University of Dayton
+            <img src='/dayton.jpg' height="50" width="60" />University of Dayton
           </div>
           <TopMenu />
           {!loggedIn && (

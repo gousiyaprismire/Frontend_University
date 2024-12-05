@@ -3,7 +3,7 @@ import './AboutUs.css';
 
 const AboutUs = () => {
   return (
-    <>
+    <div className='about-us'>
       <h1>About Us</h1>
       <img
         src="https://jcpatriot.com/wp-content/uploads/2016/04/REAL-university-of-florida-pic.jpg"
@@ -194,7 +194,7 @@ const AboutUs = () => {
       <br />
       <br />
 
-      </>
+      </div>
   );};
 
   export default AboutUs;

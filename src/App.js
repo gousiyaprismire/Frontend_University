@@ -30,7 +30,7 @@ import LogOut from './components/Pages/LogOut';
 import Study from './components/Pages/studyOptions/Study';
 import Scholarship from './components/Pages/Scholarship/Scholarship';
 import VerificationScreen from './components/Pages/Verification/VerificationScreen';
-import Sports from './components/Pages/Sports';
+import Sports from './components/Pages/Sports/Sports';
 
 const { Header, Content } = Layout;
 
@@ -136,6 +136,7 @@ const App = () => {
                   <Route path="/verification-screen" element={<VerificationScreen />} />
                   <Route path="/sports" element={<Sports />} />
                   <Route path="/study" element={<Study />} />
+                  
                   {loggedIn && (
                 <>
                   <Route path="/scholarship" element={<Scholarship />} />

@@ -64,6 +64,7 @@ const Scholarship = () => {
     navigate("/Login"); // Redirects to the Login page
   };
 
+  
   return (
     <div>
       <div>

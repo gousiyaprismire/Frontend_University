@@ -112,6 +112,7 @@ const OnlineCourses = () => {
         ))}
       </div>
     </div>
+    
   );
 };
 

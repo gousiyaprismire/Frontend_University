@@ -19,7 +19,7 @@ function VerificationScreen() {
       name: "Manoj",
       email: "manoj@example.com",
       phone: "+919876543210",
-      country: "CANADA",
+      country: "Canada",
       university: "The Kings University",
       enrollDate: "2024-12-04",
       imageUrl: "https://d38b044pevnwc9.cloudfront.net/cutout-nuxt/home/9-1-change.jpg",

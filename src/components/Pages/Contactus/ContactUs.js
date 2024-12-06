@@ -25,7 +25,7 @@ const ContactUs = () => {
   return (
     <div>
     
-    <div className="contact-container">
+    <div className="contact-container" >
     <div className="card map-card">
     <h4>Contact Us</h4>
     <div className="line"></div> 

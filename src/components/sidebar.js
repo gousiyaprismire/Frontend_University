@@ -13,7 +13,8 @@ import {
   LogoutOutlined,
   ReadOutlined,
   BankOutlined,
-} from '@ant-design/icons';
+  AppstoreAddOutlined, 
+} from '@ant-design/icons'; 
 import { useNavigate } from 'react-router-dom';
 
 const { Sider } = Layout;
@@ -37,6 +38,7 @@ const Sidebar = () => {
     { key: '/logout', icon: <LogoutOutlined />, label: 'LogOut' },
     { key: '/study', icon: <ReadOutlined />, label: 'Study' },
     { key: '/scholarship', icon: <BankOutlined />, label: 'Scholarship' },
+    { key: '/online-courses', icon: <AppstoreAddOutlined />, label: 'Online Courses' }, 
   ];
 
   const toggleMenu = () => {

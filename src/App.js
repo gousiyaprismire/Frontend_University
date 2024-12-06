@@ -11,10 +11,11 @@ import ContactUs from './components/Pages/Contactus/ContactUs';
 import LogOut from './components/Pages/LogOut';
 import Study from './components/Pages/studyOptions/Study';
 import Scholarship from './components/Pages/Scholarship';
-import VerificationScreen from './components/Pages/Verification/VerificationScreen'
+import VerificationScreen from './components/Pages/Verification/VerificationScreen';
 import Sports from './components/Pages/Sports';
 import LoginPage from './components/Pages/Login/LoginPage';
 import Welcome from './components/Pages/Welcome';  
+import OnlineCourses from './components/Pages/OnlineCourses/OnlineCourses';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);  
@@ -65,11 +66,8 @@ const App = () => {
                 path="/"
                 element={loggedIn ? <Welcome /> : <LoginPage setLoggedIn={setLoggedIn} />}
               />
-
-              
               <Route path="/login" element={<LoginPage setLoggedIn={setLoggedIn} />} />
 
-              
               {loggedIn && (
                 <>
                   <Route path="/Sports" element={<Sports />} />
@@ -78,6 +76,7 @@ const App = () => {
                   <Route path="/announcements" element={<Announcements />} />
                   <Route path="/hall-of-fame" element={<HallOfFame />} />
                   <Route path="/verification-screen" element={<VerificationScreen />} />
+                  <Route path="/online-courses" element={<OnlineCourses />} /> {/* Updated Route */}
                   <Route path="/rules-and-regulations" element={<RulesAndRegulations />} />
                   <Route path="/about-us" element={<AboutUs />} />
                   <Route path="/contact-us" element={<ContactUs />} />

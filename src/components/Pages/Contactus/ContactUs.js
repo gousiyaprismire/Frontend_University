@@ -81,7 +81,7 @@ const ContactUs = () => {
   </div>
 </div>
 <br/><br/><br/>
-      <h1 style={{ color: 'black', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', fontWeight: 'bold' ,paddingTop:'0px'}}>
+      <h1 style={{ color: 'black', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', fontWeight: 'bold' ,paddingTop:'0px',marginTop:'0px'}}>
   Submit Your Admission Inquiry
 </h1>
 

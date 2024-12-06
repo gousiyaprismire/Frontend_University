@@ -94,6 +94,7 @@ button.submit-btn:hover {
   gap: 30px; 
   width: 100%; 
   padding: 50px; 
+  margin-bottom: 0px;
 }
 
 .card {

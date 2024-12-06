@@ -22,7 +22,7 @@ import Welcome from './components/Pages/Login/Welcome';
 import CollegeMap from './components/Pages/CollegeMaps/CollegeMapPage';
 import FacultyInfo from './components/Pages/FacultyInfo/FacultyInfo';
 import Announcements from './components/Pages/Annoucements/Announcements';
-import HallOfFame from './components/Pages/HallOfFame';
+import HallOfFame from './components/Pages/HallOfFame/HallOfFame';
 import RulesAndRegulations from './components/Pages/RulesAndRegulations/RulesAndRegulations';
 import AboutUs from './components/Pages/about_us/AboutUs';
 import ContactUs from './components/Pages/Contactus/ContactUs';
@@ -31,6 +31,8 @@ import Study from './components/Pages/studyOptions/Study';
 import Scholarship from './components/Pages/Scholarship/Scholarship';
 import VerificationScreen from './components/Pages/Verification/VerificationScreen';
 import Sports from './components/Pages/Sports';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const { Header, Content } = Layout;
 
@@ -136,11 +138,11 @@ const App = () => {
                   <Route path="/verification-screen" element={<VerificationScreen />} />
                   <Route path="/sports" element={<Sports />} />
                   <Route path="/study" element={<Study />} />
-                  {loggedIn && (
-                <>
+                  {/* {loggedIn && (
+                <> */}
                   <Route path="/scholarship" element={<Scholarship />} />
-                </>
-              )}
+                {/* </>
+              )} */}
 
              
               {!loggedIn && (

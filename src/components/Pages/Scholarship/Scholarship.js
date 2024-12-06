@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, CardContent, Typography, Button, Grid } from "@mui/material";
+import { useNavigate } from "react-router-dom";  // Import useNavigate
 
 const scholarships = [
   {
@@ -9,7 +10,7 @@ const scholarships = [
       "Awarded to students with exceptional academic performance. Covers up to 50% of tuition fees.",
     eligibility: "GPA above 3.8",
     deadline: "December 31, 2024",
-    applyLink: "#",
+    applyLink: '#',
   },
   {
     id: 2,
@@ -38,13 +39,35 @@ const scholarships = [
     deadline: "February 28, 2025",
     applyLink: "#",
   },
-
+  {
+    id: 5,
+    title: "Financial Aid Program",
+    benefits: "Partial tuition coverage and also covering living expenses until the course completion.",
+    eligibility: "Undergraduate / Postgraduate",
+    deadline: "December 15, 2024",
+    applyLink: "#"
+  },
+  {
+    id: 6,
+    title: "Department-Specific Grant",
+    benefits: "Full tuition coverage and course-specific funding provided by university.",
+    eligibility: "Undergraduate",
+    deadline: "March 21, 2025",
+    applyLink: "#"
+  },
 ];
 
 const Scholarship = () => {
+  const navigate = useNavigate(); // Hook to use navigation
+
+
+  const handleApplyNow = () => {
+    navigate("/Login"); // Redirects to the Login page
+  };
+
   return (
-   <div>
     <div>
+      <div>
         <h2>Inspiring Quotes</h2>
         <p>
           “Education is the passport to the future, for tomorrow belongs to
@@ -59,49 +82,49 @@ const Scholarship = () => {
       <footer className="scholarship-footer">
         <p>Don't miss the chance to apply. Deadlines are approaching!</p>
       </footer>
-    
-    <div style={{ padding: "20px", backgroundColor: "#f8f9fa", minHeight: "100vh", textAlign: 'center'}}>
-      <h1 variant="h4" align="center" gutterBottom >
-        Scholarships at Our University
-      </h1>
 
-      <p variant="subtitle1" align="center" gutterBottom>
-        Explore various scholarships to support your academic journey.
-      </p>
-      <Grid container spacing={3} style={{ marginTop: "20px" }}>
-        {scholarships.map((scholarship) => (
-          <Grid item xs={12} sm={6} md={4} key={scholarship.id}>
-            <Card>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  {scholarship.title}
-                </Typography>
-                <Typography variant="body2" gutterBottom>
-                  {scholarship.benefits}
-                </Typography>
-                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
-                  Eligibility: {scholarship.eligibility}
-                </Typography>
-                <Typography variant="subtitle2" color="textSecondary" gutterBottom>
-                  Deadline: {scholarship.deadline}
-                </Typography>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  size="small"
-                  href={scholarship.applyLink}
-                  style={{ marginTop: "10px" }}
-                >
-                  Apply Now
-                </Button>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-        </div>
+      <div style={{ padding: "20px", backgroundColor: "#f8f9fa", minHeight: "100vh", textAlign: 'center' }}>
+        <h1 variant="h4" align="center" gutterBottom>
+          Scholarships at Our University
+        </h1>
 
-        </div> 
+        <p variant="subtitle1" align="center" gutterBottom>
+          Explore various scholarships to support your academic journey.
+        </p>
+        <Grid container spacing={3} style={{ marginTop: "20px" }}>
+          {scholarships.map((scholarship) => (
+            <Grid item xs={12} sm={6} md={4} key={scholarship.id}>
+              <Card>
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    {scholarship.title}
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                    {scholarship.benefits}
+                  </Typography>
+                  <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                    Eligibility: {scholarship.eligibility}
+                  </Typography>
+                  <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+                    Deadline: {scholarship.deadline}
+                  </Typography>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    size="small"
+                    onClick={handleApplyNow} // Trigger handleApplyNow on button click
+                    style={{ marginTop: "10px" }}
+                  >
+                    Apply Now
+                  </Button>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </div>
+    </div>
   );
 };
+
 export default Scholarship;

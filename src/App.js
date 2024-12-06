@@ -127,8 +127,7 @@ const App = () => {
               <Route path="/contact-us" element={<ContactUs />} />
 
               
-              {loggedIn && (
-                <>
+              
                   <Route path="/college-map" element={<CollegeMap />} />
                   <Route path="/faculty-info" element={<FacultyInfo />} />
                   <Route path="/announcements" element={<Announcements />} />
@@ -137,6 +136,8 @@ const App = () => {
                   <Route path="/verification-screen" element={<VerificationScreen />} />
                   <Route path="/sports" element={<Sports />} />
                   <Route path="/study" element={<Study />} />
+                  {loggedIn && (
+                <>
                   <Route path="/scholarship" element={<Scholarship />} />
                 </>
               )}

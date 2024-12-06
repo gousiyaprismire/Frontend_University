@@ -35,44 +35,44 @@ const CollegeMap = () => {
       <h3>College ClassRooms</h3>
       <div className='image-row'>
       <img src={classroom} alt='classrooms' style={{ maxWidth: '35%', height: 'auto' }}/>
-      <img src={classroom2} alt='classrooms' style={{ maxWidth: '35%', height: 'auto' }}/>
+      <img src={classroom2} alt='classrooms' style={{ maxWidth: '50%', height: 'auto' }}/>
       <img src={classroom3} alt='classrooms' style={{ maxWidth: '35%', height: 'auto' }}/>
       </div>
-      <p className='center-text'>Our classrooms are equipped with modern facilities to enhance the learning experience.</p>
+      <p className='center-text'style={{fontFamily:'Roboto'}}>Our classrooms are equipped with modern facilities to enhance the learning experience. Each classroom features state-of-the-art technology, including interactive whiteboards, high-speed internet access, and comfortable seating arrangements. These facilities are designed to support a variety of teaching methods and provide a conducive environment for both students and teachers. We are committed to creating an engaging and effective learning atmosphere for all.</p>
       <h3>College Ground</h3>
       <div className='image-row'>
       <img src={playground} alt='playground' style={{maxWidth:'35%', height:'auto'}}/>
       <img src={playground2} alt='playground' style={{maxWidth:'35%', height:'auto'}}/>
       <img src={playground3} alt='playground' style={{maxWidth:'35%', height:'auto'}}/>
       </div>
-      <p className='center-text'>The college ground is a spacious area for sports and outdoor activities.</p>
+      <p className='center-text'style={{fontFamily:'Roboto'}}>The college ground is a spacious area for sports and outdoor activities. It provides ample space for students to engage in various sports such as football, cricket, and athletics. The ground is well-maintained and equipped with necessary facilities to support these activities. It also serves as a venue for outdoor events and gatherings, fostering a sense of community and teamwork among students. We encourage everyone to make the most of this wonderful resource..</p>
       <h3>College Library</h3>
       <div className='image-row'>
       <img src={library} alt='library' style={{maxWidth:'35%', height:'auto'}}/>
       <img src={library2} alt='library' style={{maxWidth:'35%', height:'auto'}}/>
       <img src={library3} alt='library' style={{maxWidth:'35%', height:'auto'}}/>
       </div>
-      <p className='center-text'>The library houses a vast collection of books and digital resources for students.</p>
+      <p className='center-text'style={{fontFamily:'Roboto'}}>The library houses a vast collection of books and digital resources for students. It offers a wide range of academic texts, journals, and reference materials to support your studies. Additionally, the library provides access to numerous online databases and e-books, ensuring that you have the resources you need at your fingertips. Our dedicated staff is always available to assist you in finding the right materials and making the most of the library’s offerings. We encourage all students to take advantage of these valuable resources.</p>
       <h3>College Labs</h3>
       <div className='image-row'>
       <img src={labs} alt='labs' style={{maxWidth:'35%', height:'auto'}}/>
       <img src={clab2} alt='labs' style={{maxWidth:'35%', height:'auto'}}/>
-      <img src={clab3} alt='labs' style={{maxWidth:'35%', height:'auto'}}/>
+      <img src={clab3} alt='labs' style={{maxWidth:'28%', height:'auto'}}/>
       </div>
-      <p className='center-text'>Our labs are well-equipped for practical experiments and research.</p>
+      <p className='center-text'style={{fontFamily:'Roboto'}}>Our labs are well-equipped for practical experiments and research. Each lab is furnished with the latest equipment and technology to support a wide range of scientific and technical studies. Students have access to high-quality instruments and materials, enabling them to conduct experiments and research projects effectively. Our labs are designed to provide a safe and conducive environment for hands-on learning, fostering innovation and discovery. We encourage all students to utilize these facilities to enhance their practical skills and knowledge.</p>
       <div className='image-row'>
       <img src={lab2} alt='lab2' style={{maxWidth:'35%', height:'auto'}}/>
       <img src={slab2} alt='lab2' style={{maxWidth:'35%', height:'auto'}}/>
       <img src={slab3} alt='lab2' style={{maxWidth:'35%', height:'auto'}}/>
       </div>
-      <p className='center-text'>Additional lab facilities provide ample space for various scientific studies.</p>
+      <p className='center-text'style={{fontFamily:'Roboto'}}>Additional lab facilities provide ample space for various scientific studies. These labs are equipped with advanced tools and equipment to support a wide range of experiments and research activities. Students can explore different scientific disciplines, from biology and chemistry to physics and engineering. The spacious layout ensures a comfortable and efficient working environment, promoting collaboration and innovation. We encourage students to take full advantage of these facilities to enhance their learning and research capabilities.</p>
       <h3>College Canteen</h3>
       <div className='image-row'>
       <img src={canteen} alt='canteen' style={{maxWidth:'35%', height:'auto'}}/>
       <img src={canteen2} alt='canteen' style={{maxWidth:'35%', height:'auto'}}/>
-      <img src={canteen3} alt='canteen' style={{maxWidth:'35%', height:'auto'}}/>
+      <img src={canteen3} alt='canteen' style={{maxWidth:'37%', height:'auto'}}/>
       </div>
-      <p className='center-text'>The canteen offers a variety of healthy and delicious food options for students and staff.</p>
+      <p className='center-text'style={{fontFamily:'Roboto'}}>The canteen offers a variety of healthy and delicious food options for students and staff. From fresh salads and sandwiches to hot meals and snacks, there is something for everyone. The menu is designed to cater to diverse dietary needs, including vegetarian and vegan options. The canteen is a great place to relax and enjoy a meal with friends between classes. We strive to provide nutritious and tasty food to keep you energized throughout the day. Come and explore the daily specials and enjoy a pleasant dining experience!</p>
     </div>
   );
 };

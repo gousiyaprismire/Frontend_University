@@ -52,6 +52,7 @@ const HallOfFame = () => {
       description: 'NBA MVP and multiple-time champion.',
     },
    
+    
     {
       name: 'Sophia Davis',
       title: 'Pioneering Neuroscientist',

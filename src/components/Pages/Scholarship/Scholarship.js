@@ -60,7 +60,6 @@ const scholarships = [
 const Scholarship = () => {
   const navigate = useNavigate(); // Hook to use navigation
 
-
   const handleApplyNow = () => {
     navigate("/Login"); // Redirects to the Login page
   };

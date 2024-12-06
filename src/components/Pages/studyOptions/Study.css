@@ -1,30 +1,26 @@
 .study-container {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .study-heading {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .study-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  h3 {
-    font-size: 24px;
-    margin-top: 20px;
-    text-align: center;
-  }
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-  .box1{
-    display: flex;
-    justify-content: space-between;
+.study-heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
-  }
-  
-  
+h3 {
+  font-size: 24px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.carousel-text {
+  color: white;
+}
+
+.carousel-inner img {
+  width: 70%; 
+  height: 530px; 
+  object-fit: fit; 
+}

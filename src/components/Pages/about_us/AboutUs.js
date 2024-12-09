@@ -17,7 +17,7 @@ const AboutUs = () => {
         style={{ width: '100%', height: '500px' }}
       />
       <p>
-        UK University is a distinguished institution dedicated to academic excellence, innovation, and community
+        Dalton University is a distinguished institution dedicated to academic excellence, innovation, and community
         engagement. Offering a wide range of undergraduate, graduate, and professional programs, it provides students with
         the knowledge and skills necessary for success in a dynamic world. The university is renowned for its world-class
         faculty, cutting-edge research opportunities, and modern facilities. With a focus on critical thinking, hands-on
@@ -31,7 +31,7 @@ const AboutUs = () => {
         <h2>Our Goals</h2>
         <div className="row row-cols-1 row-cols-md-3 g-4">
           <div className="col">
-            <div className="card h-auto" style={{ width: '100%', maxWidth: '350px', margin: '0 auto' }}>
+            <div className="card h-auto" style={{ width: '100%', maxWidth: '430px', margin: '0 auto' }}>
               <img
                 src="https://www.shutterstock.com/image-vector/realistic-university-building-graduate-cap-600nw-2485116275.jpg"
                 className="card-img-top"
@@ -49,7 +49,7 @@ const AboutUs = () => {
           </div>
  
           <div className="col">
-            <div className="card h-auto" style={{ width: '100%', maxWidth: '350px', margin: '0 auto' }}>
+            <div className="card h-auto" style={{ width: '100%', maxWidth: '430px', margin: '0 auto' }}>
               <img
                 src="https://corporate.travelclinic.com/wp-content/uploads/2020/07/Services-Innovation-and-research-2048x1367.jpg"
                 className="card-img-top"
@@ -65,7 +65,7 @@ const AboutUs = () => {
           </div>
  
           <div className="col">
-            <div className="card h-auto" style={{ width: '100%', maxWidth: '350px', margin: '0 auto' }}>
+            <div className="card h-auto" style={{ width: '100%', maxWidth: '430px', margin: '0 auto' }}>
               <img
                 src="https://agribusinessedu.com/wp-content/uploads/2020/12/social-responsibility-and-ethics-for-agribusiness-2020-12-06-450545.jpg"
                 className="card-img-top"
@@ -82,7 +82,7 @@ const AboutUs = () => {
           </div>
  
           <div className="col">
-            <div className="card h-auto" style={{ width: '100%', maxWidth: '350px', margin: '0 auto' }}>
+            <div className="card h-auto" style={{ width: '100%', maxWidth: '430px', margin: '0 auto' }}>
               <img
                 src="https://centerforhci.org/wp-content/uploads/2022/06/What-are-the-Benefits-of-Career-Planning-1.jpg"
                 className="card-img-top"
@@ -92,14 +92,14 @@ const AboutUs = () => {
               <div className="card-body">
                 <h5 className="card-title">Career Preparation</h5>
                 <p className="card-text">
-                  Providing opportunities for students to gain practical experience through internships, cooperative education, and professional networks.
+                  Providing opportunities for students to gain practical experience through internships, cooperative education & professional networks.
                 </p>
               </div>
             </div>
           </div>
  
           <div className="col">
-            <div className="card h-auto" style={{ width: '100%', maxWidth: '350px', margin: '0 auto' }}>
+            <div className="card h-auto" style={{ width: '100%', maxWidth: '430px', margin: '0 auto' }}>
               <img
                 src="https://d3timt52sxdbq0.cloudfront.net/wp-content/uploads/2016/04/benefitsofcollaboration.jpg"
                 className="card-img-top"
@@ -116,9 +116,9 @@ const AboutUs = () => {
           </div>
  
           <div className="col">
-            <div className="card h-auto" style={{ width: '100%', maxWidth: '350px', margin: '0 auto' }}>
+            <div className="card h-auto" style={{ width: '100%', maxWidth: '430px', margin: '0 auto' }}>
               <img
-                src="https://www.continents.us/wp-content/uploads/2023/11/why-is-higher-education-important-to-you-personally-and-professionally-1-600x600.jpg"
+                src="https://www.oneeducation.org.uk/wp-content/uploads/2021/04/Personal-Development-Plan-A-Complete-Guide-with-PDP-Template-updated-1.png"
                 className="card-img-top"
                 alt="pic6"
                 style={{ height: '150px', objectFit: 'cover' }}
@@ -133,75 +133,167 @@ const AboutUs = () => {
           </div>
         </div>
      </div>
- 
-   
-     <div style={{ backgroundColor: '#FFF8DC', padding: '20px'}}>
-        <h2>Members of the University</h2>
-        <div className="container" style={{ marginTop: '0px' }}>
-          <div className="row row-cols-1 row-cols-md-4 g-4">
-            <div className="col">
-              <div className="card" style={{ width: '100%', maxWidth: '350px', margin: '0 auto' }}>
-                <img
-                  src="https://www.nesl.edu/images/default-source/admissions-aid-hero-images/5ef7f25a-a960-47c1-9d70-1a203a6c3ad4.tmb-wide.jpg?Status=Master&Culture=en&sfvrsn=5ba07fa0_1"
-                  className="card-img-top"
-                  alt="Steven Pinker"
-                  style={{ height: '200px', objectFit: 'fit', borderRadius: '50%' }}
-                />
-                <pre>
-                  <h5 className="card-title">    STEVEN PINKER</h5>
-                  <h5 className="card-title">     Chancellor</h5>
-                </pre>
-              </div>
+
+
+    <br/><br/>
+    <div className="text">
+        <marquee scrollamount="16px">Discover more about our university by watching this informative video!</marquee>
+    </div>
+    <br/>
+
+     <div className="video-text-container">
+      <div className="video-section">
+        <iframe
+          width="100%"
+          height="380"
+          src="https://www.youtube.com/embed/RgMBdVvqswM"
+          title="YouTube video player"
+     
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+
+    
+      <div className="text-section">
+        <h2>Inside our University: A Journey of Knowledge and Innovation</h2>
+        <p>
+        Welcome to Dalton University, where we help students achieve their dreams. With modern facilities, 
+        a variety of academic programs, and a supportive campus community, Dalton offers an environment 
+        where you can learn, grow, and succeed. Our dedicated faculty guide students to excel and prepare 
+        for a successful future. At Dalton, we celebrate diversity, innovation, and collaboration, ensuring 
+        every student has the opportunity to thrive. Whether you're focused on academics, career readiness, or 
+        personal growth, Dalton University is the perfect place to start your journey.............................
+        <b>Join us today and unlock your potential!</b>
+        </p>
+       
+      </div>
+    </div>
+
+
+
+    <div className="achievements-container">
+
+      <div className="achievements-section">
+        
+<h2>Discover Dalton University: Excellence, Innovation, and Success!</h2>
+        <h2>Our Awards and Achievements</h2>
+        <div className="timeline">
+      
+          <div className="timeline-item">
+            <div className="timeline-marker"></div>
+            <div className="timeline-content">
+              <img
+                src="https://www.vdgood.org/themes/default/assets/img/research-awards.jpg"
+                alt="Top University Award"
+                className="achievement-image"
+              />
+              <h3>Top University in Research</h3>
+              <p>
+                Dalton University has been recognized as a leader in innovative research, fostering advancements in various fields.
+              </p>
             </div>
- 
-            <div className="col">
-              <div className="card" style={{ width: '100%', maxWidth: '350px', margin: '0 auto' }}>
-                <img
-                  src="https://www.law.columbia.edu/sites/default/files/styles/260x312/public/2024-11/madhav.0435cc_crop.jpg?h=7f3af489&itok=6HL2hRVM"
-                  className="card-img-top"
-                  alt="ALBERT"
-                  style={{ height: '200px', objectFit: 'fit', borderRadius: '50%' }}
-                />
-                <pre>
-                  <h5 className="card-title">         ALBERT</h5>
-                  <h5 className="card-title">    Vice Chancellor</h5>
-                </pre>
-              </div>
+          </div>
+
+  
+          <div className="timeline-item">
+            <div className="timeline-marker"></div>
+            <div className="timeline-content">
+              <img
+                src="https://www.iul.ac.in/Times/images/ExcellenceAward.JPG"
+                alt="Community Engagement Award"
+                className="achievement-image"
+              />
+              <h3>Community Engagement Excellence</h3>
+              <p>
+                We are proud of our commitment to community development and
+                social responsibility through various outreach programs.
+              </p>
             </div>
- 
-            <div className="col">
-              <div className="card" style={{ width: '100%', maxWidth: '350px', margin: '0 auto' }}>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj2Zy7VNCVjz8yQ7hUvl-dvmy4n9FURfl33SxqLEbpRqr786QI8lYyO2wtGnUW0m5vwSk&usqp=CAU"
-                  className="card-img-top"
-                  alt="EDWARD"
-                  style={{ height: '200px', objectFit: 'fit', borderRadius: '50%' }}
-                />
-                <pre>
-                  <h5 className="card-title">         EDWARD</h5>
-                  <h5 className="card-title">     Payroll Manager</h5>
-                </pre>
-              </div>
+          </div>
+
+      
+          <div className="timeline-item">
+            <div className="timeline-marker"></div>
+            <div className="timeline-content">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8s8evyJVjbWltAGQpwmFeujdCJpbs6E3pMQ&s"
+                alt="Best Campus Environment"
+                className="achievement-image"
+              />
+              <h3>Best Campus Environment</h3>
+              <p>
+                Dalton University is known for its vibrant, green campus that
+                encourages creativity, collaboration, and well-being.
+              </p>
             </div>
- 
-            <div className="col">
-              <div className="card" style={{ width: '100%', maxWidth: '350px', margin: '0 auto' }}>
-                <img
-                  src="https://tse4.mm.bing.net/th?id=OIP.Kxh2Bu1CQFPBZ_MEYYYjqwHaJQ&pid=Api&P=0&h=180"
-                  className="card-img-top"
-                  alt="LUSY"
-                  style={{ height: '200px', objectFit: 'fit', borderRadius: '50%' }}
-                />
-                <pre>
-                  <h5 className="card-title">           LUSY</h5>
-                  <h5 className="card-title">    Dean of Academics</h5>
-                </pre>
-              </div>
+          </div>
+
+      
+          <div className="timeline-item">
+            <div className="timeline-marker"></div>
+            <div className="timeline-content">
+              <img
+                src="https://previews.123rf.com/images/ctrlh/ctrlh1611/ctrlh161100080/68959940-best-employer-of-the-year-business-award-ribbon-golden-red-colors-distinction-with-champions-cup.jpg"
+                alt="Top Employer Ranking"
+                className="achievement-image"
+              />
+              <h3>Top Employer Ranking</h3>
+              <p>
+                Our graduates are sought after by leading global companies,
+                thanks to the quality education and career preparation at
+                Dalton.
+              </p>
             </div>
           </div>
         </div>
       </div>
+    </div> 
+    <div className="university-members-section">
+      <h2 className="section-title">Members of the University</h2>
+      <div className="members-container">
+        <div className="member">
+          <img
+            src="https://www.nesl.edu/images/default-source/admissions-aid-hero-images/5ef7f25a-a960-47c1-9d70-1a203a6c3ad4.tmb-wide.jpg?Status=Master&Culture=en&sfvrsn=5ba07fa0_1"
+            alt="Steven Pinker"
+            className="member-image"
+          />
+          <h4 className="member-name">Steven Pinker</h4>
+          <p className="member-role">Chancellor</p>
+        </div>
 
+        <div className="member">
+          <img
+            src="https://www.law.columbia.edu/sites/default/files/styles/260x312/public/2024-11/madhav.0435cc_crop.jpg?h=7f3af489&itok=6HL2hRVM"
+            alt="Albert"
+            className="member-image"
+          />
+          <h4 className="member-name">Albert</h4>
+          <p className="member-role">Vice Chancellor</p>
+        </div>
+
+      
+        <div className="member">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj2Zy7VNCVjz8yQ7hUvl-dvmy4n9FURfl33SxqLEbpRqr786QI8lYyO2wtGnUW0m5vwSk&usqp=CAU"
+            alt="Edward"
+            className="member-image"
+          />
+          <h4 className="member-name">Edward</h4>
+          <p className="member-role">Payroll Manager</p>
+        </div>
+
+        <div className="member">
+          <img
+            src="https://tse4.mm.bing.net/th?id=OIP.Kxh2Bu1CQFPBZ_MEYYYjqwHaJQ&pid=Api&P=0&h=180"
+            alt="Lusy"
+            className="member-image"
+          />
+          <h4 className="member-name">Lusy</h4>
+          <p className="member-role">Dean of Academics</p>
+        </div>
+      </div>
+    </div>
 
 <Footer style={{ backgroundColor: '#001529', color: '#fff', padding: '20px 0', marginTop: '50px' }}>
   <Row justify="center" align="middle">

@@ -1,3 +1,8 @@
+
+* {
+  font-family: 'Roboto'
+}
+
 h1 {
   text-align: center;
   margin-top: 30px;
@@ -12,23 +17,17 @@ h2 {
   color: black;
 }
 
-.img1
-{
+.img1 {
   margin-left: 10px;
   height: 500px;
   width: 98%;
-
 }
-
 
 .card:hover {
   transform: scale(1.06);
   box-shadow: 2px 4px 8px rgba(19, 16, 16, 0.86);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-
-
 
 p {
   font-size: 14px;
@@ -39,6 +38,144 @@ p {
   text-align: justify;
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
-   
- 
 }
+
+.video-text-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 12px;
+}
+
+.video-section {
+  width: 50%;
+  padding-left: 50px;
+}
+
+.text-section {
+  width: 50%;
+  font-size: 16px;
+  font-family: 'Roboto';
+}
+
+.text {
+  font-size: 23px;
+  font-weight: bold;
+  font-family: 'Roboto';
+}
+
+.achievements-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.achievements-section {
+  width: 75%;
+  margin-top: 40px;
+  text-align: left;
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  border-left: 4px solid #4CAF50;
+  margin-left: 20px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 30px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -9px;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  background-color: #59975b;
+  border: 3px solid white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-content {
+  margin-left: 20px;
+  background-color: #f9f9f9;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: #182a2bbc;
+  font-size: 16px;
+  font-family: 'Roboto';
+}
+
+.achievement-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 60%;
+  float: left;
+  margin-right: 15px;
+}
+
+.university-members-section {
+  padding: 20px;
+  text-align: center;
+  font-family: 'Roboto';
+}
+
+.section-title {
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.members-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.member {
+  text-align: center;
+  width: 200px;
+}
+
+.member-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 60%;
+  object-fit: fill;
+  margin-bottom: 20px;
+  border: 5px solid #285c28;
+}
+
+.member-name {
+  margin: 5px 0;
+  margin-left: -45px;
+  color: #2c3e50;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.member-role {
+  margin: -15px 0;
+  color: #48686b;
+  margin-left: 35px;
+  font-weight: bold;
+  font-size: 14px;
+  
+}   

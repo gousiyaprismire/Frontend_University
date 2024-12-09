@@ -1,24 +1,24 @@
+
 .rules-container {
   font-family: Arial, sans-serif;
   margin: 20px;
   padding: 20px;
+  background: url('https://i.pinimg.com/736x/07/19/6c/07196c2d32e6e0ecb7f78980cbb1e72e.jpg') no-repeat center center;
+  background-size: cover;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  color: #333; 
-  height: auto;
-
-  
+  color: #333;
 }
 
 .rules-container h1 {
   font-size: 2em;
-  color: #003366; 
-  margin-bottom: 20px;
+  color: #003366;
+  margin-bottom: 10px;
 }
 
 .rules-container p {
   font-size: 1em;
-  color: #666; 
+  color: #666;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -26,43 +26,48 @@
 .rules-container ul {
   list-style-type: none;
   padding-left: 0;
-  width: 900px;
-  height: auto;
-  text-align: center;
-  
 }
 
-.rules-container li {
-  padding: 15px; 
-  margin-bottom: 15px; 
-  background-color: rgba(255, 255, 255, 0.8); 
-  border-radius: 8px; 
-  border: 1px solid #ccc; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  
+.rule-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
 }
 
-.rules-container h2 {
+.rule-content {
+  flex: 2;
+  padding-right: 20px;
+}
+
+.rule-content h2 {
   font-size: 1.5em;
-  color: #0066cc; 
+  color: #0066cc;
   margin-bottom: 5px;
   text-align: center;
+  
 }
 
-.rules-container li p {
+.rule-content p {
   font-size: 1em;
-  color: #333; 
+  color: #333;
   margin: 0;
+}
+
+.rule-image {
+  flex: 1;
   text-align: center;
 }
 
-.rules-img{
-  width: 1250px;
-  padding-left: 910px;
-  
+.rule-image img {
+  width: 250px;
+  height: 180px;
+  margin-top: 12px;
+  border-radius: 8px;
   
 }
 
-.rules-img{
-  padding-right: 100px;
-}

@@ -1,19 +1,17 @@
 import React from "react";
-import './Scholarship.css';
+import Footer from '../Footer/Footer';
+
 import { Card, CardContent, Typography, Button, Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";  // Import useNavigate
-<<<<<<< HEAD
 import { Carousel } from "react-bootstrap";  // Import Carousel from react-bootstrap
-import Footer from '../Footer/Footer'; 
-=======
->>>>>>> b96bdb5fb6fcee1e4b7cb8f7a2b2cc048a230839
+
 
 const scholarships = [
   {
     id: 1,
     title: "Merit-Based Scholarship",
     benefits:
-      "Awarded with exceptional academic performance. Covers 50% tuition fees.",
+      "Awarded to students with exceptional academic performance. Covers up to 50% of tuition fees.",
     eligibility: "GPA above 3.8",
     deadline: "December 31, 2024",
     applyLink: '#',
@@ -22,7 +20,7 @@ const scholarships = [
     id: 2,
     title: "Need-Based Scholarship",
     benefits:
-      "Designed for students who demonstrate financial need.tuition and living expenses.",
+      "Designed for students who demonstrate financial need. Covers tuition and living expenses.",
     eligibility: "Family income below $50,000/year",
     deadline: "January 15, 2025",
     applyLink: "#",
@@ -40,7 +38,7 @@ const scholarships = [
     id: 4,
     title: "International Student Scholarship",
     benefits:
-      "Available to international students showing outstanding achievements leadership skills.",
+      "Available to international students showing outstanding achievements and leadership skills.",
     eligibility: "Valid international student visa",
     deadline: "February 28, 2025",
     applyLink: "#",
@@ -70,7 +68,6 @@ const Scholarship = () => {
     navigate("/Login"); // Redirects to the Login page
   };
 
-<<<<<<< HEAD
   return (
     <div>
       {/* Welcome message placed before carousel */}
@@ -117,37 +114,13 @@ const Scholarship = () => {
           </Carousel.Item>
         </Carousel>
       </div>
-=======
-  
-  return (
-    <div>
-      <div>
-        <h2>Inspiring Quotes</h2>
-        <p>
-          “Education is the passport to the future, for tomorrow belongs to
-          those who prepare for it today.” Malcolm X
-        </p>
-        <p>
-          “An investment in knowledge pays the best interest.” Benjamin Franklin
-        </p>
-      </div>
-
-      {/* Footer Section */}
-      <footer className="scholarship-footer">
-        <p>Don't miss the chance to apply. Deadlines are approaching!</p>
-      </footer>
->>>>>>> b96bdb5fb6fcee1e4b7cb8f7a2b2cc048a230839
 
       <div style={{ padding: "20px", backgroundColor: "#f8f9fa", minHeight: "100vh", textAlign: 'center' }}>
         <h1 variant="h4" align="center" gutterBottom>
           Scholarships at Our University
         </h1>
 
-<<<<<<< HEAD
-        <p variant="subtitle1" align="center" gutterBottom className="content">
-=======
         <p variant="subtitle1" align="center" gutterBottom>
->>>>>>> b96bdb5fb6fcee1e4b7cb8f7a2b2cc048a230839
           Explore various scholarships to support your academic journey.
         </p>
         <Grid container spacing={3} style={{ marginTop: "20px" }}>
@@ -172,12 +145,8 @@ const Scholarship = () => {
                     color="primary"
                     size="small"
                     onClick={handleApplyNow} // Trigger handleApplyNow on button click
-<<<<<<< HEAD
-                    style={{ marginTop: "10px" }}>
-=======
                     style={{ marginTop: "10px" }}
                   >
->>>>>>> b96bdb5fb6fcee1e4b7cb8f7a2b2cc048a230839
                     Apply Now
                   </Button>
                 </CardContent>
@@ -186,10 +155,7 @@ const Scholarship = () => {
           ))}
         </Grid>
       </div>
-<<<<<<< HEAD
       <Footer/>
-=======
->>>>>>> b96bdb5fb6fcee1e4b7cb8f7a2b2cc048a230839
     </div>
   );
 };

@@ -30,16 +30,10 @@ import LogOut from './components/Pages/LogOut';
 import Study from './components/Pages/studyOptions/Study';
 import Scholarship from './components/Pages/Scholarship/Scholarship';
 import VerificationScreen from './components/Pages/Verification/VerificationScreen';
-<<<<<<< HEAD
 import Sports from './components/Pages/Sports/Sports';
-import 'bootstrap/dist/css/bootstrap.min.css';
-=======
-import Sports from './components/Pages/Sports';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
->>>>>>> b96bdb5fb6fcee1e4b7cb8f7a2b2cc048a230839
 
 const { Header, Content } = Layout;
+
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false); 
@@ -113,47 +107,40 @@ const App = () => {
             <Button
               type="primary"
               icon={<LoginOutlined />}
+            >
+              SignIn as Admin
+            </Button>
+          )}
+          &nbsp;
+          {!loggedIn && (
+            <Button
+              type="primary"
+              icon={<LoginOutlined />}
               onClick={() => window.location.href = '/login'}
             >
-              Login
+              SignIn as Student
             </Button>
           )}
         </Header>
 
         <Layout>
-          
           <Sidebar collapsed={collapsed} toggleSidebar={toggleSidebar} loggedIn={loggedIn} />
-
-          
           <Content style={{ padding: '20px', backgroundColor: '#f0f2f5' }}>
             <Routes>
               
               <Route path="/" element={<Welcome />} />
               <Route path="/login" element={<LoginPage setLoggedIn={setLoggedIn} />} />
               <Route path="/about-us" element={<AboutUs />} />
-              <Route path="/contact-us" element={<ContactUs />} />
-
-              
-              
-                  <Route path="/college-map" element={<CollegeMap />} />
-                  <Route path="/faculty-info" element={<FacultyInfo />} />
-                  <Route path="/announcements" element={<Announcements />} />
-                  <Route path="/hall-of-fame" element={<HallOfFame />} />
-                  <Route path="/rules-and-regulations" element={<RulesAndRegulations />} />
-                  <Route path="/verification-screen" element={<VerificationScreen />} />
-                  <Route path="/sports" element={<Sports />} />
-                  <Route path="/study" element={<Study />} />
-<<<<<<< HEAD
-                  
-=======
->>>>>>> b96bdb5fb6fcee1e4b7cb8f7a2b2cc048a230839
-                  {/* {loggedIn && (
-                <> */}
-                  <Route path="/scholarship" element={<Scholarship />} />
-                {/* </>
-              )} */}
-
-             
+              <Route path="/contact-us" element={<ContactUs />} />              
+              <Route path="/college-map" element={<CollegeMap />} />
+              <Route path="/faculty-info" element={<FacultyInfo />} />
+              <Route path="/announcements" element={<Announcements />} />
+              <Route path="/hall-of-fame" element={<HallOfFame />} />
+              <Route path="/rules-and-regulations" element={<RulesAndRegulations />} />
+              <Route path="/verification-screen" element={<VerificationScreen />} />
+              <Route path="/sports" element={<Sports />} />
+              <Route path="/study" element={<Study />} />
+              <Route path="/scholarship" element={<Scholarship />} />
               {!loggedIn && (
                 <Route path="/verification-screen" element={<Navigate to="/login" />} />
               )}

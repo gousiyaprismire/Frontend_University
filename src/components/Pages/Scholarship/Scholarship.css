@@ -1,20 +1,13 @@
 
 .scholarship-quotes {
-<<<<<<< HEAD
   margin-top: 20px;
   padding: 20px;
   background-color: #ecf0f1;
-  font-family: 'Roboto';
 }
 .quote {
   font-style: 'Roboto';
   color: #2c3e50;
   margin: 10px 0;
-  font-family: 'Roboto';
-}
-
-.content{
-  text-align: center;
 }
 
 .scholarship-footer {
@@ -23,22 +16,4 @@
   padding: 20px;
   margin-top: 30px;
 }
-=======
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #ecf0f1;
-  }
-  .quote {
-    font-style: 'Roboto';
-    color: #2c3e50;
-    margin: 10px 0;
-  }
-   
-  .scholarship-footer {
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
-    margin-top: 30px;
-  }
-  
->>>>>>> b96bdb5fb6fcee1e4b7cb8f7a2b2cc048a230839
+

@@ -138,5 +138,4 @@ const FacultyInfo = () => {
     </div>
   );
 };
-
 export default FacultyInfo;

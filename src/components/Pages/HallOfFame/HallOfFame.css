@@ -1,0 +1,46 @@
+.hall-of-fame-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin: 0;
+    /* font-family: 'Roboto'; */
+  }
+  
+  .hall-of-fame-title {
+    text-align: center;
+    font-size: 3rem;
+    /* margin-bottom: 40px; */
+  }
+  
+  /* .achievers-container {
+    margin-top: 20px;
+  } */
+  
+  .achiever-card-content {
+    /* padding: 20px; */
+    text-align: center;
+  }
+  
+  .achiever-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .achiever-title {
+    font-size: 1.2rem;
+    color: #6c757d;
+    text-align: center;
+  }
+  
+  .achiever-description {
+    font-size: 17px;
+    text-align: center;
+    font-family: 'Roboto';
+  }
+  
+  .achiever-image {
+    width: 80%;          
+    height: 300px;        
+    /* object-fit: cover;      */
+    border-radius: 10px;   
+  }
+  

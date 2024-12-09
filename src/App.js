@@ -17,7 +17,7 @@ import {
   BankOutlined,
 } from '@ant-design/icons';
 import Sidebar from './components/sidebar';
-
+import LoginPage from './components/Pages/Login/Login';
 import Welcome from './components/Pages/Login/Welcome';
 import CollegeMap from './components/Pages/CollegeMaps/CollegeMapPage';
 import FacultyInfo from './components/Pages/FacultyInfo/FacultyInfo';
@@ -29,9 +29,11 @@ import ContactUs from './components/Pages/Contactus/ContactUs';
 import Study from './components/Pages/studyOptions/Study';
 
 import Scholarship from './components/Pages/Scholarship/Scholarship';
-import VerificationScreen from './components/Pages/Verification/VerificationScreen';
 import Sports from './components/Pages/Sports/Sports';
-import LoginPage from './components/Pages/Login/LoginPage';
+import RegisterPage from './components/Pages/Login/Registration';
+
+import VerificationScreen from './components/Pages/Verification/VerificationScreen';
+
 import OnlineCourses from './components/Pages/OnlineCourses/OnlineCourses';
 const { Header, Content } = Layout;
 
@@ -82,14 +84,14 @@ const App = () => {
 
   return (
     <Router>
-      <Layout style={{ minHeight: '100vh' }}>
+      <Layout style={{ minHeight: '100vh', flexDirection: 'column' }}>
         
         <Header
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            backgroundColor: '#f5f5dc', // Beige color
+            backgroundColor: '#f5f5dc', 
           }}
         >
           <div
@@ -124,13 +126,13 @@ const App = () => {
           )}
         </Header>
 
-        <Layout>
           <Sidebar collapsed={collapsed} toggleSidebar={toggleSidebar} loggedIn={loggedIn} />
-          <Content style={{ padding: '20px', backgroundColor: '#f0f2f5' }}>
+          <Content style={{ padding: '20px', backgroundColor: '#f0f2f5', width:'100vw' }}>
             <Routes>
               
               <Route path="/" element={<Welcome />} />
               <Route path="/login" element={<LoginPage setLoggedIn={setLoggedIn} />} />
+              <Route path="/register" element={<RegisterPage setLoggedIn={setLoggedIn} />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/contact-us" element={<ContactUs />} />              
               <Route path="/college-map" element={<CollegeMap />} />
@@ -142,11 +144,17 @@ const App = () => {
               <Route path="/online-courses" element={<OnlineCourses />} />
               <Route path="/sports" element={<Sports />} />
               <Route path="/study" element={<Study />} />
-              <Route path="/scholarship" element={<Scholarship />} />
+
+                  
+              {loggedIn && (
+    <Route path="/scholarship" element={<Scholarship />} /> )}
+
+              {!loggedIn && (
+                <Route path="/verification-screen" element={<Navigate to="/login" />} />
+              )}
             </Routes>
           </Content>
         </Layout>
-      </Layout>
     </Router>
   );
 };

@@ -127,7 +127,6 @@ const App = () => {
           )}
         </Header>
 
-        <Layout>
           <Sidebar collapsed={collapsed} toggleSidebar={toggleSidebar} loggedIn={loggedIn} />
           <Content style={{ padding: '20px', backgroundColor: '#f0f2f5' }}>
             <Routes>
@@ -146,11 +145,17 @@ const App = () => {
               <Route path="/online-courses" element={<OnlineCourses />} />
               <Route path="/sports" element={<Sports />} />
               <Route path="/study" element={<Study />} />
-              <Route path="/scholarship" element={<Scholarship />} />
+
+                  
+              {loggedIn && (
+    <Route path="/scholarship" element={<Scholarship />} /> )}
+
+              {!loggedIn && (
+                <Route path="/verification-screen" element={<Navigate to="/login" />} />
+              )}
             </Routes>
           </Content>
         </Layout>
-      </Layout>
     </Router>
   );
 };

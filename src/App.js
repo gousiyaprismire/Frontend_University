@@ -22,7 +22,7 @@ import Welcome from './components/Pages/Login/Welcome';
 import CollegeMap from './components/Pages/CollegeMaps/CollegeMapPage';
 import FacultyInfo from './components/Pages/FacultyInfo/FacultyInfo';
 import Announcements from './components/Pages/Annoucements/Announcements';
-import HallOfFame from './components/Pages/HallOfFame';
+import HallOfFame from './components/Pages/HallOfFame/HallOfFame';
 import RulesAndRegulations from './components/Pages/RulesAndRegulations/RulesAndRegulations';
 import AboutUs from './components/Pages/about_us/AboutUs';
 import ContactUs from './components/Pages/Contactus/ContactUs';
@@ -34,6 +34,7 @@ import VerificationScreen from './components/Pages/Verification/VerificationScre
 import Sports from './components/Pages/Sports/Sports';
 
 const { Header, Content } = Layout;
+
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false); 
@@ -124,10 +125,7 @@ const App = () => {
         </Header>
 
         <Layout>
-          
           <Sidebar collapsed={collapsed} toggleSidebar={toggleSidebar} loggedIn={loggedIn} />
-
-          
           <Content style={{ padding: '20px', backgroundColor: '#f0f2f5' }}>
             <Routes>
               
@@ -141,15 +139,10 @@ const App = () => {
               <Route path="/hall-of-fame" element={<HallOfFame />} />
               <Route path="/rules-and-regulations" element={<RulesAndRegulations />} />
               <Route path="/verification-screen" element={<VerificationScreen />} />
-              <Route path="/online-courses" element={<OnlineCourses />} />
+
               <Route path="/sports" element={<Sports />} />
               <Route path="/study" element={<Study />} />
-                  
-              {loggedIn && (
-                <>
                   <Route path="/scholarship" element={<Scholarship />} />
-                </>
-              )}
 
               {!loggedIn && (
                 <Route path="/verification-screen" element={<Navigate to="/login" />} />

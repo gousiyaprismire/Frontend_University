@@ -17,7 +17,7 @@ import {
   BankOutlined,
 } from '@ant-design/icons';
 import Sidebar from './components/sidebar';
-import LoginPage from './components/Pages/Login/LoginPage';
+
 import Welcome from './components/Pages/Login/Welcome';
 import CollegeMap from './components/Pages/CollegeMaps/CollegeMapPage';
 import FacultyInfo from './components/Pages/FacultyInfo/FacultyInfo';
@@ -29,11 +29,10 @@ import ContactUs from './components/Pages/Contactus/ContactUs';
 import LogOut from './components/Pages/LogOut';
 import Study from './components/Pages/studyOptions/Study';
 
-import Scholarship from './components/Pages/Scholarship';
+import Scholarship from './components/Pages/Scholarship/Scholarship';
 import VerificationScreen from './components/Pages/Verification/VerificationScreen';
-import Sports from './components/Pages/Sports';
+import Sports from './components/Pages/Sports/Sports';
 import LoginPage from './components/Pages/Login/LoginPage';
-import Welcome from './components/Pages/Welcome';  
 import OnlineCourses from './components/Pages/OnlineCourses/OnlineCourses';
 const { Header, Content } = Layout;
 
@@ -141,18 +140,10 @@ const App = () => {
               <Route path="/hall-of-fame" element={<HallOfFame />} />
               <Route path="/rules-and-regulations" element={<RulesAndRegulations />} />
               <Route path="/verification-screen" element={<VerificationScreen />} />
-
+              <Route path="/online-courses" element={<OnlineCourses />} />
               <Route path="/sports" element={<Sports />} />
               <Route path="/study" element={<Study />} />
-
-                  
-              {loggedIn && (
-                <>
-    <Route path="/scholarship" element={<Scholarship />} />
-
-              {!loggedIn && (
-                <Route path="/verification-screen" element={<Navigate to="/login" />} />
-              )}
+              <Route path="/scholarship" element={<Scholarship />} />
             </Routes>
           </Content>
         </Layout>

@@ -37,6 +37,7 @@ const Sidebar = () => {
     { key: '/logout', icon: <LogoutOutlined />, label: 'LogOut' },
     { key: '/study', icon: <ReadOutlined />, label: 'Study' },
     { key: '/scholarship', icon: <BankOutlined />, label: 'Scholarship' },
+    { key: '/online-courses', icon: <ReadOutlined />, label: 'Online Courses' },
   ];
 
   const toggleMenu = () => {

@@ -106,9 +106,18 @@ const App = () => {
             <Button
               type="primary"
               icon={<LoginOutlined />}
+            >
+              SignIn as Admin
+            </Button>
+          )}
+          &nbsp;
+          {!loggedIn && (
+            <Button
+              type="primary"
+              icon={<LoginOutlined />}
               onClick={() => window.location.href = '/login'}
             >
-              Login
+              SignIn as Student
             </Button>
           )}
         </Header>
@@ -124,26 +133,22 @@ const App = () => {
               <Route path="/" element={<Welcome />} />
               <Route path="/login" element={<LoginPage setLoggedIn={setLoggedIn} />} />
               <Route path="/about-us" element={<AboutUs />} />
-              <Route path="/contact-us" element={<ContactUs />} />
-
-              
-              
-                  <Route path="/college-map" element={<CollegeMap />} />
-                  <Route path="/faculty-info" element={<FacultyInfo />} />
-                  <Route path="/announcements" element={<Announcements />} />
-                  <Route path="/hall-of-fame" element={<HallOfFame />} />
-                  <Route path="/rules-and-regulations" element={<RulesAndRegulations />} />
-                  <Route path="/verification-screen" element={<VerificationScreen />} />
-                  <Route path="/sports" element={<Sports />} />
-                  <Route path="/study" element={<Study />} />
+              <Route path="/contact-us" element={<ContactUs />} />              
+              <Route path="/college-map" element={<CollegeMap />} />
+              <Route path="/faculty-info" element={<FacultyInfo />} />
+              <Route path="/announcements" element={<Announcements />} />
+              <Route path="/hall-of-fame" element={<HallOfFame />} />
+              <Route path="/rules-and-regulations" element={<RulesAndRegulations />} />
+              <Route path="/verification-screen" element={<VerificationScreen />} />
+              <Route path="/sports" element={<Sports />} />
+              <Route path="/study" element={<Study />} />
                   
-                  {loggedIn && (
+              {loggedIn && (
                 <>
                   <Route path="/scholarship" element={<Scholarship />} />
                 </>
               )}
 
-             
               {!loggedIn && (
                 <Route path="/verification-screen" element={<Navigate to="/login" />} />
               )}

@@ -1,6 +1,8 @@
 import React from 'react';
+
 import './OnlineCourses.css';
  
+
 const OnlineCourses = () => {
   const courses = [
     {
@@ -94,7 +96,6 @@ const OnlineCourses = () => {
       link: "/courses/digital-marketing"
     }
   ];
- 
   return (
     <div className="online-courses-container">
       <h2 className="online-courses-title">Available Online Courses</h2>
@@ -113,8 +114,10 @@ const OnlineCourses = () => {
         ))}
       </div>
     </div>
+
  
   );
 };
  
 export default OnlineCourses;
+

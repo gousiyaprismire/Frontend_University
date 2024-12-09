@@ -4,9 +4,7 @@ import Email from '../../../images/email.png';
 import mapImage from '../../../images/Map.png';
 import home from '../../../images/Home.png';
  
- 
- 
- 
+
 const ContactUs = () => {
  
   const [name, setName] = useState('');
@@ -22,6 +20,7 @@ const ContactUs = () => {
  
   return (
     <div>
+
    
     <div className="contact-container" >
     <div className="card map-card">
@@ -46,7 +45,7 @@ const ContactUs = () => {
       </a>
     </div>
   </div>
- 
+
   <div className="card contact-card">
   <div className="info-item">
     <img
@@ -64,8 +63,7 @@ const ContactUs = () => {
       </p>
     </div>
 </div>
- 
- 
+
     <div className="info-item">
       <img
         src={Email}

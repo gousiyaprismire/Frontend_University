@@ -28,11 +28,13 @@ import AboutUs from './components/Pages/about_us/AboutUs';
 import ContactUs from './components/Pages/Contactus/ContactUs';
 import LogOut from './components/Pages/LogOut';
 import Study from './components/Pages/studyOptions/Study';
-import Scholarship from './components/Pages/Scholarship/Scholarship';
-import OnlineCourses from './components/Pages/OnlineCourses/OnlineCourses';
-import VerificationScreen from './components/Pages/Verification/VerificationScreen';
-import Sports from './components/Pages/Sports/Sports';
 
+import Scholarship from './components/Pages/Scholarship';
+import VerificationScreen from './components/Pages/Verification/VerificationScreen';
+import Sports from './components/Pages/Sports';
+import LoginPage from './components/Pages/Login/LoginPage';
+import Welcome from './components/Pages/Welcome';  
+import OnlineCourses from './components/Pages/OnlineCourses/OnlineCourses';
 const { Header, Content } = Layout;
 
 
@@ -142,7 +144,11 @@ const App = () => {
 
               <Route path="/sports" element={<Sports />} />
               <Route path="/study" element={<Study />} />
-                  <Route path="/scholarship" element={<Scholarship />} />
+
+                  
+              {loggedIn && (
+                <>
+    <Route path="/scholarship" element={<Scholarship />} />
 
               {!loggedIn && (
                 <Route path="/verification-screen" element={<Navigate to="/login" />} />

@@ -63,7 +63,7 @@ function VerificationScreen() {
   return (
     <div className="app-container">
       <h1 style={{ backgroundColor: 'white', fontSize: '2rem',fontWeight:"Bold",textShadow:" 2px 2px 4px rgba(0,0,0,0.5)",marginTop:"15px" }}>Check Student Enrollment Information</h1>
- 
+
       <div className="student-table-container">
         <h2 className="student-table-header">Student Table</h2>
  

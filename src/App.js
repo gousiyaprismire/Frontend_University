@@ -140,7 +140,7 @@ const App = () => {
               <Route path="/verification-screen" element={<VerificationScreen />} />
               <Route path="/sports" element={<Sports />} />
               <Route path="/study" element={<Study />} />
-              <Route path="/scholarship" element={<Scholarship />} />
+                  <Route path="/scholarship" element={<Scholarship />} />
               {!loggedIn && (
                 <Route path="/verification-screen" element={<Navigate to="/login" />} />
               )}

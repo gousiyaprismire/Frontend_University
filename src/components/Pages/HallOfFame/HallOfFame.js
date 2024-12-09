@@ -43,7 +43,6 @@ const HallOfFame = () => {
                     and celebrating the milestones that have shaped our university's legacy of excellence.
                 </p>
             </header>
-
             <Tabs
                 defaultActiveKey="student-achievements"
                 id="hall-of-fame-tabs"

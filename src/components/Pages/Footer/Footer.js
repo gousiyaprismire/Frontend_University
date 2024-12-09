@@ -83,7 +83,6 @@ const Footer = () => {
             </Box>
           </Grid>
         </Grid>
-
         {/* Copyright */}
         <Box textAlign="center" mt={4}>
           <Typography variant="body2" color="inherit">

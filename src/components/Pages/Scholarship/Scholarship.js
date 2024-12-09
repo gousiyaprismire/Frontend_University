@@ -120,6 +120,7 @@ const Scholarship = () => {
           Scholarships at Our University
         </h1>
 
+
         <p variant="subtitle1" align="center" gutterBottom>
           Explore various scholarships to support your academic journey.
         </p>

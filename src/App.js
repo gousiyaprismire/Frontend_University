@@ -26,7 +26,6 @@ import HallOfFame from './components/Pages/HallOfFame/HallOfFame';
 import RulesAndRegulations from './components/Pages/RulesAndRegulations/RulesAndRegulations';
 import AboutUs from './components/Pages/about_us/AboutUs';
 import ContactUs from './components/Pages/Contactus/ContactUs';
-import LogOut from './components/Pages/LogOut';
 import Study from './components/Pages/studyOptions/Study';
 
 import Scholarship from './components/Pages/Scholarship/Scholarship';

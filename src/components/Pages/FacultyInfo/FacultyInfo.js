@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './FacultyInfo.css';
-// import Footer from '../Footer/Footer';
+import Footer from '../Footer/Footer';
 
 const defaultFaculty = [
   {
@@ -171,7 +171,7 @@ const FacultyInfo = () => {
         <h3>About Our Faculty</h3>
         <p>Our faculty members are renowned experts in their fields, with decades of combined experience in academia and industry. They are dedicated to fostering a supportive learning environment and encouraging students to reach their full potential. Each professor brings unique insights and a wealth of knowledge, making our institution a hub of innovation and excellence. Our faculty actively engage in cutting-edge research, contributing to advancements in their respective disciplines. They also collaborate with industry partners to ensure that the curriculum remains relevant and up-to-date. Their commitment to academic excellence is reflected in their numerous publications, awards, and recognitions. Beyond the classroom, our faculty members serve as mentors, advisors, and role models to our students. They are passionate about education and go above and beyond to inspire and motivate the next generation of leaders and innovators.</p>
       </div>
-    {/* <Footer/> */}
+    { <Footer/> }
     </div>
   );
 };

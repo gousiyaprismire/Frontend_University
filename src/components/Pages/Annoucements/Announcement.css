@@ -1,40 +1,44 @@
-.announcement-list{
-  text-align: center;
+.announcement-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-between;
-  gap:10px
+  justify-content: space-between;
+  gap: 10px;
 }
+
 .announcement-item {
-  background-color: #75cf6d41;
-  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
   border-radius: 5px;
   padding: 10px;
-  margin: 15px auto; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 15px auto;
   font-size: 0.9rem;
-  width: 45%; 
-  text-align: center;
+  width: 45%;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-announcement-list h1{
-   font-size: 2.0rem;
 
+.announcement-image {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  border-radius: 5px;
 }
-  .announcement-item h2 {
-    margin-top: 0;
-    font-size: 1.3rem; 
-    font-weight: bold;
-  }
-  
-  .announcement-item p {
-    margin: 5px 0;
-    font-size: 1.3rem;
-  }
-  .announcement-image{
-    width: 200px;
-    height: 200px;
-    align-items: center;
-  }
+
+.announcement-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.announcement-details h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.announcement-details p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
   .sports-event{
     margin:20px 20px;
     padding: 20px 10px;
@@ -48,6 +52,12 @@ announcement-list h1{
   .sports-event h2{
     color: rgba(38, 41, 27, 0.808)
   }
+  .round-image {
+    border-radius: 75%;
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Ensure the height and width are equal for a perfect circle */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+}
   .general-announcements{
     display: flex;
     flex-wrap: wrap;

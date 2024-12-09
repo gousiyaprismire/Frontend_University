@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './VerificationScreen.css'; 
-
+import './VerificationScreen.css';
+ 
 function VerificationScreen() {
     const students = [
     {
@@ -48,25 +48,25 @@ function VerificationScreen() {
       additionalInfo: "Football Team Captain"
     }
   ];
-
+ 
   const [selectedStudent, setSelectedStudent] = useState(null);
-
+ 
   const handleViewDetails = (studentId) => {
     const student = students.find(s => s.id === studentId);
     setSelectedStudent(student);
   };
-
+ 
   const handleBackToTable = () => {
     setSelectedStudent(null);
   };
-
+ 
   return (
     <div className="app-container">
       <h1 style={{ backgroundColor: 'white', fontSize: '2rem',fontWeight:"Bold",textShadow:" 2px 2px 4px rgba(0,0,0,0.5)",marginTop:"15px" }}>Check Student Enrollment Information</h1>
 
       <div className="student-table-container">
         <h2 className="student-table-header">Student Table</h2>
-
+ 
         <table className="student-table">
           <thead>
             <tr>
@@ -101,11 +101,11 @@ function VerificationScreen() {
             ))}
           </tbody>
         </table>
-
+ 
         {selectedStudent && (
           <div className="student-details-container">
             <h3 className="student-details-header">Student Details</h3>
-
+ 
             <div><strong>Name:</strong> <span>{selectedStudent.name}</span></div>
             <div><strong>Email:</strong> <span>{selectedStudent.email}</span></div>
             <div><strong>Phone:</strong> <span>{selectedStudent.phone}</span></div>
@@ -113,7 +113,7 @@ function VerificationScreen() {
             <div><strong>University:</strong> <span>{selectedStudent.university}</span></div>
             <div><strong>Enroll Date:</strong> <span>{new Date(selectedStudent.enrollDate).toLocaleDateString()}</span></div>
             <div><strong>Additional Info:</strong> <span>{selectedStudent.additionalInfo}</span></div>
-
+ 
             <div className="student-details-back-btn-container">
               <button className="student-details-back-btn" onClick={handleBackToTable}>
                 Back to Table
@@ -125,5 +125,5 @@ function VerificationScreen() {
     </div>
   );
 }
-
+ 
 export default VerificationScreen;

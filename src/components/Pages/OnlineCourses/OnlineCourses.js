@@ -1,5 +1,7 @@
 import React from 'react';
-import './OnlineCourses.css'; 
+
+import './OnlineCourses.css';
+ 
 
 const OnlineCourses = () => {
   const courses = [
@@ -94,7 +96,6 @@ const OnlineCourses = () => {
       link: "/courses/digital-marketing"
     }
   ];
-
   return (
     <div className="online-courses-container">
       <h2 className="online-courses-title">Available Online Courses</h2>
@@ -102,6 +103,7 @@ const OnlineCourses = () => {
         {courses.map((course) => (
           <div key={course.id} className="course-item">
             <img className="course-image" src={course.image} alt={course.title} />
+
             <h3>{course.title}</h3>
             <p>{course.description}</p>
             <p><strong>Duration:</strong> {course.duration}</p>
@@ -113,7 +115,9 @@ const OnlineCourses = () => {
       </div>
     </div>
 
+ 
   );
 };
-
+ 
 export default OnlineCourses;
+

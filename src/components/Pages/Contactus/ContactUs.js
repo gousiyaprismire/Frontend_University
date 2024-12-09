@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import './ContactUs.css';  
 import Email from '../../../images/email.png';
@@ -7,30 +5,29 @@ import mapImage from '../../../images/Map.png';
 import home from '../../../images/Home.png';
  
 
-
-
 const ContactUs = () => {
-
+ 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
-
-  
+ 
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
   };
-
+ 
   return (
     <div>
-    
+
+   
     <div className="contact-container" >
     <div className="card map-card">
     <h4>Contact Us</h4>
-    <div className="line"></div> 
+    <div className="line"></div>
     <h3>Keep In Touch</h3>
-    
+   
     <div className="map-image-wrapper">
       <img
         src={mapImage}  
@@ -67,7 +64,6 @@ const ContactUs = () => {
     </div>
 </div>
 
-
     <div className="info-item">
       <img
         src={Email}
@@ -84,8 +80,8 @@ const ContactUs = () => {
       <h1 style={{ color: 'black', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', fontWeight: 'bold' ,paddingTop:'0px',marginTop:'0px'}}>
   Submit Your Admission Inquiry
 </h1>
-
-    
+ 
+   
       <div className="contact-us">
         <h2>Contact Us</h2>
         <form onSubmit={handleSubmit}>
@@ -100,7 +96,7 @@ const ContactUs = () => {
               required
             />
           </div>
-
+ 
           <div className="form-group">
             <label htmlFor="email">Your Email</label>
             <input
@@ -112,7 +108,7 @@ const ContactUs = () => {
               required
             />
           </div>
-
+ 
           <div className="form-group">
             <label htmlFor="message">Your Message</label>
             <textarea
@@ -123,9 +119,9 @@ const ContactUs = () => {
               required
             />
           </div>
-
+ 
           <button type="submit" className="submit-btn">Submit</button>
-
+ 
           {submitted && (
             <p className="submission-status">Thank you for reaching out! We will get back to you soon.</p>
           )}
@@ -134,5 +130,5 @@ const ContactUs = () => {
     </div>
   );
 };
-
+ 
 export default ContactUs;

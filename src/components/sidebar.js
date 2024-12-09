@@ -33,12 +33,14 @@ const Sidebar = () => {
     { key: '/hall-of-fame', icon: <StarOutlined />, label: 'Hall of Fame' },
     { key: '/verification-screen', icon: <VerifiedOutlined />, label: 'Verification Screen' },
     { key: '/rules-and-regulations', icon: <FileProtectOutlined />, label: 'Rules & Regulations' },
-    { key: '/about-us', icon: <InfoCircleOutlined />, label: 'About Us' },
-    { key: '/contact-us', icon: <MailOutlined />, label: 'Contact Us' },
+    // { key: '/about-us', icon: <InfoCircleOutlined />, label: 'About Us' },
+    // { key: '/contact-us', icon: <MailOutlined />, label: 'Contact Us' },
     { key: '/logout', icon: <LogoutOutlined />, label: 'LogOut' },
     { key: '/study', icon: <ReadOutlined />, label: 'Study' },
     { key: '/scholarship', icon: <BankOutlined />, label: 'Scholarship' },
-    { key: '/online-courses', icon: <AppstoreAddOutlined />, label: 'Online Courses' }, 
+
+    { key: '/online-courses', icon: <ReadOutlined />, label: 'Online Courses' },
+
   ];
 
   const toggleMenu = () => {
@@ -86,7 +88,7 @@ const Sidebar = () => {
     >
       <div
         style={{
-          height: '50px',  
+          height: '60px',  
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',

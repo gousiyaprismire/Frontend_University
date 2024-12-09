@@ -1,15 +1,65 @@
+.announcement-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
 .announcement-item {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 15px auto;
+  font-size: 0.9rem;
+  width: 45%;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-image {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.announcement-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.announcement-details h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.announcement-details p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+  .sports-event{
+    margin:20px 20px;
+    padding: 20px 10px;
+    background: linear-gradient(145deg, #b3831c, #273d5a);
+    color: #d8bb5bc5;
+    border-radius: 15px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 5px 5px 15px #a38a5e, -5px -5px 15px #fff4c4;
   }
-  .announcement-item h2 {
-    margin-top: 0;
+  .sports-event h2{
+    color: rgba(38, 41, 27, 0.808)
   }
-  
-  .announcement-item p {
-    margin: 5px 0;
+  .round-image {
+    border-radius: 75%;
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Ensure the height and width are equal for a perfect circle */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+}
+  .general-announcements{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }

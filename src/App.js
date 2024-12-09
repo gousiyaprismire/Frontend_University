@@ -27,7 +27,6 @@ import RulesAndRegulations from './components/Pages/RulesAndRegulations/RulesAnd
 import AboutUs from './components/Pages/about_us/AboutUs';
 import ContactUs from './components/Pages/Contactus/ContactUs';
 import Study from './components/Pages/studyOptions/Study';
-
 import Scholarship from './components/Pages/Scholarship/Scholarship';
 import Sports from './components/Pages/Sports/Sports';
 import RegisterPage from './components/Pages/Login/Registration';
@@ -144,10 +143,7 @@ const App = () => {
               <Route path="/online-courses" element={<OnlineCourses />} />
               <Route path="/sports" element={<Sports />} />
               <Route path="/study" element={<Study />} />
-
-                  
-              {loggedIn && (
-    <Route path="/scholarship" element={<Scholarship />} /> )}
+              <Route path="/scholarship" element={<Scholarship />} />
 
               {!loggedIn && (
                 <Route path="/verification-screen" element={<Navigate to="/login" />} />

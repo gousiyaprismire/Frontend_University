@@ -30,8 +30,14 @@ import LogOut from './components/Pages/LogOut';
 import Study from './components/Pages/studyOptions/Study';
 import Scholarship from './components/Pages/Scholarship/Scholarship';
 import VerificationScreen from './components/Pages/Verification/VerificationScreen';
+<<<<<<< HEAD
 import Sports from './components/Pages/Sports/Sports';
 import 'bootstrap/dist/css/bootstrap.min.css';
+=======
+import Sports from './components/Pages/Sports';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+>>>>>>> b96bdb5fb6fcee1e4b7cb8f7a2b2cc048a230839
 
 const { Header, Content } = Layout;
 
@@ -137,7 +143,10 @@ const App = () => {
                   <Route path="/verification-screen" element={<VerificationScreen />} />
                   <Route path="/sports" element={<Sports />} />
                   <Route path="/study" element={<Study />} />
+<<<<<<< HEAD
                   
+=======
+>>>>>>> b96bdb5fb6fcee1e4b7cb8f7a2b2cc048a230839
                   {/* {loggedIn && (
                 <> */}
                   <Route path="/scholarship" element={<Scholarship />} />

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .hall-of-fame-container {
     padding: 20px;
     background-color: #f8f9fa;
@@ -42,5 +43,80 @@
     height: 300px;        
     /* object-fit: cover;      */
     border-radius: 10px;   
+=======
+
+  /* Hall of Fame Container */
+  .hall-of-fame-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  /* Title Styling */
+  .hall-of-fame-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  
+  /* Flex container for achievers */
+  .achievers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Individual Achiever Card */
+  .achiever-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  /* Image Styling for the Achiever */
+  .achiever-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Card Content */
+  .achiever-card-content {
+    padding: 15px;
+  }
+  
+  /* Name Styling */
+  .achiever-name {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 8px;
+  }
+  
+  /* Title Styling */
+  .achiever-title {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  /* Description Styling */
+  .achiever-description {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .achiever-card {
+      width: 100%;
+      max-width: 400px;
+    }
+>>>>>>> b96bdb5fb6fcee1e4b7cb8f7a2b2cc048a230839
   }
   

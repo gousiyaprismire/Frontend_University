@@ -7,7 +7,7 @@ import graduation from '../../../images/graduation.jpg';
 import renovation from '../../../images/renov.jpg';
 import sports from '../../../images/sportsevent.jpg';
 import workshop from '../../../images/workshop.png';
-import culturalEvent from '../../../images/culturalevent.jpg';
+import culturalEvent from '../../../images/cultural.jpg';
 
 const announcements = [
   { title: 'New Semester Start Date',image:newsem, content: 'The new semester will start on January 15, 2024. We are excited to welcome all students back to campus. Please ensure you have completed your registration and have all necessary materials ready. Let’s make this semester a great one!', date: '2024-01-15' },
@@ -34,18 +34,18 @@ const Announcements = () => {
       <div className='general-announcements'>
        <div className='sports-event'>
         <h2 style={{fontFamily:'Roboto'}}>Annual Sports Meet</h2>
-         <img src={sports} alt='Sports'/>
-          <p>Join us for the Annual Sports Meet on March 10, 2024. Participate in various sports activities and showcase your athletic skills. Let's make this event a memorable one!</p>
+         <img src={sports} alt='Sports' className='round-image'/>
+          <p style={{fontFamily:'Roboto'}}>Join us for the Annual Sports Meet on March 10, 2024. Participate in various sports activities and showcase your athletic skills. Let's make this event a memorable one!</p>
         </div>
         <div className='sports-event'>
         <h2 style={{fontFamily:'Roboto'}}>WorkShop</h2>
-         <img src={workshop} alt='Sports'/>
-          <p>We are excited to announce a Coding Workshop on April 5, 2024. This workshop is open to all students interested in learning the basics of programming. Register now to secure your spot! </p>
+         <img src={workshop} alt='Sports' className='round-image'/>
+          <p style={{fontFamily:'Roboto'}}>We are excited to announce a Coding Workshop on April 5, 2024. This workshop is open to all students interested in learning the basics of programming. Register now to secure your spot! </p>
         </div>
         <div className='sports-event'>
         <h2 style={{fontFamily:'Roboto'}}>CulturalEvent</h2>
-         <img src={culturalEvent} alt='Sports'/>
-          <p>Join us for the Annual Sports Meet on March 10, 2024. Participate in various sports activities and showcase your athletic skills. Let's make this event a memorable one!</p>
+         <img src={culturalEvent} alt='Sports'className='round-image'/>
+          <p style={{fontFamily:'Roboto'}}>Celebrate diversity at our Cultural Festival on May 20, 2024. Enjoy performances, food, and activities from different cultures. Everyone is welcome. This is a wonderful opportunity to learn about and appreciate the rich cultural heritage of our community. Don't miss out on the fun and festivities!</p>
         </div>
         </div>
       </>

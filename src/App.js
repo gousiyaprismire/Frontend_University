@@ -85,7 +85,7 @@ const App = () => {
 
   return (
     <Router>
-      <Layout style={{ minHeight: '100vh' }}>
+      <Layout style={{ minHeight: '100vh', flexDirection: 'column' }}>
         
         <Header
           style={{
@@ -128,7 +128,7 @@ const App = () => {
         </Header>
 
           <Sidebar collapsed={collapsed} toggleSidebar={toggleSidebar} loggedIn={loggedIn} />
-          <Content style={{ padding: '20px', backgroundColor: '#f0f2f5' }}>
+          <Content style={{ padding: '20px', backgroundColor: '#f0f2f5', width:'100vw' }}>
             <Routes>
               
               <Route path="/" element={<Welcome />} />

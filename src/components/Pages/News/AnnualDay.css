@@ -1,0 +1,28 @@
+/* AnnualDay.css */
+
+.annual-day {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .annual-day h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .annual-day-image {
+    width: 100%;
+    max-height: 750px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .annual-day-passage {
+    font-size: 1.2em;
+    line-height: 1.6;
+    /* margin: 0 auto; */
+    max-width: 1300px;
+    text-align: justify;
+  }
+  

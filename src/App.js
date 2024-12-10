@@ -35,6 +35,10 @@ import News from './components/Pages/News/News';
 import VerificationScreen from './components/Pages/Verification/VerificationScreen';
 
 import OnlineCourses from './components/Pages/OnlineCourses/OnlineCourses';
+import GymOpening from './components/Pages/News/GymOpening';
+import AnnualDay from './components/Pages/News/AnnualDay';
+import CelebratingWomeninSports from './components/Pages/News/CelebratingWomeninSports';
+import SportsandWellness from './components/Pages/News/SportsandWellness';
 const { Header, Content } = Layout;
 
 
@@ -147,7 +151,10 @@ const App = () => {
               <Route path="/scholarship" element={<Scholarship />} />
               <Route path="/jobs" element={<Jobs />} />
               <Route path="/news" element={<News />} />
-
+              <Route path="/gym-opening" element={<GymOpening/>}/>
+              <Route path="/annaul-day" element={<AnnualDay/>}/>
+              <Route path="/celebrating-women-in-sports" element={<CelebratingWomeninSports/>}/>
+              <Route path="/sports-and-wellness" element={<SportsandWellness/>}/>
               {!loggedIn && (
                 <Route path="/verification-screen" element={<Navigate to="/login" />} />
               )}

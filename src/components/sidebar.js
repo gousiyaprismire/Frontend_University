@@ -38,7 +38,7 @@ const Sidebar = () => {
     { key: '/study', icon: <ReadOutlined />, label: 'Study' },
     { key: '/scholarship', icon: <BankOutlined />, label: 'Scholarship' },
     { key: '/jobs', icon: <BankOutlined />, label: 'Jobs' },
-
+    { key: '/news', icon: <ReadOutlined />, label: 'News' },
     { key: '/online-courses', icon: <ReadOutlined />, label: 'Online Courses' },
 
   ];

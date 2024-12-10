@@ -37,6 +37,7 @@ const Sidebar = () => {
     // { key: '/contact-us', icon: <MailOutlined />, label: 'Contact Us' },
     { key: '/study', icon: <ReadOutlined />, label: 'Study' },
     { key: '/scholarship', icon: <BankOutlined />, label: 'Scholarship' },
+    { key: '/jobs', icon: <BankOutlined />, label: 'Jobs' },
 
     { key: '/online-courses', icon: <ReadOutlined />, label: 'Online Courses' },
 

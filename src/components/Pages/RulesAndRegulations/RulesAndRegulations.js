@@ -53,6 +53,31 @@ const defaultRules = [
    { rule: "Respect for College Property", 
     description: "Students should respect college property and facilities. This includes keeping classrooms, restrooms, and common areas clean and reporting any damage or maintenance issues promptly. Treat college property with care and contribute to a tidy and well-maintained campus environment.",
      image: "https://m.media-amazon.com/images/I/61zwVkFx1-L._AC_UF894,1000_QL80_.jpg" 
+    },
+    { 
+      rule: "Cyber Safety", 
+      description: "Students should practice good cyber hygiene by using strong passwords, being cautious of phishing scams, and protecting their personal information. Always log out of shared computers and report any suspicious online activity to the IT department immediately.",
+       image: "https://www.iasgyan.in//ig-uploads/images//image01736.jpg"
+       },
+     { 
+      rule: "Academic Integrity",
+     description: "Students must adhere to principles of academic integrity, including avoiding plagiarism, cheating, and other forms of academic dishonesty. Properly cite all sources and complete assignments independently unless collaboration is explicitly allowed.", 
+     image: "https://media.licdn.com/dms/image/v2/D4D12AQGg30Jl7KRESg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1722943496556?e=2147483647&v=beta&t=T6WV47QPWVk69-mNoht1KrLG1HfrfOzyKpPl52s6gn8" 
+    }, 
+    { 
+      rule: "Punctuality", 
+      description: "Students are expected to arrive on time for all classes, meetings, and events. Punctuality is a key aspect of professionalism and respect for others' time. Consistently arriving late can disrupt the learning environment and negatively impact your academic record.", 
+      image: "https://thumbs.dreamstime.com/b/punctuality-concept-businesswoman-businessman-looking-50330901.jpg" 
+    },
+    { 
+      rule: "Mental Health Support",
+       description: "Students are encouraged to prioritize their mental health. The college offers counseling services and mental health resources to support students. Do not hesitate to reach out for help if you're feeling overwhelmed or stressed. Regular self-care and seeking support when needed are key to maintaining mental well-being.",
+       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHGq1PwnIZoqYERNXaprH6ph83_lcS4HfeKw&s" 
+      },
+     { 
+      rule: "Substance Abuse Policy", 
+      description: "The use, possession, or distribution of illegal substances on campus is strictly prohibited. Students found violating this policy will face severe disciplinary actions. The college provides support and resources for those struggling with substance abuse. Encourage a safe and healthy environment by following the college's substance abuse policy.",
+     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-EkPNpOHRInkvZUApKT1RYL5yEAG4TsDuCZ8y61nKN2tndLDcPef5SPVikiEK4B9gRbQ&usqp=CAU" 
     }
 ];
 

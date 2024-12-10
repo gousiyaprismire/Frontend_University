@@ -13,41 +13,43 @@
   padding-top: 50px;  
   border-radius: 25px;
 }
- 
+
 .contact-us h2 {
   font-size: 2.5rem;
   margin-bottom: 5px;
   margin-top: 0px;
   z-index: 10;  
-  text-align: left;
+  text-align: left; 
   align-items: center;
   position: relative;
   color: white;
-  margin-left: 175px;
+  margin-left: 175px; 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
- 
+
 .contact-us form {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6); 
   padding: 30px;
   border-radius: 10px;
   width: 100%;
   max-width: 500px;
-  z-index: 10;
+
+  z-index: 10; 
   margin-top: 0px;
 }
- 
+
+
 .form-group {
   margin-bottom: 20px;
   margin-top: -20px;
 }
- 
+
 label {
   display: block;
   margin-bottom: 5px;
   font-size: 1rem;
 }
- 
+
 input, textarea {
   width: 100%;
   padding: 10px;
@@ -58,12 +60,12 @@ input, textarea {
   font-size: 1rem;
   box-sizing: border-box;
 }
- 
+
 textarea {
   height: 150px;
   resize: vertical;
 }
- 
+
 button.submit-btn {
   width: 100%;
   padding: 15px;
@@ -74,11 +76,12 @@ button.submit-btn {
   font-size: 1.2rem;
   cursor: pointer;
 }
- 
+
 button.submit-btn:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; 
 }
- 
+
+
 .submission-status {
   text-align: center;
   margin-top: 20px;
@@ -155,10 +158,12 @@ button.submit-btn:hover {
   font-weight: bold;  
   border-radius: 5px;  
   margin-left: 10px;
+
   margin-top: 5px;
   width: auto;  
   max-width: 150px;  
 }
+
  
 .view-large-map-link:hover {
   background-color: rgba(0, 0, 0, 0.5);
@@ -182,37 +187,44 @@ button.submit-btn:hover {
   padding-left: 70px;
   line-height: 1.5;
   font-size: 1.2em;
+  font-family: 'Roboto';
+ 
 }
  
-.info-icon {
-  width: 50px;
-  height: 50px;
+.info-icons {
+  width: 50px !important; 
+  height: 50px !important;
   margin-right: 10px;
 }
+
  
 .address-container {
   max-width: 90%;
+  height: 230px;
 }
  
+
 .address-text {
   margin: 0;
   line-height: 1.5;
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
+
  
 }
  
-h3, h4 {
+
+
+.keepIntouch1{
+  font-size: 2rem;
   margin: 0;
   padding-left: 50px;
 }
- 
-h4 {
+.keepIntouch{
   font-size: 1.5rem;
-}
- 
-h3 {
-  font-size: 2rem;
+  margin: 0;
+  padding-left: 50px;
+
 }
 #gmail{
   font-family: 'Roboto', sans-serif;

@@ -117,7 +117,7 @@ const Scholarship = () => {
         </Carousel>
       </div>
 
-      <div style={{ padding: "20px", backgroundColor: "#f8f9fa", minHeight: "100vh", textAlign: 'center' }}>
+      <div style={{ padding: "20px", backgroundColor: "#f8f9fa", minHeight: "100vh", textAlign: 'center'}}>
         <h1 variant="h4" align="center" gutterBottom>
           Scholarships at Our University
         </h1>

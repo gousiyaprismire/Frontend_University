@@ -1,0 +1,98 @@
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+  background-image: url('/public/login3.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f0f2f5; 
+}
+
+
+.register-content h2 {
+  color: #fff; 
+}
+
+.register-content span {
+  font-size: 16px;
+  color: #eee; 
+}
+
+
+.register-form {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.9); 
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.register-form h4 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+.ant-form-item-label > label {
+  font-weight: 600;
+  color: #555;
+}
+
+.ant-input,
+.ant-input-password {
+  height: 40px;
+  border-radius: 4px;
+}
+
+.ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.ant-btn-primary:hover {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+
+.ant-btn-primary:focus {
+  background-color: #096dd9;
+  border-color: #096dd9;
+}
+
+
+.ant-input {
+  padding: 8px 12px;
+}
+
+.ant-form-item {
+  margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .register-form {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    padding: 15px;
+  }
+
+  .register-form {
+    padding: 15px;
+  }
+}

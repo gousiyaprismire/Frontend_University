@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './FacultyInfo.css';
+import Footer from '../Footer/Footer';
 
 const defaultFaculty = [
   {
@@ -101,10 +102,45 @@ const FacultyInfo = () => {
         console.error('Error fetching faculty data:', error);
       });
   }, []);
+  
+  const hod = {
+    name: "Will Smith",
+    designation: "Head of the Department",
+    biodata: "Will Smith is an accomplished academic and educator with over 15 years of experience in the field of Applied Physics. He currently serves as the Head of the Department of Physics, overseeing faculty development, research initiatives, and academic programs. Will specializes in experimental physics, with a particular focus on renewable energy systems and sustainable technologies. He has led numerous pioneering projects that have significantly advanced clean energy solutions.",
+    email: "will.smith@college.com",
+    image: "https://img.freepik.com/premium-photo/portrait-senior-teacher-sitting-desk-classroom-teacher-best-friend-learners-school-teach_265223-80232.jpg"
+  };
 
   return (
     <div className="faculty-container">
       <h2>Faculty Info</h2>
+      <div className="carousel-container">
+        <Carousel showThumbs={false} autoPlay infiniteLoop>
+          <div>
+            <img src="https://t3.ftcdn.net/jpg/08/60/24/04/360_F_860240482_eEgkLFXyY5SKnIUT9d7vVSeR0IZpwz6S.jpg" alt="Carousel Image 1" />
+          </div>
+          <div>
+            <img src="https://youthde.com/wp-content/uploads/2024/11/iStock-1142918319_WENR_Ranking_740_430.jpg" alt="Carousel Image 2" />
+          </div>
+          <div>
+            <img src="https://www.uni-wuerzburg.de/fileadmin/_processed_/9/c/csm_Programmes-at-the-University-of-Wuerzburg_aa2de5617f.jpg" alt="Carousel Image 3" />
+          </div>
+        </Carousel>
+      </div>
+      <div className="faculty-student-bonding">
+         <p>Our faculty members foster strong, collaborative relationships with students by providing mentorship and guidance both academically and personally. We prioritize open communication, ensuring that students feel supported and encouraged throughout their academic journey. Beyond the classroom, our faculty play a key role in students' growth, offering career advice, personal development, and a sense of community within the college.</p>
+     </div>
+      <div className="hod-info">
+  <div className="hod-image">
+    <img src={hod.image} alt={hod.name} className="hod-image-circle" />
+  </div>
+  <div className="hod-details">
+    <h3>{hod.name}</h3>
+    <p><strong>Designation:</strong>{hod.designation}</p>
+    <p><strong>Biodata:</strong>{hod.biodata}</p>
+    <p><strong>Email: </strong><a href={`mailto:${hod.email}`}>{hod.email}</a></p>
+  </div>
+</div>
       <div className="card-container">
         {faculty.map((facultyMember, index) => (
           <div key={index} className="card">
@@ -135,6 +171,7 @@ const FacultyInfo = () => {
         <h3>About Our Faculty</h3>
         <p>Our faculty members are renowned experts in their fields, with decades of combined experience in academia and industry. They are dedicated to fostering a supportive learning environment and encouraging students to reach their full potential. Each professor brings unique insights and a wealth of knowledge, making our institution a hub of innovation and excellence. Our faculty actively engage in cutting-edge research, contributing to advancements in their respective disciplines. They also collaborate with industry partners to ensure that the curriculum remains relevant and up-to-date. Their commitment to academic excellence is reflected in their numerous publications, awards, and recognitions. Beyond the classroom, our faculty members serve as mentors, advisors, and role models to our students. They are passionate about education and go above and beyond to inspire and motivate the next generation of leaders and innovators.</p>
       </div>
+    { <Footer/> }
     </div>
   );
 };

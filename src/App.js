@@ -3,40 +3,37 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'r
 import { Layout, Menu, Button } from 'antd';
 import {
   HomeOutlined,
-  AppstoreOutlined,
-  ReadOutlined,
-  TeamOutlined,
-  NotificationOutlined,
-  StarOutlined,
-  VerifiedOutlined,
-  FileProtectOutlined,
+
   InfoCircleOutlined,
   MailOutlined,
   LoginOutlined,
   LogoutOutlined,
-  BankOutlined,
+  
 } from '@ant-design/icons';
 import Sidebar from './components/sidebar';
-import LoginPage from './components/Pages/Login/LoginPage';
+import LoginPage from './components/Pages/Login/Login';
 import Welcome from './components/Pages/Login/Welcome';
 import CollegeMap from './components/Pages/CollegeMaps/CollegeMapPage';
 import FacultyInfo from './components/Pages/FacultyInfo/FacultyInfo';
 import Announcements from './components/Pages/Annoucements/Announcements';
-import HallOfFame from './components/Pages/HallOfFame';
+import HallOfFame from './components/Pages/HallOfFame/HallOfFame';
 import RulesAndRegulations from './components/Pages/RulesAndRegulations/RulesAndRegulations';
 import AboutUs from './components/Pages/about_us/AboutUs';
 import ContactUs from './components/Pages/Contactus/ContactUs';
-import LogOut from './components/Pages/LogOut';
+import Admissions from './components/Pages/Admissions/Admissions';
 import Study from './components/Pages/studyOptions/Study';
 import Scholarship from './components/Pages/Scholarship/Scholarship';
-import VerificationScreen from './components/Pages/Verification/VerificationScreen';
 import Sports from './components/Pages/Sports/Sports';
+import RegisterPage from './components/Pages/Login/Registration';
+import News from './components/Pages/News/News';
+import VerificationScreen from './components/Pages/Verification/VerificationScreen';
 
-import AdminLogin from './components/Pages/Admin/AdminLogin';
-import AdminRegister from './components/Pages/Admin/AdminRegister';
 import StudyDetail from './components/Pages/studyOptions/StudyDetail';
-
+import OnlineCourses from './components/Pages/OnlineCourses/OnlineCourses';
+import AdminRegistration from './components/Pages/Login/AdminRegistration';
+import AdminLogin from './components/Pages/Login/AdminLogin';
 const { Header, Content } = Layout;
+
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false); 
@@ -84,14 +81,14 @@ const App = () => {
 
   return (
     <Router>
-      <Layout style={{ minHeight: '100vh' }}>
+      <Layout style={{ minHeight: '100vh', flexDirection: 'column' }}>
         
         <Header
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            backgroundColor: '#f5f5dc', // Beige color
+            backgroundColor: '#f5f5dc', 
           }}
         >
           <div
@@ -108,12 +105,12 @@ const App = () => {
           <TopMenu />
           {!loggedIn && (
             <Button
-            type="primary"
-            icon={<LoginOutlined />}
-            // onClick={() => window.location.href = '/admin-login'} 
-          >
-            SignIn as Admin
-          </Button>
+              type="primary"
+              icon={<LoginOutlined />}
+              onClick={() => window.location.href = '/Adminlogin'}
+            >
+              SignIn as Admin
+            </Button>
           )}
           &nbsp;
           {!loggedIn && (
@@ -127,16 +124,15 @@ const App = () => {
           )}
         </Header>
 
-        <Layout>
-          
           <Sidebar collapsed={collapsed} toggleSidebar={toggleSidebar} loggedIn={loggedIn} />
-
-          
-          <Content style={{ padding: '20px', backgroundColor: '#f0f2f5' }}>
+          <Content style={{ padding: '20px', backgroundColor: '#f0f2f5', width:'100vw' }}>
             <Routes>
               
               <Route path="/" element={<Welcome />} />
               <Route path="/login" element={<LoginPage setLoggedIn={setLoggedIn} />} />
+              <Route path="/adminlogin" element={<AdminLogin setLoggedIn={setLoggedIn} />} />
+              <Route path="/register" element={<RegisterPage setLoggedIn={setLoggedIn} />} />
+              <Route path="/adminregister" element={<AdminRegistration setLoggedIn={setLoggedIn} />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/contact-us" element={<ContactUs />} />              
               <Route path="/college-map" element={<CollegeMap />} />
@@ -145,12 +141,10 @@ const App = () => {
               <Route path="/hall-of-fame" element={<HallOfFame />} />
               <Route path="/rules-and-regulations" element={<RulesAndRegulations />} />
               <Route path="/verification-screen" element={<VerificationScreen />} />
+              <Route path="/online-courses" element={<OnlineCourses />} />
               <Route path="/sports" element={<Sports />} />
               <Route path="/study" element={<Study />} />
 
-
-              {/* <Route path="/admin-login" element={<AdminLogin />} />
-              <Route path="/admin-register" element={<AdminRegister />} /> */}
               <Route path="/" element={<Study />} />
               <Route path="/study/:type" element={<StudyDetail />} />
               
@@ -161,13 +155,17 @@ const App = () => {
                 </>
               )}
 
+              <Route path="/scholarship" element={<Scholarship />} />
+              <Route path="/admissions" element={<Admissions />} />
+              <Route path="/news" element={<News />} />
+
+
               {!loggedIn && (
                 <Route path="/verification-screen" element={<Navigate to="/login" />} />
               )}
             </Routes>
           </Content>
         </Layout>
-      </Layout>
     </Router>
   );
 };

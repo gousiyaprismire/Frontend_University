@@ -1,128 +1,214 @@
-.student-table-container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-  }
-  
-  .student-table-header {
-    text-align: center;
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .student-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .student-table th {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 15px;
-    text-align: left;
-  }
-  
-  .student-table tr {
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .student-table td {
-    padding: 12px 15px;
-    text-align: left;
-  }
-  
-  .student-table img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .student-table button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .student-table button:hover {
-    background-color: #45a049;
-  }
-  
-  .student-details-container {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .student-details-header {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #333;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 10px;
-    font-weight: bold;
-    text-indent:2px 2px 5px rgba(0, 0, 0, 0.4) ;
-  }
-  
-  .student-details-container div {
-    font-size: 1.1rem;
-    margin: 5px 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline; 
-  }
-  
-  .student-details-container div strong {
-    color: #000000;
+.app-container {
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+}
 
-    font-weight: bold;
-    margin-right: 10px; 
-    padding-left: 300px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+.verificationscreen-h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 15px;
+  text-align: center;
+}
+
+.student-table-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Roboto', sans-serif;
+}
+
+.student-table th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 15px;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+}
+
+.student-table tr {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Roboto', sans-serif;
+}
+
+.student-table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+}
+
+.student-table img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.student-table button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.student-table button:hover {
+  background-color: #45a049;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.student-details-container {
+  background-color: #fff;
+  padding: 15px;  
+  border-radius: 8px;
+  max-width: 500px; 
+  width: 80%;  
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.student-details-header {
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: bold;
+  border-bottom: 2px solid #4CAF50; 
+  padding-bottom: 10px;
+  margin-bottom: 10px;  
+  text-align: center;
+}
+
+
+.student-details-container div {
+  font-size: 1rem; 
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;  
+  gap: 10px;  
+  width: 100%;  
+}
+
+
+.student-details-container div strong {
+  color: #333;
+  font-weight: bold;
+  min-width: 100px;  
+}
+
+
+.student-details-container div span {
+  color: #555;  
+}
+
+
+.approval-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;  
+}
+
+
+.approval-buttons button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.approval-buttons button:hover {
+  opacity: 0.9;
+}
+
+
+.approval-buttons button:first-child {
+  background-color: #4CAF50;
+}
+
+.approval-buttons button:first-child:hover {
+  background-color: #45a049;
+}
+
+
+.approval-buttons button:last-child {
+  background-color: #f44336; 
+}
+
+.approval-buttons button:last-child:hover {
+  background-color: #d32f2f;
+}
+
+
+.student-details-back-btn-container {
+  margin-top: 15px; 
+  display: flex;
+  justify-content: center;
+}
+
+.student-details-back-btn {
+  padding: 10px 18px;
+  background-color: #2196F3; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.student-details-back-btn:hover {
+  background-color: #1976D2;
+}
+
+
+@media (max-width: 768px) {
+  .student-details-container {
+    width: 90%;  
+    padding: 15px;
   }
-  
-  .student-details-container div span {
-    color: #333;
+
+  .student-details-header {
+    font-size: 1.4rem;
   }
-  
-  .student-details-back-btn-container {
-    display: flex;
-    justify-content: center;
+
+  .student-details-container div {
+    font-size: 0.95rem;
   }
-  
+
+  .approval-buttons button {
+    padding: 8px 15px;
+    font-size: 0.95rem;
+  }
+
   .student-details-back-btn {
-    padding: 10px 20px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 10px 18px;
     font-size: 1rem;
-    transition: background-color 0.3s;
-    margin-left: 340px;
   }
-  
-  .student-details-back-btn:hover {
-    background-color: #d32f2f;
-  }
-  
+}

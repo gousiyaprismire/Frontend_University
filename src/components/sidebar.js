@@ -13,7 +13,8 @@ import {
   LogoutOutlined,
   ReadOutlined,
   BankOutlined,
-} from '@ant-design/icons';
+  AppstoreAddOutlined, 
+} from '@ant-design/icons'; 
 import { useNavigate } from 'react-router-dom';
 
 const { Sider } = Layout;
@@ -34,9 +35,12 @@ const Sidebar = () => {
     { key: '/rules-and-regulations', icon: <FileProtectOutlined />, label: 'Rules & Regulations' },
     // { key: '/about-us', icon: <InfoCircleOutlined />, label: 'About Us' },
     // { key: '/contact-us', icon: <MailOutlined />, label: 'Contact Us' },
-    { key: '/logout', icon: <LogoutOutlined />, label: 'LogOut' },
     { key: '/study', icon: <ReadOutlined />, label: 'Study' },
     { key: '/scholarship', icon: <BankOutlined />, label: 'Scholarship' },
+    { key: '/admissions', icon: <ReadOutlined />, label: 'Admissions' },
+    { key: '/news', icon: <ReadOutlined />, label: 'News' },
+    { key: '/online-courses', icon: <ReadOutlined />, label: 'Online Courses' },
+
   ];
 
   const toggleMenu = () => {

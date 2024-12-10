@@ -1,18 +1,9 @@
-.container{
-    padding: 20px;
-    text-align: center;
-    align-items: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
-}
-h1{
+.location-container h1{
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
-.container h3{
-    font-size: 1.7rem;
-    margin-bottom: 20px;
-}
-img{
+
+.location-container img{
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
@@ -20,11 +11,8 @@ img{
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
-img:hover{
-    transform: scale(1.01);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-p{
+
+.location-container p{
     font-size: 1.7rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri;
     margin-top: -10px;
@@ -49,3 +37,237 @@ p{
 iframe{
     margin-bottom: 20px;
 }
+.nav-tabs{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.nav-tabs button{
+    background-color: #f0f0f0;
+    border: 1px solid #cf8484;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.nav-tabs button:hover{
+    background-color: #ecdbdb56;
+}
+.nav-tabs button.active{
+    background-color: #cf8484;
+    color: black;
+    border-color:beige ;
+}
+.university-location{
+    background-color: rgb(211, 211, 145);
+    border: #cf8484;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 20px 0;
+    line-height: 1.6;
+}
+.university-location p{
+    font-size: large;
+    font-family: 'Roboto', sans-serif ;
+}
+.library1{
+    margin: 40px;
+    display: flex;
+    align-items: flex-start;
+    text-align:right;
+    margin-top: 20px;
+}
+.library1 p{
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: #1f1d1d;
+    margin: 0;
+}
+.library1 img{
+    width: 50%;
+   height: 300px;
+}
+.library2{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.library2 p{
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: #1f1d1d;
+    margin: 0;
+    flex: 1;
+}
+.library2 img{
+    max-width: 40%;
+    border-radius: 10px;
+}
+.library-imagerow {
+    display: flex; 
+    background-color: rgba(159, 162, 163, 0.192);
+    border-radius: 15px;
+    padding: 15px 10px;
+    justify-content: space-around; 
+    align-items: center;
+    margin: 40px 50px;
+  }
+  .library-imagerow img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .library3{
+    background-color:beige;
+    padding: 40px;
+    border-radius: 30px;
+  }
+  .library3 p{
+    font-size: 16px;
+    font-family: 'Roboto';
+  }
+.library-footer {
+    background-color: #0a0909;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+  }
+  
+  .library-footer p {
+    margin: 5px 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #a7a3a3;
+  } 
+  .library-footer a {
+    color: #007bff;
+    text-decoration: none;
+  } 
+  .library-footer a:hover {
+    text-decoration: underline;
+  }
+  .admin-block {
+    display: flex; 
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    padding: 20px; 
+    margin: 20px 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+  }
+  
+  .admin-img {
+    max-width: 50%;
+    height: auto; 
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .admin-content {
+    flex: 1; 
+  }
+  
+  .admin-text {
+    color: #333;
+    margin-bottom: 5px;
+    font-family: 'Roboto';
+    font-size: 18px;
+  }
+  
+  .admin-key {
+    color: #333; 
+    margin-bottom: 5px; 
+  }
+  
+  .admin-key strong {
+    color: #007bff; 
+  }
+  .admin-images{
+    display: flex;
+    justify-content: space-around;
+    gap:30px;
+  }
+  .admin-images img{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .contact-info{
+    background-color: rgb(92, 92, 134);
+    color: whitesmoke;
+    font-family: 'Roboto';
+  }
+  .contact{
+    display: flex;
+    background-color: white;
+    padding: 20px 5px;
+  }
+  .contact p{
+    font-size: 1.6;
+    font-family: 'Roboto';
+  }
+  .medical1 {
+    background-color: #f9f9f9; /* Light grey background */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Space inside the box */
+    margin: 20px 0; /* Space outside the box */
+    font-family: 'Roboto', sans-serif; /* Font style */
+    line-height: 1.6; /* Line spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .medical1 p {
+    margin: 10px 0; /* Space above and below paragraphs */
+    color: #333; /* Dark grey text color */
+  }
+  
+  .medical1 p strong {
+    color: #007bff; /* Blue color for strong text */
+  }
+  
+  .medical-images {
+    display: flex; /* Use flexbox to arrange images side by side */
+    justify-content: space-between; /* Space images evenly */
+    gap: 20px; /* Space between images */
+    margin: 15px 0; /* Space above and below the image container */
+  }
+  
+  .medical-images img {
+    width: calc(50% - 10px); /* Adjust the width to fit two images in a row with gap */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  .parking{
+    background-color: #c5c1c1;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px;
+  }
+  .parking-text{
+    font-size: 18px;
+    font-family: 'Roboto';
+    padding: 0;
+  }
+  .parking-images {
+    display: flex; /* Use flexbox to arrange images side by side */
+    justify-content: space-between; /* Space images evenly */
+    gap: 20px; /* Space between images */
+    margin: 20px 0; /* Space above and below the image container */
+    padding: 10px;
+  }
+  
+  .parking-images img {
+    width: calc(33.33% - 13.33px); /* Adjust the width to fit three images in a row with gap */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }

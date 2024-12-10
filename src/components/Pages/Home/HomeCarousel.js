@@ -33,23 +33,20 @@ const HomeCarousel = () => {
   const director = {
     name: 'Dr. Jane Doe',
     position: 'Director of the University',
-    bio: 'Dr. Doe has been leading the university with a focus on academic excellence and innovation. With over 20 years in higher education, he has made significant contributions to the growth and success of the university.',
+    bio: 'Dr. Doe has been leading the university with a focus on academic excellence and innovation. With over 20 years in higher education, she has made significant contributions to the growth and success of the university.',
     image: '/prof.jpg',
   };
 
   const achievements = [
     {
-     
       title: 'Top University in Research',
       description: 'Ranked #1 in research and innovation in 2023.',
     },
     {
-      
       title: 'State-of-the-Art Facilities',
       description: 'Newly inaugurated labs and libraries for all disciplines.',
     },
     {
-      
       title: 'Global Outreach Programs',
       description: 'Expanding student exchange programs to 15+ countries.',
     },
@@ -65,7 +62,6 @@ const HomeCarousel = () => {
     {
       student: 'Keerthi',
       course: 'Computer Science',
-      
       image: '/stu1.jpg',
       feedback: 'The vibrant campus life and supportive faculty helped me achieve my dreams.',
     },
@@ -108,33 +104,29 @@ const HomeCarousel = () => {
         </Row>
       </div>
 
-     
       <div className="achievements-section">
-        <Title level={2} style={{ textAlign: 'center', margin: '40px 0' }}>
-          Recent Achievements
-        </Title>
-        <Row gutter={[16, 16]} justify="center">
-          {achievements.map((achievement, index) => (
-            <Col span={6} key={index}>
-              <Card
-                hoverable
-                
-              >
-                <Card.Meta title={achievement.title} description={achievement.description} />
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </div>
+  <Title level={2} style={{ textAlign: 'center', marginBottom: '20px' }}>
+    Recent Achievements
+  </Title>
+  <Row gutter={[24, 24]} justify="center">
+    {achievements.map((achievement, index) => (
+      <Col xs={24} sm={12} md={8} key={index}>
+        <Card hoverable style={{ textAlign: 'center', padding: '20px' }}>
+          <Card.Meta title={achievement.title} description={achievement.description} />
+        </Card>
+      </Col>
+    ))}
+  </Row>
+</div>
 
-   
+
       <div className="testimonials-section" style={{ background: '#f5f5f5', padding: '40px 0' }}>
         <Title level={2} style={{ textAlign: 'center', marginBottom: '40px' }}>
           What Our Students Say
         </Title>
-        <Row gutter={[16, 16]} justify="center">
+        <Row gutter={[16, 16]} justify="center" style={{ margin: 0 }}>
           {testimonials.map((testimonial, index) => (
-            <Col span={8} key={index}>
+            <Col xs={24} sm={12} md={8} key={index}>
               <Card>
                 <Row>
                   <Col span={8}>
@@ -160,7 +152,6 @@ const HomeCarousel = () => {
         </Row>
       </div>
 
-     
       <Footer style={{ backgroundColor: '#001529', color: '#fff', padding: '20px 0', marginTop: '50px' }}>
         <Row justify="center" align="middle">
           <Col span={12} style={{ textAlign: 'center' }}>

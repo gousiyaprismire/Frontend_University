@@ -1,13 +1,11 @@
 import React from 'react';
 import './Study.css'; 
-import undergraduate from '../../../images/undergraduate.png';
-import graduate from '../../../images/graduate.png';
+import { Link } from 'react-router-dom';
 
-const Study = () => {
+const Study = () => { 
   return (
     <>
       <div className="study-container">
-        <h1 className="study-heading">Study Options</h1>
         <div id="carouselExampleDark" className="carousel carousel-light slide" data-bs-ride="carousel">
           <div className="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -61,9 +59,104 @@ const Study = () => {
         proactive in pursuing their aspirations.
       </p>
 
-      <h3>Choose Your Career...</h3>
-      
-    </>
+<br></br>
+
+      <div className="study-container">        
+        <h2>Study at Dayton University</h2>
+     
+        <div className="study-options-container">
+          <div className="study-option-item">
+            <Link to="/study/undergraduate">
+              <img 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT7dCfmk1n57ukb0BVt9SsZRsN-rEM6F2tPw&s" 
+                alt="Undergraduate" 
+                className="study-option-logo" 
+              />
+              <p className="study-option-name">Undergraduate</p>
+            </Link>
+          </div>
+          <div className="study-option-item">
+            <Link to="/study/postgraduate">
+              <img 
+                src="https://w7.pngwing.com/pngs/739/4/png-transparent-graduation-ceremony-graduate-university-academic-degree-student-master-s-degree-student-thumbnail.png" 
+                alt="Post Graduate" 
+                className="study-option-logo" 
+              />
+              <p className="study-option-name">Post Graduate</p>
+            </Link>
+          </div>
+          <div className="study-option-item">
+            <Link to="/study/studyabroad">
+              <img 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmFsyt3SNSIB11YbDxBbsgnfuOQ_ITbDVIqU50GhKUZ6EakMqa4JoJEoUa4bNpY-015ZY&usqp=CAU" 
+                alt="Study Abroad" 
+                className="study-option-logo" 
+              />
+              <p className="study-option-name">Study Abroad</p>
+            </Link>
+          </div>
+          <div className="study-option-item">
+            <Link to="/study/shortcourses">
+              <img 
+                src="https://static.vecteezy.com/system/resources/previews/041/041/344/non_2x/courses-logo-icon-brand-identity-sign-symbol-template-vector.jpg" 
+                className="study-option-logo" 
+              />
+              <p className="study-option-name">Short Courses</p>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <h2>Discover Study Together</h2><br></br>
+     <div className="study-together-section">
+  <div className="study-together-item large">
+    <img src="https://images.herzindagi.info/image/2020/Sep/study-room.jpg" alt="Study Room" />
+    <div className="study-together-overlay">
+      <h4>Study Rooms</h4>
+      <p>Quiet and well-equipped spaces designed for individual and focused learning.</p>
+    </div>
+  </div>
+  <div className="study-together-item">
+    <img src="https://t3.ftcdn.net/jpg/06/98/15/28/360_F_698152816_iofj0EaoJp6jjKsHkMSoAEawmbKg3at0.jpg" alt="Group Studies" />
+    <div className="study-together-overlay">
+      <h4>Group Studies</h4>
+      <p>Collaborative learning sessions with peers to discuss and solve problems together.</p>
+    </div>
+  </div>
+  <div className="study-together-item">
+    <img src="https://img.freepik.com/free-vector/flat-working-day-scene-illustration_23-2148960100.jpg?semt=ais_hybrid" alt="Free Tutors" />
+    <div className="study-together-overlay">
+      <h4>Free Tutors</h4>
+      <p>Accessible tutoring programs offering one-on-one guidance for academic success.</p>
+    </div>
+  </div>
+  
+  <div className="study-together-item">
+    <img src="https://cdn.hswstatic.com/gif/community-events-ideas.jpg" alt="Community Events" />
+    <div className="study-together-overlay">
+      <h4>Community Events</h4>
+      <p>Engage in workshops, seminars, and activities that foster learning and networking.</p>
+    </div>
+  </div>
+  <div className="study-together-item">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/SanDiegoCityCollegeLearningResource_-_bookshelf.jpg/1200px-SanDiegoCityCollegeLearningResource_-_bookshelf.jpg" alt="Library Zones" />
+    <div className="study-together-overlay">
+      <h4>Library Zones</h4>
+      <p>Dedicated areas in libraries with diverse resources and a conducive environment for studying.</p>
+    </div>
+  </div>
+  <div className="study-together-item">
+    <img src="https://vibe.us/blog/10-positive-aspects-to-distance-learning/cover_hu3d03a01dcc18bc5be0e67db3d8d209a6_184197_1280x0_resize_q90_h2_lanczos.fb14c134342d2bea0403db653637a3ce725f63e353d3537016bf81f05e1367bb.webp" alt="Online Learning" />
+    <div className="study-together-overlay">
+      <h4>Online Learning Platforms</h4>
+      <p>Access courses and materials from global institutions right from your home.</p>
+    </div>
+  </div>
+
+ 
+</div>
+
+</>
   );
 };
 

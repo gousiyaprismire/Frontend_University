@@ -3,18 +3,12 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'r
 import { Layout, Menu, Button } from 'antd';
 import {
   HomeOutlined,
-  AppstoreOutlined,
-  ReadOutlined,
-  TeamOutlined,
-  NotificationOutlined,
-  StarOutlined,
-  VerifiedOutlined,
-  FileProtectOutlined,
+
   InfoCircleOutlined,
   MailOutlined,
   LoginOutlined,
   LogoutOutlined,
-  BankOutlined,
+  
 } from '@ant-design/icons';
 import Sidebar from './components/sidebar';
 import LoginPage from './components/Pages/Login/Login';
@@ -26,7 +20,7 @@ import HallOfFame from './components/Pages/HallOfFame/HallOfFame';
 import RulesAndRegulations from './components/Pages/RulesAndRegulations/RulesAndRegulations';
 import AboutUs from './components/Pages/about_us/AboutUs';
 import ContactUs from './components/Pages/Contactus/ContactUs';
-import Jobs from './components/Pages/Jobs/Jobs'
+import Admissions from './components/Pages/Admissions/Admissions';
 import Study from './components/Pages/studyOptions/Study';
 import Scholarship from './components/Pages/Scholarship/Scholarship';
 import Sports from './components/Pages/Sports/Sports';
@@ -34,11 +28,17 @@ import RegisterPage from './components/Pages/Login/Registration';
 import News from './components/Pages/News/News';
 import VerificationScreen from './components/Pages/Verification/VerificationScreen';
 
+import StudyDetail from './components/Pages/studyOptions/StudyDetail';
 import OnlineCourses from './components/Pages/OnlineCourses/OnlineCourses';
+
 import GymOpening from './components/Pages/News/GymOpening';
 import AnnualDay from './components/Pages/News/AnnualDay';
 import CelebratingWomeninSports from './components/Pages/News/CelebratingWomeninSports';
 import SportsandWellness from './components/Pages/News/SportsandWellness';
+
+import AdminRegistration from './components/Pages/Login/AdminRegistration';
+import AdminLogin from './components/Pages/Login/AdminLogin';
+
 const { Header, Content } = Layout;
 
 
@@ -114,6 +114,7 @@ const App = () => {
             <Button
               type="primary"
               icon={<LoginOutlined />}
+              onClick={() => window.location.href = '/Adminlogin'}
             >
               SignIn as Admin
             </Button>
@@ -136,7 +137,9 @@ const App = () => {
               
               <Route path="/" element={<Welcome />} />
               <Route path="/login" element={<LoginPage setLoggedIn={setLoggedIn} />} />
+              <Route path="/adminlogin" element={<AdminLogin setLoggedIn={setLoggedIn} />} />
               <Route path="/register" element={<RegisterPage setLoggedIn={setLoggedIn} />} />
+              <Route path="/adminregister" element={<AdminRegistration setLoggedIn={setLoggedIn} />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/contact-us" element={<ContactUs />} />              
               <Route path="/college-map" element={<CollegeMap />} />
@@ -148,13 +151,26 @@ const App = () => {
               <Route path="/online-courses" element={<OnlineCourses />} />
               <Route path="/sports" element={<Sports />} />
               <Route path="/study" element={<Study />} />
+
+              <Route path="/" element={<Study />} />
+              <Route path="/study/:type" element={<StudyDetail />} />
+              
+                  
+              {loggedIn && (
+                <>
+                  <Route path="/scholarship" element={<Scholarship />} />
+                </>
+              )}
+
               <Route path="/scholarship" element={<Scholarship />} />
-              <Route path="/jobs" element={<Jobs />} />
+              <Route path="/admissions" element={<Admissions />} />
               <Route path="/news" element={<News />} />
+
               <Route path="/gym-opening" element={<GymOpening/>}/>
               <Route path="/annaul-day" element={<AnnualDay/>}/>
               <Route path="/celebrating-women-in-sports" element={<CelebratingWomeninSports/>}/>
               <Route path="/sports-and-wellness" element={<SportsandWellness/>}/>
+
               {!loggedIn && (
                 <Route path="/verification-screen" element={<Navigate to="/login" />} />
               )}

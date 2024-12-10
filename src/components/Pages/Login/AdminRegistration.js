@@ -6,13 +6,13 @@ import './Registration.css';
 const { Content } = Layout;
 const { Title, Text } = Typography;
 
-const RegisterPage = () => {
+const AdminRegistration = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
 
   const handleSubmit = (values) => {
     message.success('Registration successful! Redirecting to login page...');
-    navigate('/login');
+    navigate('/Adminlogin');
   };
 
   return (
@@ -37,7 +37,7 @@ const RegisterPage = () => {
               style={{ maxWidth: '400px' }}
             >
 
-             <Form.Item
+<Form.Item
                 label="Full Name"
                 name="Fullname"
                 rules={[{ required: true, message: 'Please enter your Fullname!' }]}
@@ -64,9 +64,9 @@ const RegisterPage = () => {
               </Form.Item>
 
               <Form.Item
-                label="Student Id"
-                name="StudentId"
-                rules={[{ required: true, message: 'Please enter your Student Id!' }]}
+                label="Admin Id"
+                name="AdminId"
+                rules={[{ required: true, message: 'Please enter your Admin Id!' }]}
               >
                 <Input placeholder="Enter your mobile number" />
               </Form.Item>
@@ -114,4 +114,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default AdminRegistration;

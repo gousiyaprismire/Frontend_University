@@ -32,6 +32,10 @@ import Scholarship from './components/Pages/Scholarship/Scholarship';
 import VerificationScreen from './components/Pages/Verification/VerificationScreen';
 import Sports from './components/Pages/Sports/Sports';
 
+import AdminLogin from './components/Pages/Admin/AdminLogin';
+import AdminRegister from './components/Pages/Admin/AdminRegister';
+import StudyDetail from './components/Pages/studyOptions/StudyDetail';
+
 const { Header, Content } = Layout;
 
 const App = () => {
@@ -104,11 +108,12 @@ const App = () => {
           <TopMenu />
           {!loggedIn && (
             <Button
-              type="primary"
-              icon={<LoginOutlined />}
-            >
-              SignIn as Admin
-            </Button>
+            type="primary"
+            icon={<LoginOutlined />}
+            // onClick={() => window.location.href = '/admin-login'} 
+          >
+            SignIn as Admin
+          </Button>
           )}
           &nbsp;
           {!loggedIn && (
@@ -142,6 +147,13 @@ const App = () => {
               <Route path="/verification-screen" element={<VerificationScreen />} />
               <Route path="/sports" element={<Sports />} />
               <Route path="/study" element={<Study />} />
+
+
+              {/* <Route path="/admin-login" element={<AdminLogin />} />
+              <Route path="/admin-register" element={<AdminRegister />} /> */}
+              <Route path="/" element={<Study />} />
+              <Route path="/study/:type" element={<StudyDetail />} />
+              
                   
               {loggedIn && (
                 <>

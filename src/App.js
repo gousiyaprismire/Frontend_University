@@ -28,6 +28,7 @@ import RegisterPage from './components/Pages/Login/Registration';
 import News from './components/Pages/News/News';
 import VerificationScreen from './components/Pages/Verification/VerificationScreen';
 
+import StudyDetail from './components/Pages/studyOptions/StudyDetail';
 import OnlineCourses from './components/Pages/OnlineCourses/OnlineCourses';
 import AdminRegistration from './components/Pages/Login/AdminRegistration';
 import AdminLogin from './components/Pages/Login/AdminLogin';
@@ -143,9 +144,21 @@ const App = () => {
               <Route path="/online-courses" element={<OnlineCourses />} />
               <Route path="/sports" element={<Sports />} />
               <Route path="/study" element={<Study />} />
+
+              <Route path="/" element={<Study />} />
+              <Route path="/study/:type" element={<StudyDetail />} />
+              
+                  
+              {loggedIn && (
+                <>
+                  <Route path="/scholarship" element={<Scholarship />} />
+                </>
+              )}
+
               <Route path="/scholarship" element={<Scholarship />} />
               <Route path="/admissions" element={<Admissions />} />
               <Route path="/news" element={<News />} />
+
 
               {!loggedIn && (
                 <Route path="/verification-screen" element={<Navigate to="/login" />} />

@@ -30,8 +30,15 @@ import VerificationScreen from './components/Pages/Verification/VerificationScre
 
 import StudyDetail from './components/Pages/studyOptions/StudyDetail';
 import OnlineCourses from './components/Pages/OnlineCourses/OnlineCourses';
+
+import GymOpening from './components/Pages/News/GymOpening';
+import AnnualDay from './components/Pages/News/AnnualDay';
+import CelebratingWomeninSports from './components/Pages/News/CelebratingWomeninSports';
+import SportsandWellness from './components/Pages/News/SportsandWellness';
+
 import AdminRegistration from './components/Pages/Login/AdminRegistration';
 import AdminLogin from './components/Pages/Login/AdminLogin';
+
 const { Header, Content } = Layout;
 
 
@@ -159,6 +166,10 @@ const App = () => {
               <Route path="/admissions" element={<Admissions />} />
               <Route path="/news" element={<News />} />
 
+              <Route path="/gym-opening" element={<GymOpening/>}/>
+              <Route path="/annaul-day" element={<AnnualDay/>}/>
+              <Route path="/celebrating-women-in-sports" element={<CelebratingWomeninSports/>}/>
+              <Route path="/sports-and-wellness" element={<SportsandWellness/>}/>
 
               {!loggedIn && (
                 <Route path="/verification-screen" element={<Navigate to="/login" />} />

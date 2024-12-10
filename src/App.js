@@ -26,7 +26,7 @@ import HallOfFame from './components/Pages/HallOfFame/HallOfFame';
 import RulesAndRegulations from './components/Pages/RulesAndRegulations/RulesAndRegulations';
 import AboutUs from './components/Pages/about_us/AboutUs';
 import ContactUs from './components/Pages/Contactus/ContactUs';
-import Jobs from './components/Pages/Jobs/Jobs'
+import Admissions from './components/Pages/Admissions/Admissions';
 import Study from './components/Pages/studyOptions/Study';
 import Scholarship from './components/Pages/Scholarship/Scholarship';
 import Sports from './components/Pages/Sports/Sports';
@@ -145,7 +145,7 @@ const App = () => {
               <Route path="/sports" element={<Sports />} />
               <Route path="/study" element={<Study />} />
               <Route path="/scholarship" element={<Scholarship />} />
-              <Route path="/jobs" element={<Jobs />} />
+              <Route path="/admissions" element={<Admissions />} />
               <Route path="/news" element={<News />} />
 
               {!loggedIn && (

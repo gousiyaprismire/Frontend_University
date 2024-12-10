@@ -3,18 +3,12 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'r
 import { Layout, Menu, Button } from 'antd';
 import {
   HomeOutlined,
-  AppstoreOutlined,
-  ReadOutlined,
-  TeamOutlined,
-  NotificationOutlined,
-  StarOutlined,
-  VerifiedOutlined,
-  FileProtectOutlined,
+
   InfoCircleOutlined,
   MailOutlined,
   LoginOutlined,
   LogoutOutlined,
-  BankOutlined,
+  
 } from '@ant-design/icons';
 import Sidebar from './components/sidebar';
 import LoginPage from './components/Pages/Login/Login';
@@ -36,6 +30,8 @@ import RegisterPage from './components/Pages/Login/Registration';
 import VerificationScreen from './components/Pages/Verification/VerificationScreen';
 
 import OnlineCourses from './components/Pages/OnlineCourses/OnlineCourses';
+import AdminRegistration from './components/Pages/Login/AdminRegistration';
+import AdminLogin from './components/Pages/Login/AdminLogin';
 const { Header, Content } = Layout;
 
 
@@ -111,6 +107,7 @@ const App = () => {
             <Button
               type="primary"
               icon={<LoginOutlined />}
+              onClick={() => window.location.href = '/Adminlogin'}
             >
               SignIn as Admin
             </Button>
@@ -133,7 +130,9 @@ const App = () => {
               
               <Route path="/" element={<Welcome />} />
               <Route path="/login" element={<LoginPage setLoggedIn={setLoggedIn} />} />
+              <Route path="/adminlogin" element={<AdminLogin setLoggedIn={setLoggedIn} />} />
               <Route path="/register" element={<RegisterPage setLoggedIn={setLoggedIn} />} />
+              <Route path="/adminregister" element={<AdminRegistration setLoggedIn={setLoggedIn} />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/contact-us" element={<ContactUs />} />              
               <Route path="/college-map" element={<CollegeMap />} />

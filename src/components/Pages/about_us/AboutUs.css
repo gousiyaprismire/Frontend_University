@@ -3,33 +3,33 @@
   font-family: 'Roboto'
 }
 
-h1 {
+.aboutus h1 {
   text-align: center;
   margin-top: 30px;
   font-size: 2.5rem;
   color: #333;
 }
 
-h2 {
+.aboutus h2 {
   text-align: center;
   margin-top: 30px;
   font-size: 2rem;
   color: black;
 }
 
-.img1 {
+.aboutus.img1 {
   margin-left: 10px;
   height: 500px;
   width: 98%;
 }
 
-.card:hover {
+.aboutus.card:hover {
   transform: scale(1.06);
   box-shadow: 2px 4px 8px rgba(19, 16, 16, 0.86);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-p {
+.aboutus p {
   font-size: 14px;
   color: black;
   line-height: 1.8;
@@ -52,45 +52,45 @@ p {
   padding-left: 50px;
 }
 
-.text-section {
+.aboutus.text-section {
   width: 50%;
   font-size: 16px;
   font-family: 'Roboto';
 }
 
-.text {
+.aboutus.text {
   font-size: 23px;
   font-weight: bold;
   font-family: 'Roboto';
 }
 
-.achievements-container {
+.aboutus.achievements-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
 }
 
-.achievements-section {
+.aboutus.achievements-section {
   width: 75%;
   margin-top: 40px;
   text-align: left;
 }
 
-.timeline {
+.aboutus.timeline {
   position: relative;
   padding: 20px 0;
   border-left: 4px solid #4CAF50;
   margin-left: 20px;
 }
 
-.timeline-item {
+.aboutus.timeline-item {
   position: relative;
   margin-bottom: 30px;
   padding-left: 30px;
 }
 
-.timeline-marker {
+.aboutus.timeline-marker {
   position: absolute;
   left: -9px;
   top: 10px;
@@ -102,7 +102,7 @@ p {
   z-index: 1;
 }
 
-.timeline-content {
+.aboutus.timeline-content {
   margin-left: 20px;
   background-color: #f9f9f9;
   padding: 20px 25px;
@@ -110,18 +110,18 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.timeline-content h3 {
+.aboutus.timeline-content h3 {
   color: black;
   margin-bottom: 10px;
 }
 
-.timeline-content p {
+.aboutus.timeline-content p {
   color: #182a2bbc;
   font-size: 16px;
   font-family: 'Roboto';
 }
 
-.achievement-image {
+.aboutus.achievement-image {
   width: 150px;
   height: 150px;
   border-radius: 60%;
@@ -129,32 +129,32 @@ p {
   margin-right: 15px;
 }
 
-.university-members-section {
+.aboutus.university-members-section {
   padding: 20px;
   text-align: center;
   font-family: 'Roboto';
 }
 
-.section-title {
+.aboutus.section-title {
   margin-bottom: 30px;
   color: #2c3e50;
   font-size: 24px;
   font-weight: bold;
 }
 
-.members-container {
+.aboutus.members-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
 }
 
-.member {
+.aboutus.member {
   text-align: center;
   width: 200px;
 }
 
-.member-image {
+.aboutus.member-image {
   width: 180px;
   height: 180px;
   border-radius: 60%;
@@ -163,7 +163,7 @@ p {
   border: 5px solid #285c28;
 }
 
-.member-name {
+.aboutus.member-name {
   margin: 5px 0;
   margin-left: -45px;
   color: #2c3e50;
@@ -171,7 +171,7 @@ p {
   font-weight: bold;
 }
 
-.member-role {
+.aboutus.member-role {
   margin: -15px 0;
   color: #48686b;
   margin-left: 35px;

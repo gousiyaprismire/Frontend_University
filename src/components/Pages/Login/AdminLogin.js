@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import { Layout, Form, Input, Button, Typography, message } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
@@ -6,7 +6,7 @@ import './Login.css';
 const { Content } = Layout;
 const { Title } = Typography;
 
-const RegisterPage = () => {
+const AdminLogin = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
 
@@ -26,7 +26,7 @@ const RegisterPage = () => {
           </div>
 
           <div className="register-form">
-            <Title level={4} className='form-title'>Login</Title>
+            <Title level={4}>Login</Title>
             <Form
               form={form}
               layout="vertical"
@@ -35,7 +35,7 @@ const RegisterPage = () => {
             >
               <div style={{ marginBottom: '20px', textAlign: 'right', right:'50px', position:'relative' }}>
                 Don’t have an account? &nbsp;
-                <Link to="/register" style={{ fontSize: '14px' }}>
+                <Link to="/adminregister" style={{ fontSize: '14px' }}>
                   Register here
                 </Link>
               </div>
@@ -69,4 +69,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default AdminLogin;

@@ -1,6 +1,8 @@
 import React from "react";
 import Footer from '../Footer/Footer';
 
+import './Scholarship.css';
+
 import { Card, CardContent, Typography, Button, Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";  // Import useNavigate
 import { Carousel } from "react-bootstrap";  // Import Carousel from react-bootstrap
@@ -29,7 +31,7 @@ const scholarships = [
     id: 3,
     title: "Sports Excellence Scholarship",
     benefits:
-      "For students excelling in sports at national or state levels. Includes a monthly stipend.",
+      "For students excelling in sports at national or state levels stage participation. Includes a monthly stipend.",
     eligibility: "Participation in national-level events",
     deadline: "November 30, 2024",
     applyLink: "#",
@@ -46,7 +48,7 @@ const scholarships = [
   {
     id: 5,
     title: "Financial Aid Program",
-    benefits: "Partial tuition coverage and also covering living expenses until the course completion.",
+    benefits: "Partial tuition coverage and also covering living expenses until the course completion to the eligible students.",
     eligibility: "Undergraduate / Postgraduate",
     deadline: "December 15, 2024",
     applyLink: "#"
@@ -54,7 +56,7 @@ const scholarships = [
   {
     id: 6,
     title: "Department-Specific Grant",
-    benefits: "Full tuition coverage and course-specific funding provided by university.",
+    benefits: "Full tuition coverage and course-specific funding provided by university to the eligible students.",
     eligibility: "Undergraduate",
     deadline: "March 21, 2025",
     applyLink: "#"
@@ -62,22 +64,22 @@ const scholarships = [
 ];
 
 const Scholarship = () => {
-  const navigate = useNavigate(); // Hook to use navigation
+  const navigate = useNavigate();
 
   const handleApplyNow = () => {
-    navigate("/Login"); // Redirects to the Login page
+    navigate("/Login"); 
   };
 
   return (
     <div>
-      {/* Welcome message placed before carousel */}
+     
       <div style={{ textAlign: 'center', marginTop: '20px' }}>
         <Typography variant="h4" gutterBottom>
           Welcome to the Scholarships Page!
         </Typography>
       </div>
 
-      {/* Bootstrap Carousel Section with Inspirational Quotes */}
+     
       <div style={{ width: "100%", marginBottom: "20px" }}>
         <Carousel>
           <Carousel.Item>
@@ -120,8 +122,7 @@ const Scholarship = () => {
           Scholarships at Our University
         </h1>
 
-
-        <p variant="subtitle1" align="center" gutterBottom>
+        <p variant="subtitle1"  gutterBottom textAlign="center" align="center">
           Explore various scholarships to support your academic journey.
         </p>
         <Grid container spacing={3} style={{ marginTop: "20px" }}>

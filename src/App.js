@@ -3,21 +3,15 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'r
 import { Layout, Menu, Button } from 'antd';
 import {
   HomeOutlined,
-  AppstoreOutlined,
-  ReadOutlined,
-  TeamOutlined,
-  NotificationOutlined,
-  StarOutlined,
-  VerifiedOutlined,
-  FileProtectOutlined,
+
   InfoCircleOutlined,
   MailOutlined,
   LoginOutlined,
   LogoutOutlined,
-  BankOutlined,
+  
 } from '@ant-design/icons';
 import Sidebar from './components/sidebar';
-import LoginPage from './components/Pages/Login/LoginPage';
+import LoginPage from './components/Pages/Login/Login';
 import Welcome from './components/Pages/Login/Welcome';
 import CollegeMap from './components/Pages/CollegeMaps/CollegeMapPage';
 import FacultyInfo from './components/Pages/FacultyInfo/FacultyInfo';
@@ -26,15 +20,17 @@ import HallOfFame from './components/Pages/HallOfFame/HallOfFame';
 import RulesAndRegulations from './components/Pages/RulesAndRegulations/RulesAndRegulations';
 import AboutUs from './components/Pages/about_us/AboutUs';
 import ContactUs from './components/Pages/Contactus/ContactUs';
-import LogOut from './components/Pages/LogOut';
+import Admissions from './components/Pages/Admissions/Admissions';
 import Study from './components/Pages/studyOptions/Study';
-
-import Scholarship from './components/Pages/Scholarship';
+import Scholarship from './components/Pages/Scholarship/Scholarship';
+import Sports from './components/Pages/Sports/Sports';
+import RegisterPage from './components/Pages/Login/Registration';
+import News from './components/Pages/News/News';
 import VerificationScreen from './components/Pages/Verification/VerificationScreen';
-import Sports from './components/Pages/Sports';
-import LoginPage from './components/Pages/Login/LoginPage';
-import Welcome from './components/Pages/Welcome';  
+
 import OnlineCourses from './components/Pages/OnlineCourses/OnlineCourses';
+import AdminRegistration from './components/Pages/Login/AdminRegistration';
+import AdminLogin from './components/Pages/Login/AdminLogin';
 const { Header, Content } = Layout;
 
 
@@ -84,14 +80,14 @@ const App = () => {
 
   return (
     <Router>
-      <Layout style={{ minHeight: '100vh' }}>
+      <Layout style={{ minHeight: '100vh', flexDirection: 'column' }}>
         
         <Header
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            backgroundColor: '#f5f5dc', // Beige color
+            backgroundColor: '#f5f5dc', 
           }}
         >
           <div
@@ -110,6 +106,7 @@ const App = () => {
             <Button
               type="primary"
               icon={<LoginOutlined />}
+              onClick={() => window.location.href = '/Adminlogin'}
             >
               SignIn as Admin
             </Button>
@@ -126,13 +123,15 @@ const App = () => {
           )}
         </Header>
 
-        <Layout>
           <Sidebar collapsed={collapsed} toggleSidebar={toggleSidebar} loggedIn={loggedIn} />
-          <Content style={{ padding: '20px', backgroundColor: '#f0f2f5' }}>
+          <Content style={{ padding: '20px', backgroundColor: '#f0f2f5', width:'100vw' }}>
             <Routes>
               
               <Route path="/" element={<Welcome />} />
               <Route path="/login" element={<LoginPage setLoggedIn={setLoggedIn} />} />
+              <Route path="/adminlogin" element={<AdminLogin setLoggedIn={setLoggedIn} />} />
+              <Route path="/register" element={<RegisterPage setLoggedIn={setLoggedIn} />} />
+              <Route path="/adminregister" element={<AdminRegistration setLoggedIn={setLoggedIn} />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/contact-us" element={<ContactUs />} />              
               <Route path="/college-map" element={<CollegeMap />} />
@@ -141,14 +140,12 @@ const App = () => {
               <Route path="/hall-of-fame" element={<HallOfFame />} />
               <Route path="/rules-and-regulations" element={<RulesAndRegulations />} />
               <Route path="/verification-screen" element={<VerificationScreen />} />
-
+              <Route path="/online-courses" element={<OnlineCourses />} />
               <Route path="/sports" element={<Sports />} />
               <Route path="/study" element={<Study />} />
-
-                  
-              {loggedIn && (
-                <>
-    <Route path="/scholarship" element={<Scholarship />} />
+              <Route path="/scholarship" element={<Scholarship />} />
+              <Route path="/admissions" element={<Admissions />} />
+              <Route path="/news" element={<News />} />
 
               {!loggedIn && (
                 <Route path="/verification-screen" element={<Navigate to="/login" />} />
@@ -156,7 +153,6 @@ const App = () => {
             </Routes>
           </Content>
         </Layout>
-      </Layout>
     </Router>
   );
 };

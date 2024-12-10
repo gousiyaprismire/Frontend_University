@@ -31,7 +31,7 @@ import Study from './components/Pages/studyOptions/Study';
 import Scholarship from './components/Pages/Scholarship/Scholarship';
 import Sports from './components/Pages/Sports/Sports';
 import RegisterPage from './components/Pages/Login/Registration';
-
+import News from './components/Pages/News/News';
 import VerificationScreen from './components/Pages/Verification/VerificationScreen';
 
 import OnlineCourses from './components/Pages/OnlineCourses/OnlineCourses';
@@ -146,6 +146,7 @@ const App = () => {
               <Route path="/study" element={<Study />} />
               <Route path="/scholarship" element={<Scholarship />} />
               <Route path="/jobs" element={<Jobs />} />
+              <Route path="/news" element={<News />} />
 
               {!loggedIn && (
                 <Route path="/verification-screen" element={<Navigate to="/login" />} />

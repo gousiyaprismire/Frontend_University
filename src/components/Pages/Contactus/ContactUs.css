@@ -187,16 +187,20 @@ button.submit-btn:hover {
   padding-left: 70px;
   line-height: 1.5;
   font-size: 1.2em;
+  font-family: 'Roboto';
+ 
 }
  
-.info-icon {
-  width: 50px;
-  height: 50px;
+.info-icons {
+  width: 50px !important; 
+  height: 50px !important;
   margin-right: 10px;
 }
+
  
 .address-container {
   max-width: 90%;
+  height: 230px;
 }
  
 
@@ -209,17 +213,18 @@ button.submit-btn:hover {
  
 }
  
-h3, h4 {
+
+
+.keepIntouch1{
+  font-size: 2rem;
   margin: 0;
   padding-left: 50px;
 }
- 
-h4 {
+.keepIntouch{
   font-size: 1.5rem;
-}
- 
-h3 {
-  font-size: 2rem;
+  margin: 0;
+  padding-left: 50px;
+
 }
 #gmail{
   font-family: 'Roboto', sans-serif;

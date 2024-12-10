@@ -24,14 +24,14 @@ const ContactUs = () => {
    
     <div className="contact-container" >
     <div className="card map-card">
-    <h4>Contact Us</h4>
+    <h4 className='keepIntouch'>Contact Us</h4>
     <div className="line"></div>
-    <h3>Keep In Touch</h3>
+    <h3 className='keepIntouch1'>Keep In Touch</h3>
    
     <div className="map-image-wrapper">
       <img
         src={mapImage}  
-        alt="Yogi Vemana University Map"
+        alt="JNTU K"
         className="map-image"
       />
       <p className='view-jntu'>JNTU.Kakinada</p>
@@ -47,12 +47,12 @@ const ContactUs = () => {
   </div>
 
   <div className="card contact-card">
-  <div className="info-item">
-    <img
-      src={home}
-      alt="Registrar Icon"
-      className="info-icon"
-    />
+    <div className="info-item">
+      <img
+        src={home}
+        alt="Registrar Icon"
+        className="info-icons"
+      />
     <div className="address-container">
       <p className="address-text">
         The Registrar<br />
@@ -68,7 +68,7 @@ const ContactUs = () => {
       <img
         src={Email}
         alt="Email Icon"
-        className="info-icon"
+        className="info-icons"
       />
       <div>
         <p id='gmail'>contact.jntuk@gmail.com</p>

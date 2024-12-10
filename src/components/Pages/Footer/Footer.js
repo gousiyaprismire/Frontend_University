@@ -7,7 +7,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Footer = () => {
   return (
-    <Box className="footer-container" py={3} bgcolor="primary.main" color="white">
+    <Box className="footer-container" py={3}  color="white">
       <Container maxWidth="lg">
         {/* Grid layout for footer content */}
         <Grid container spacing={4}>

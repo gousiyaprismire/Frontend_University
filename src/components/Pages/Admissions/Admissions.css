@@ -1,0 +1,182 @@
+.tab-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tabs {
+    display: flex;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    justify-content: space-between;
+    gap:150px;
+}
+  
+.tab {
+    padding: 5px 20px;
+    font-size: 16px;
+    border: #ccc;
+    font-family: 'Roboto';
+    margin-right: 5px;
+    background-color: #d8cece;
+    border-radius: 5px;
+    position: relative;
+}
+  
+.tab.active {
+    background-color: #b6acac;
+}
+  
+.tab-content {
+    padding: 10px 0px;
+    width: 100%;
+    margin: 0 auto;
+}
+  
+.dropdown {
+    display: none;
+    position: absolute;
+    font-size: 16px;
+    top: 100%;
+    left: 0;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    width: 100%;
+    z-index: 1;
+    
+}
+  
+.tab:hover .dropdown {
+    display: block;
+}
+  
+.dropdown div {
+    padding: 10px;
+    cursor: pointer;
+}
+  
+.dropdown div:hover {
+    background-color: #ddd;
+}
+  
+.arrow {
+    margin-left: 5px;
+}
+.admission-default{
+    font-size: 18px;
+    font-family: 'Roboto';
+    background-color: #bd8d8d21;
+    border-radius: 10px;
+    padding:20px;
+    margin: 5px 0px;
+    text-align: left;
+    padding-left: 0;  
+    margin-left: 100;  
+    width: 1005; 
+}
+.admission-default h2{
+    text-align: left;
+    font-size: 20px;
+}
+.admission-default p{
+    font-size: 16px;
+    font-family: 'Roboto';
+    background-color: rgb(207, 174, 131);
+    border-radius: 10px;
+    text-align: left;
+    padding: 50px;
+}
+.admission-default h1{
+    color: rgb(2, 12, 12);
+    text-align: left;
+    font-family: 'Roboto';
+}
+.admission-image {
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    position: relative;
+}
+
+.admission-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.default2 h3{
+   font-size: 18px;
+   font-family: 'Roboto';
+   padding: 0px;
+   background-color: whitesmoke;
+}
+.default2 p{
+    font-size: 18px;
+    font-family: 'Roboto';
+    padding: 20px;
+    background-color: rgb(190, 178, 178);
+    border-radius: 0 20px 0 20px;
+}
+.graduate-student-life {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.graduate-student-life button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.graduate-student-life button:hover {
+    background-color: #004494;
+}
+
+.gstudent1, .gstudent2, .gstudent3, .gstudent4 {
+    margin-bottom: 20px;
+}
+
+.gstudent1 h2, .gstudent3 h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.gstudent1 h3, .gstudent2 h4, .gstudent4 h4 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.gstudent1 p, .gstudent2 p, .gstudent3 p, .gstudent4 p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.gstudent2 p strong, .gstudent3 p strong {
+    color: #333;
+}
+
+.gstudent2 p {
+    margin-left: 20px;
+}
+
+.gstudent3 p {
+    margin-left: 20px;
+}
+
+.gstudent4 p {
+    margin-left: 20px;
+}

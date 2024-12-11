@@ -91,7 +91,6 @@ const FacultyAchievements = () => {
           </div>
         </div>
       </div>
-
       <p  className='ptag'>
         These achievements highlight the dedication and excellence of our faculty members, who are shaping the future through research, education, and leadership. Their work inspires our students and contributes to society at large.
       </p>

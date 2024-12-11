@@ -119,7 +119,6 @@ const HallOfFame = () => {
 
   return (
     <div className="hall-of-fame-container">
-    
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <span className="navbar-brand">Hall of Fame</span>

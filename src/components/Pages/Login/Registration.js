@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layout, Form, Input, Button, Select, Typography, message } from 'antd';
+import { Layout, Form, Input, Button, Typography, message, Modal } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import './Registration.css';
 
@@ -10,9 +10,20 @@ const RegisterPage = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
 
-  const handleSubmit = (values) => {
-    message.success('Registration successful! Redirecting to login page...');
-    navigate('/login');
+  // const handleSubmit = (values) => {
+  //   message.success('Registration successful! Redirecting to login page...');
+  //   navigate('/login');
+  // };
+
+  const handleLoginSuccess = () => {
+    Modal.success({
+      title: 'Registration Successful',
+      content: 'You have Registered successfully. After background verification, you will get an email. Please wait for the mail.',
+      centered: true, 
+      onOk: () => {
+        navigate('/login');
+      },
+    });
   };
 
   return (
@@ -33,11 +44,13 @@ const RegisterPage = () => {
             <Form
               form={form}
               layout="vertical"
-              onFinish={handleSubmit}
+              onFinish={(values) => {
+                //handleSubmit(values);
+                handleLoginSuccess();  
+              }}
               style={{ maxWidth: '400px' }}
             >
-
-             <Form.Item
+              <Form.Item
                 label="Full Name"
                 name="Fullname"
                 rules={[{ required: true, message: 'Please enter your Fullname!' }]}
@@ -86,8 +99,6 @@ const RegisterPage = () => {
                 <Input placeholder="Enter your username" />
               </Form.Item>
 
-             
-
               <Form.Item
                 label="Password"
                 name="password"
@@ -103,10 +114,6 @@ const RegisterPage = () => {
               >
                 <Input.Password placeholder="Enter your password" />
               </Form.Item>
-
-            
-
-             
 
               <Form.Item>
                 <Button type="primary" htmlType="submit" block>

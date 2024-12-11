@@ -33,7 +33,7 @@ const HomeCarousel = () => {
   const director = {
     name: 'Dr. Jane Doe',
     position: 'Director of the University',
-    bio: 'Dr. Doe has been leading the university with a focus on academic excellence and innovation. With over 20 years in higher education, she has made significant contributions to the growth and success of the university.',
+    bio: 'Dr. Doe has been leading the university with a focus on academic excellence and innovation. With over 20 years in higher education, he has made significant contributions to the growth and success of the university.',
     image: '/prof.jpg',
   };
 

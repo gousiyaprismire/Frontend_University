@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Tabs, Tab } from 'react-bootstrap';
 import './HallOfFame.css';
 import Footer from '../Footer/Footer';
 import StudentAchievements from './StudentAchievements';
@@ -8,7 +7,7 @@ import AlumniSuccess from './AlumniSuccess';
 import UniversityRanking from './UniversityRanking';
 
 const HallOfFame = () => {
-  const [activeTab, setActiveTab] = useState("all");
+  const [activePage, setActivePage] = useState("all");
 
   const achievers = [
     {
@@ -80,68 +79,95 @@ const HallOfFame = () => {
    
   ];
 
-  const renderAllAchievers = () => {
-    return (
-      <div className="achievers-container">
-        {achievers.map((achiever, index) => (
-          <div className="row mb-4" key={index}>
-            <div className={`col-md-6 ${index % 2 === 0 ? 'order-md-1' : 'order-md-2'}`}>
-              <img
-                src={achiever.image}
-                alt={achiever.name}
-                className="all-achiever-image img-fluid"
-              />
-            </div>
-            <div className={`col-md-6 ${index % 2 === 0 ? 'order-md-2' : 'order-md-1'}`}>
-              <div className="achiever-card-content">
-                <h2 className="achiever-name">{achiever.name}</h2>
-                <p className="achiever-title">{achiever.title}</p>
-                <p className="achiever-description">{achiever.description}</p>
+  const renderContent = () => {
+    switch (activePage) {
+      case "all":
+        return (
+          <div className="all-achievers-container">
+            {achievers.map((achiever, index) => (
+              <div className="row mb-4" key={index}>
+                <div className={`col-md-6 ${index % 2 === 0 ? 'order-md-1' : 'order-md-2'}`}>
+                  <img
+                    src={achiever.image}
+                    alt={achiever.name}
+                    className="all-achiever-image img-fluid"
+                  />
+                </div>
+                <div className={`col-md-6 ${index % 2 === 0 ? 'order-md-2' : 'order-md-1'}`}>
+                  <div className="all-achiever-card-content">
+                    <h2 className="all-achiever-name">{achiever.name}</h2>
+                    <p className="all-achiever-title">{achiever.title}</p>
+                    <p className="all-achiever-description">{achiever.description}</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
-    );
+        );
+      case "student-achievements":
+        return <StudentAchievements />;
+      case "faculty-achievements":
+        return <FacultyAchievements />;
+      case "alumni-success":
+        return <AlumniSuccess />;
+      case "university-ranking":
+        return <UniversityRanking />;
+      default:
+        return null;
+    }
   };
 
   return (
     <div className="hall-of-fame-container">
-      <header className="hall-of-fame-header">
-        <h1>University Hall of Fame</h1>
-        <p className='point'>
-          Honoring the achievements and contributions of our students, faculty, and alumni, 
-          and celebrating the milestones that have shaped our university's legacy of excellence.
-        </p>
-      </header>
-      <Tabs
-        defaultActiveKey="all"
-        id="hall-of-fame-tabs"
-        className="mb-3"
-        onSelect={(k) => setActiveTab(k)}
-      >
-        <Tab eventKey="all" title="All">
-          <div className="tab-content">
-            {renderAllAchievers()}
+    
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container-fluid">
+          <span className="navbar-brand">Hall of Fame</span>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <button className="nav-link btn btn-link" onClick={() => setActivePage("all")}>
+                  All Achievers
+                </button>
+              </li>
+              <li className="nav-item">
+                <button className="nav-link btn btn-link" onClick={() => setActivePage("student-achievements")}>
+                  Student Achievements
+                </button>
+              </li>
+              <li className="nav-item">
+                <button className="nav-link btn btn-link" onClick={() => setActivePage("faculty-achievements")}>
+                  Faculty Achievements
+                </button>
+              </li>
+              <li className="nav-item">
+                <button className="nav-link btn btn-link" onClick={() => setActivePage("alumni-success")}>
+                  Alumni Success
+                </button>
+              </li>
+              <li className="nav-item">
+                <button className="nav-link btn btn-link" onClick={() => setActivePage("university-ranking")}>
+                  University Rankings
+                </button>
+              </li>
+            </ul>
           </div>
-        </Tab>
+        </div>
+      </nav>
 
-        <Tab eventKey="student-achievements" title="Student Achievements">
-          <StudentAchievements />
-        </Tab>
+      <div className="content-container">{renderContent()}</div>
 
-        <Tab eventKey="faculty-achievements" title="Faculty Achievements">
-          <FacultyAchievements />
-        </Tab>
-
-        <Tab eventKey="alumni-success" title="Alumni Success Stories">
-          <AlumniSuccess />
-        </Tab>
-
-        <Tab eventKey="university-ranking" title="University Rankings & Awards">
-          <UniversityRanking />
-        </Tab>
-      </Tabs>
       <Footer />
     </div>
   );

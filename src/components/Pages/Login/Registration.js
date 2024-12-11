@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Layout, Form, Input, Button, Select, Typography, message } from 'antd';
+import { Layout, Form, Input, Button, Typography, message } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './Registration.css';
 
 const { Content } = Layout;
@@ -10,9 +11,26 @@ const RegisterPage = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
 
-  const handleSubmit = (values) => {
-    message.success('Registration successful! Redirecting to login page...');
-    navigate('/login');
+  const handleSubmit = async (values) => {
+    try {
+      // Send POST request directly using Axios
+      const response = await axios.post('http://localhost:8080/api/students/register', values);
+
+      if (response.status === 200) {
+        message.success('Registration successful! Redirecting to login page...');
+        navigate('/login');
+      }
+    } catch (error) {
+      console.error('Error during registration:', error);
+      
+      if (error.response) {
+        message.error(error.response?.data || 'Registration failed! Please try again later.');
+      } else if (error.request) {
+        message.error('No response from server. Please check your network connection.');
+      } else {
+        message.error('An unexpected error occurred. Please try again later.');
+      }
+    }
   };
 
   return (
@@ -36,14 +54,14 @@ const RegisterPage = () => {
               onFinish={handleSubmit}
               style={{ maxWidth: '400px' }}
             >
-
-             <Form.Item
+              <Form.Item
                 label="Full Name"
-                name="Fullname"
+                name="fullname"
                 rules={[{ required: true, message: 'Please enter your Fullname!' }]}
               >
                 <Input placeholder="Enter your fullname" />
               </Form.Item>
+
               <Form.Item
                 label="Email"
                 name="email"
@@ -64,11 +82,11 @@ const RegisterPage = () => {
               </Form.Item>
 
               <Form.Item
-                label="Student Id"
-                name="StudentId"
-                rules={[{ required: true, message: 'Please enter your Student Id!' }]}
+                label="Upload Id"
+                name="uploadId"
+                rules={[{ required: true, message: 'Please enter your Upload Id!' }]}
               >
-                <Input placeholder="Enter your mobile number" />
+                <Input placeholder="Enter your Upload Id" />
               </Form.Item>
 
               <Form.Item
@@ -78,8 +96,6 @@ const RegisterPage = () => {
               >
                 <Input placeholder="Enter your username" />
               </Form.Item>
-
-             
 
               <Form.Item
                 label="Password"
@@ -91,15 +107,19 @@ const RegisterPage = () => {
 
               <Form.Item
                 label="Re-enter Password"
-                name="Re-enter Password"
+                name="rePassword"
                 rules={[{ required: true, message: 'Please reenter your password!' }]}
               >
-                <Input.Password placeholder="Enter your password" />
+                <Input.Password placeholder="Re-enter your password" />
               </Form.Item>
 
-            
-
-             
+              <Form.Item
+                label="Country"
+                name="country"
+                rules={[{ required: true, message: 'Please enter your country!' }]}
+              >
+                <Input placeholder="Enter your country" />
+              </Form.Item>
 
               <Form.Item>
                 <Button type="primary" htmlType="submit" block>

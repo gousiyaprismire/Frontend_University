@@ -9,9 +9,9 @@ const StudentAchievements = () => {
         <div className="student-achievement-item">
           <div className="student-image-column">
             <img
-              src="https://as2.ftcdn.net/v2/jpg/01/82/04/15/1000_F_182041578_lONY3gqsIz5uGveQfl0tdcUF0HXG4r7f.jpg"
+              src="https://img.freepik.com/free-photo/young-attractive-smiling-student-showing-thumb-up-outdoors-campus-university_8353-6394.jpg"
               alt="John Doe"
-              className="achiever-image img-fluid"
+              className="student-image img-fluid"
             />
           </div>
           <div className="student-content-column">
@@ -26,9 +26,9 @@ const StudentAchievements = () => {
         <div className="student-achievement-item">
           <div className="student-image-column">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSobOFp1KLhXqTdx77xB6Krrpci5kfXwxGJFA&s"
+              src="https://media.istockphoto.com/id/1444077739/photo/college-study-and-education-student-man-portrait-with-back-to-school-backpack-and-portfolio.jpg?s=612x612&w=0&k=20&c=PAQmqKzYd3OiKhlfrT1DVMQNkGu-drX4rtJ5p6y7D8c="
               alt="Jane Smith"
-              className="achiever-image img-fluid"
+              className="student-image img-fluid"
             />
           </div>
           <div className="student-content-column">
@@ -45,7 +45,7 @@ const StudentAchievements = () => {
             <img
               src="https://cdn.pixabay.com/photo/2018/06/27/07/45/college-student-3500990_1280.jpg"
               alt="Michael Brown"
-              className="achiever-image img-fluid"
+              className="student-image img-fluid"
             />
           </div>
           <div className="student-content-column">
@@ -62,7 +62,7 @@ const StudentAchievements = () => {
             <img
               src="https://www.euroschoolindia.com/wp-content/uploads/2023/10/Yale-university-admission-jpg.webp"
               alt="Emily White"
-              className="achiever-image img-fluid"
+              className="student-image img-fluid"
             />
           </div>
           <div className="student-content-column">
@@ -79,7 +79,7 @@ const StudentAchievements = () => {
             <img
               src="https://previews.123rf.com/images/dolgachov/dolgachov1812/dolgachov181200486/113368901-group-of-students-over-university-background.jpg"
               alt="Team Innovators"
-              className="achiever-image img-fluid"
+              className="student-image img-fluid"
             />
           </div>
           <div className="student-content-column">

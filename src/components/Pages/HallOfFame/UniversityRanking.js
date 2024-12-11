@@ -107,7 +107,7 @@ const UniversityRanking = () => {
         </div>
       </div>
 
-      <p>
+      <p className='last-tag'>
         Our unwavering commitment to academic excellence, cutting-edge research, and societal impact continues to position our university as a leader in global education.
       </p>
     </div>

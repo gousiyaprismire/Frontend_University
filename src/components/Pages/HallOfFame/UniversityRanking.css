@@ -1,4 +1,4 @@
-.university-ranking-content {
+  .university-ranking-content {
     padding: 20px;
     background-color: #f9f9f9;
     font-family: 'Roboto', sans-serif;
@@ -78,5 +78,9 @@
     .content-column {
       flex: 1;
     }
+  }
+  .last-tag{
+    margin-top: 20px;
+    font-size: 1rem;
   }
   

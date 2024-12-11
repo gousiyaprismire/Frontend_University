@@ -24,12 +24,12 @@
     flex: 0 0 150px; 
   }
   
-  .content-column {
+  .student-content-column {
     flex: 1; 
     padding-left: 20px; 
   }
   
-  .achiever-image {
+  .student-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -57,7 +57,7 @@
       align-items: center;
     }
   
-    .image-column {
+    .student-image-column {
       margin-bottom: 15px; /* Add spacing when in column layout */
     }
   

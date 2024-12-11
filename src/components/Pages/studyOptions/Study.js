@@ -1,10 +1,12 @@
 import React from 'react';
 import './Study.css'; 
+import Footer from '../Footer/Footer';
 import { Link } from 'react-router-dom';
 
 const Study = () => { 
   return (
-    <>
+    <> 
+    <h2  style={{ textAlign: 'center' }}>Welcome to study options page</h2>
       <div className="study-container">
         <div id="carouselExampleDark" className="carousel carousel-light slide" data-bs-ride="carousel">
           <div className="carousel-indicators">
@@ -46,8 +48,8 @@ const Study = () => {
         </div>
       </div>
 
-      <h3>Why Career Planning is Important?</h3>
-      <p style={{ textAlign: 'center' }}>
+      <h3 className='head3'>Why Career Planning is Important?</h3>
+      <p className='para'  style={{ textAlign: 'center' }}>
         Career planning is essential for setting clear goals, enhancing decision-making, 
         and identifying strengths and interests. It helps individuals make informed choices, 
         ensuring alignment with their skills and passions. A structured career plan supports 
@@ -100,6 +102,7 @@ const Study = () => {
               <img 
                 src="https://static.vecteezy.com/system/resources/previews/041/041/344/non_2x/courses-logo-icon-brand-identity-sign-symbol-template-vector.jpg" 
                 className="study-option-logo" 
+                alt='img'
               />
               <p className="study-option-name">Short Courses</p>
             </Link>
@@ -107,7 +110,7 @@ const Study = () => {
         </div>
       </div>
 
-      <h2>Discover Study Together</h2><br></br>
+      <h2 style={{ textAlign: 'center' }}>Discover Study Together</h2><br></br>
      <div className="study-together-section">
   <div className="study-together-item large">
     <img src="https://images.herzindagi.info/image/2020/Sep/study-room.jpg" alt="Study Room" />
@@ -155,6 +158,28 @@ const Study = () => {
 
  
 </div>
+
+    
+      <div className="reviews-section">
+        <h2 className="reviews-heading">What Our Students Say</h2>
+        <div className="reviews-container">
+          <div className="review-item">
+            <p className="review-text">"The MBA program has transformed my career! The knowledge and skills I gained here were invaluable. I highly recommend Dayton University for anyone looking to pursue higher education!"</p>
+            <p className="review-author">- Anil, MBA Graduate</p>
+          </div>
+          <div className="review-item">
+            <p className="review-text">"Studying Medicine at Dayton University was an enriching experience. The faculty and resources helped me excel in my studies. I feel prepared to take on any challenge in the medical field."</p>
+            <p className="review-author">- Sarah singh, MBBS Graduate</p>
+          </div>
+          <div className="review-item">
+            <p className="review-text">"The undergraduate program in Engineering gave me a solid foundation for my career. The campus and faculty support made my journey smooth and memorable!"</p>
+            <p className="review-author">- Antony, Engineering Graduate</p>
+          </div>
+        </div>
+      </div>
+
+
+<Footer/>
 
 </>
   );

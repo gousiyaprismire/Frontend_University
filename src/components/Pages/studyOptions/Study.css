@@ -1,3 +1,17 @@
+*
+{
+  font-family: 'Roboto';
+}
+.para
+{
+  font-size: 15px;
+  text-align: justify;
+  font-family: 'Roboto';
+  padding: 10px;
+  line-height: 23px;
+}
+
+
 .study-container {
   text-align: center;
   margin-bottom: 30px;
@@ -9,18 +23,18 @@
   margin-bottom: 20px;
 }
 
-.study h3 {
-  font-size: 24px;
+.head3 {
+  font-size: 26px;
   margin-top: 20px;
   text-align: center;
   font-family: 'Roboto';
 }
 
-.study.carousel-text {
+.carousel-text {
   color: white;
 }
 
-.study.carousel-inner img {
+.carousel-inner img {
   width: 70%; 
   height: 530px; 
   object-fit: fit; 
@@ -85,27 +99,87 @@
   justify-content: center;
   margin-top: 40px;
   flex-wrap: wrap; 
+  gap: 100px; 
 }
+
 .study-option-item {
-  text-align: center;
+  text-align: center; 
+  margin: 10px; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
 }
 
 .study-option-logo {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  object-fit: cover; 
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+  object-fit: cover;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .study-option-name {
   font-size: 16px;
-  margin-top: -20px;
-  margin-left: 95px;
+  margin-top: 10px; 
   font-weight: bold;
-  display: inline-block; 
-  white-space: nowrap; 
+  text-align: center; 
 }
 
+.reviews-section {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+}
 
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.reviews-section {
+  background-color: #fff;
+  padding: 60px 30px;
+  text-align: center;
+  color: #333;
+}
+
+.reviews-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2a3d66;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0;
+}
+
+.review-item {
+  background-color: #f1c06582;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.review-text {
+  font-size: 16px;
+  font-style: italic;
+  color: #403232;
+  margin-bottom: 15px;
+}
+
+.review-author {
+  font-weight: 600;
+  font-size: 16px;
+  color: #2a3d66;
+  letter-spacing: 0.5px;
+}
 

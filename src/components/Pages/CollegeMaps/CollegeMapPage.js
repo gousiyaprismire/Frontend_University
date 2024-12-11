@@ -15,7 +15,21 @@ import medical2 from '../../../images/medical2.jpg';
 import parking1 from '../../../images/parking1.jpg';
 import parking2 from '../../../images/parking2.jpg';
 import parking3 from '../../../images/parking3.jpg';
-
+import classroom from '../../../images/classroom.jpg';
+import classroom2 from '../../../images/classroom2.jpg';
+import classroom3 from '../../../images/classroom3.jpg';
+import playground from '../../../images/playground.jpg';
+import playground2 from '../../../images/ground2.jpg';
+import playground3 from '../../../images/ground3.jpg';
+import library8 from '../../../images/library.jpg';
+import library9 from '../../../images/library2.jpg';
+import library2 from '../../../images/library3.jpg';
+import labs from '../../../images/labs.jpg';
+import clab2 from '../../../images/clab2.jpg';
+import clab3 from '../../../images/clab3.png';
+import canteen from '../../../images/canteen.png';
+import canteen2 from '../../../images/canteen2.webp';
+import canteen3 from '../../../images/canteen3.jpg';
 const CollegeMap = () => {
   const [activeTab, setActiveTab] = useState('map');
 
@@ -24,7 +38,51 @@ const CollegeMap = () => {
       case 'map':
         return (
           <div className='location-container'>
-              <h1>Map</h1>
+            <h1>Map</h1>
+            <div className='classroom'>
+             <h4>College ClassRoom</h4>
+             <div className='class-images'>
+              <img src={classroom} alt='classroom' style={{ maxWidth: '35%', height: 'auto' }} />
+              <img src={classroom2} alt='classroom' style={{ maxWidth: '50%', height: 'auto' }} />
+              <img src={classroom3} alt='classroom' style={{ maxWidth: '35%', height: 'auto' }} />
+             </div>
+             <p className='center-text' style={{ fontFamily: 'Roboto' }}>
+              Our classrooms are equipped with modern facilities to enhance the learning experience. Each classroom features state-of-the-art technology, including interactive whiteboards, high-speed internet access, and comfortable seating arrangements. These facilities are designed to support a variety of teaching methods and provide a conducive environment for both students and teachers. We are committed to creating an engaging and effective learning atmosphere for all.
+             </p>
+            </div>
+            <div className='playground'>
+             <h4>College Ground</h4>
+             <div className='ground-images'>
+              <img src={playground} alt='playground' style={{ maxWidth: '35%', height: 'auto' }} />
+              <img src={playground2} alt='playground' style={{ maxWidth: '35%', height: 'auto' }} />
+              <img src={playground3} alt='playground' style={{ maxWidth: '35%', height: 'auto' }} />
+             </div>
+             <p className='center-text' style={{ fontFamily: 'Roboto' }}>
+              The college ground is a spacious area for sports and outdoor activities. It provides ample space for students to engage in various sports such as football, cricket, and athletics. The ground is well-maintained and equipped with necessary facilities to support these activities. It also serves as a venue for outdoor events and gatherings, fostering a sense of community and teamwork among students. We encourage everyone to make the most of this wonderful resource.
+             </p>
+            </div>
+            <div className='college-library'>
+             <h4>College Library</h4>
+             <div className='image-row'>
+              <img src={library8} alt='library' style={{ maxWidth: '35%', height: 'auto' }} />
+              <img src={library9} alt='library' style={{ maxWidth: '35%', height: 'auto' }} />
+              <img src={library2} alt='library' style={{ maxWidth: '35%', height: 'auto' }} />
+             </div>
+             <p className='center-text' style={{ fontFamily: 'Roboto' }}>
+              The library houses a vast collection of books and digital resources for students. It offers a wide range of academic texts, journals, and reference materials to support your studies. Additionally, the library provides access to numerous online databases and e-books, ensuring that you have the resources you need at your fingertips. Our dedicated staff is always available to assist you in finding the right materials and making the most of the library’s offerings. We encourage all students to take advantage of these valuable resources.
+             </p>
+            </div>
+            <div className='labs'>
+            <h4>College Labs</h4>
+            <div className='image-row'>
+              <img src={labs} alt='labs' style={{ maxWidth: '35%', height: 'auto' }} />
+              <img src={clab2} alt='labs' style={{ maxWidth: '35%', height: 'auto' }} />
+              <img src={clab3} alt='labs' style={{ maxWidth: '28%', height: 'auto' }} />
+            </div>
+            <p className='center-text' style={{ fontFamily: 'Roboto' }}>
+              Our labs are well-equipped for practical experiments and research. Each lab is furnished with the latest equipment and technology to support a wide range of scientific and technical studies. Students have access to high-quality instruments and materials, enabling them to conduct experiments and research projects effectively. Our labs are designed to provide a safe and conducive environment for hands-on learning, fostering innovation and discovery. We encourage all students to utilize these facilities to enhance their practical skills and knowledge.
+            </p>
+            </div>
             <div className='university-location'>
               <p>The University of Dayton is a private, Catholic research university located in Dayton, Ohio. The campus is situated approximately 2 miles southeast of downtown Dayton, making it easily accessible to city amenities1. The university spans 388 acres and includes a mix of historic buildings and modern facilities2.
                Founded in 1850 by the Society of Mary, the University of Dayton is one of three Marianist universities in the United States and the second-largest private university in Ohio2. The campus is noted for landmarks such as the Immaculate Conception Chapel and the University of Dayton Arena2.
@@ -47,7 +105,7 @@ const CollegeMap = () => {
         );
       case 'library':
         return (
-          <div className='location-container'>
+          <div className='location-container2'>
           <h1>Library</h1>
           <div className='library1'>
             <img src={library} alt='library photo'/>
@@ -74,10 +132,10 @@ const CollegeMap = () => {
         );
       case 'administration':
         return (
-        <div className='location-container'>
+        <div className='location-container3'>
         <h1>Administration</h1>
          <div className='admin-block'>
-            <img src={admin1} alt='admin1'/>
+            <img src={admin1} alt='admin1' className='admin-img'/>
             <p className='admin-text'>The University of Dayton's administration office is located in St. Mary's Hall on the main campus at 300 College Park, Dayton, Ohio1. This office is central to the university's operations and houses key administrative functions, including the Office of the President, the Board of Trustees, and various executive offices1.The administration office is dedicated to providing leadership and support to the entire university community, ensuring that the University of Dayton continues to thrive as a leading institution of higher education.Additionally, the administration office manages government and regional relations, strategic communications, and campus safety, fostering relationships with officials, maintaining the university's public image, and ensuring a secure environment</p>
         </div>
         <div>
@@ -91,8 +149,8 @@ const CollegeMap = () => {
             <img src={admin4} alt='admin-photo'/>
             <img src={admin5} alt='admin-photo'/>
         </div>
-        <h1 className='contact-info'><strong>Contact Information</strong></h1>
-        <div className='contact'>
+        <h1 className='admin-contact-info'><strong>Contact Information</strong></h1>
+        <div className='admin-contact'>
           <p><strong>Mailing Address:</strong>Office of the President, University of Dayton, 300 College Park, Dayton, OH 45469-1624</p>
           <p><strong>Phone:</strong> (937) 229-4122</p>
           <p><strong>Email:</strong>info@udayton.edu</p>
@@ -106,7 +164,7 @@ const CollegeMap = () => {
         );
       case 'medical':
         return(
-        <div className='location-container'>
+        <div className='location-container4'>
          <h1>Medical Facilities</h1>
          <div className='medical1'>
           <p>The University of Dayton offers comprehensive medical facilities and services to support the health and well-being of its students, faculty, and staff. These facilities are primarily provided through a partnership with Premier Health, a leading healthcare provider in the Dayton area.</p>
@@ -127,8 +185,8 @@ const CollegeMap = () => {
         );
       case 'parkingarea':
         return (
-         <div className='location-container'>
-         <h1>Parking</h1>
+         <div className='location-container5'>
+         <h1>Parking Area</h1>
          <div className='parking'>
           <p className='parking-text'>The University of Dayton provides ample parking facilities to accommodate students, faculty, staff, and visitors. The parking services are managed by the university's Public Safety department, ensuring a well-organized and secure parking environment.</p>
           <p  className='parking-text'><strong>Parking Facilities and Services</strong></p>
@@ -140,6 +198,17 @@ const CollegeMap = () => {
           <img src={parking1}/>
           <img src={parking2}/>
           <img src={parking3}/>
+         </div>
+         <div className='canteen'>
+             <h4>College Canteen</h4>
+             <div className='canteen-images'>
+              <img src={canteen} alt='canteen' style={{ maxWidth: '35%', height: 'auto' }} />
+              <img src={canteen2} alt='canteen' style={{ maxWidth: '35%', height: 'auto' }} />
+              <img src={canteen3} alt='canteen' style={{ maxWidth: '37%', height: 'auto' }} />
+             </div>
+             <p className='center-text' style={{ fontFamily: 'Roboto' }}>
+              The canteen offers a variety of healthy and delicious food options for students and staff. From fresh salads and sandwiches to hot meals and snacks, there is something for everyone. The menu is designed to cater to diverse dietary needs, including vegetarian and vegan options. The canteen is a great place to relax and enjoy a meal with friends between classes. We strive to provide nutritious and tasty food to keep you energized throughout the day. Come and explore the daily specials and enjoy a pleasant dining experience!
+             </p>
          </div>
          <div className="library-footer">
             <p>&copy; 2024 University of Dayton Library. All rights reserved.</p>

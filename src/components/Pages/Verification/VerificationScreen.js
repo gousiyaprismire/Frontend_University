@@ -184,15 +184,14 @@ function VerificationScreen() {
       </h1>
 
       <div className="student-table-container">
-        <table className="student-table">
+        <table className="student-table" >
           <thead>
             <tr>
               <th>ID</th>
-              <th>Image</th>
+              <th>Uploaded ID</th>
               <th>Name</th>
               <th>Country</th>
               <th>Email</th>
-              <th>University</th>
               <th>Enroll Date</th>
               <th>Status</th>
               <th>View Details</th>
@@ -208,7 +207,6 @@ function VerificationScreen() {
                 <td>{student.name}</td>
                 <td>{student.country}</td>
                 <td>{student.email}</td>
-                <td>{student.university}</td>
                 <td>{new Date(student.enrollDate).toLocaleDateString()}</td>
                 <td>{student.status}</td>
                 <td>
@@ -230,7 +228,6 @@ function VerificationScreen() {
               <div><strong>Email:</strong> <span>{selectedStudent.email}</span></div>
               <div><strong>Phone:</strong> <span>{selectedStudent.phone}</span></div>
               <div><strong>Country:</strong> <span>{selectedStudent.country}</span></div>
-              <div><strong>University:</strong> <span>{selectedStudent.university}</span></div>
               <div><strong>Enroll Date:</strong> <span>{new Date(selectedStudent.enrollDate).toLocaleDateString()}</span></div>
               <div><strong>Additional Info:</strong> <span>{selectedStudent.additionalInfo}</span></div>
 
@@ -243,7 +240,7 @@ function VerificationScreen() {
 
               <div className="student-details-back-btn-container">
                 <button className="student-details-back-btn" onClick={handleBackToTable}>
-                  Back to Table
+                  Cancel
                 </button>
               </div>
             </div>

@@ -31,7 +31,7 @@ import canteen from '../../../images/canteen.png';
 import canteen2 from '../../../images/canteen2.webp';
 import canteen3 from '../../../images/canteen3.jpg';
 const CollegeMap = () => {
-  const [activeTab, setActiveTab] = useState('map');
+  const [activeTab, setActiveTab] = useState('library');
 
   const renderContent = () => {
     switch (activeTab) {
@@ -138,11 +138,11 @@ const CollegeMap = () => {
             <img src={admin1} alt='admin1' className='admin-img'/>
             <p className='admin-text'>The University of Dayton's administration office is located in St. Mary's Hall on the main campus at 300 College Park, Dayton, Ohio1. This office is central to the university's operations and houses key administrative functions, including the Office of the President, the Board of Trustees, and various executive offices1.The administration office is dedicated to providing leadership and support to the entire university community, ensuring that the University of Dayton continues to thrive as a leading institution of higher education.Additionally, the administration office manages government and regional relations, strategic communications, and campus safety, fostering relationships with officials, maintaining the university's public image, and ensuring a secure environment</p>
         </div>
-        <div>
-          <p className='admin-key'><strong>Key Functions and Services</strong></p>
-            <p className='admin-key'><strong>Office of the President:</strong>This office oversees the overall administration of the university, ensuring that the institution's mission and goals are met. It includes the President's Council, which consists of senior administrators who advise on strategic decisions</p>
-            <p  className='admin-key'><strong>Board of Trustees:</strong> The board is responsible for the governance of the university, setting policies, and ensuring the institution's financial health. The board consists of 36 members, including alumni and community leaders</p>
-            <p className='admin-key'><strong>Government and Regional Relations:</strong> This office fosters relationships with local, state, and federal officials, advocating for the university's interests and facilitating community partnerships</p>
+        <div className='admin-key'>
+          <p><strong>Key Functions and Services</strong></p>
+            <p><strong>Office of the President:</strong>This office oversees the overall administration of the university, ensuring that the institution's mission and goals are met. It includes the President's Council, which consists of senior administrators who advise on strategic decisions</p>
+            <p><strong>Board of Trustees:</strong> The board is responsible for the governance of the university, setting policies, and ensuring the institution's financial health. The board consists of 36 members, including alumni and community leaders</p>
+            <p><strong>Government and Regional Relations:</strong> This office fosters relationships with local, state, and federal officials, advocating for the university's interests and facilitating community partnerships</p>
         </div>
         <div className='admin-images'>
             <img src={admin2} alt='admin-photo'/>
@@ -225,11 +225,11 @@ const CollegeMap = () => {
   return (
     <div>
       <div className='nav-tabs'>
-        <button onClick={() => setActiveTab('map')}>Map</button>
         <button onClick={() => setActiveTab('library')}>Library</button>
         <button onClick={() => setActiveTab('administration')}>Administration Office</button>
         <button onClick={() => setActiveTab('medical')}>Medical</button>
         <button onClick={() => setActiveTab('parkingarea')}>Parking Area</button>
+        <button onClick={() => setActiveTab('map')}>Map</button>
       </div>
       {renderContent()}
     </div>

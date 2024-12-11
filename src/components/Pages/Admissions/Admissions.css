@@ -84,6 +84,7 @@
     border-radius: 10px;
     text-align: left;
     padding: 50px;
+    margin: 10px -8px 0px 10px;
 }
 .admission-default h1{
     color: rgb(2, 12, 12);
@@ -102,81 +103,275 @@
     height: 100%;
     object-fit: cover; 
     position: absolute;
+    margin-bottom: 10px;
     top: 0;
     left: 0;
 }
 .default2 h3{
    font-size: 18px;
    font-family: 'Roboto';
+   text-align: center;
    padding: 0px;
-   background-color: whitesmoke;
+   margin: 20px 0px;
+   background-color: rgb(218, 100, 100);
 }
 .default2 p{
     font-size: 18px;
     font-family: 'Roboto';
     padding: 20px;
-    background-color: rgb(190, 178, 178);
+    background-color: rgba(153, 78, 78, 0);
     border-radius: 0 20px 0 20px;
 }
-.graduate-student-life {
-    padding: 20px;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.graduate-student-life button {
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+.student-life{
+    background-color: #babbbb33;
+    margin: 10px 10px;
+    padding: 20px 10px;
+    font-size: 18px;
+    font-family: 'Roboto';
     border-radius: 5px;
-    cursor: pointer;
+}
+.student-life button{
+    padding: 5px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+.student-life button:hover{
+    background-color:rgb(197, 167, 129);
+}
+.student-text1, .student-text3{
+    background: linear-gradient(145deg, rgba(28, 83, 56, 0.438), rgba(192, 136, 136, 0.5));
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 10px 30px;
+}
+.student-text1 h2, .student-text3 h2{
+    color: rgba(226, 38, 38, 0.644);
+    text-align: center;
+    padding: 10px;
+    font-size: 40px;
+}
+.student-text1 h3{
+    color: rgba(61, 55, 46, 0.856);
+    padding-left:10px;
+}
+.student-text1 p{
+    color: rgba(241, 241, 200, 0.925);
+    padding: 10px;
+}
+.student-text3 p{
+    padding: 0px;
+    color: rgba(241, 241, 200, 0.925);
+}
+.student-text2, .student-text4{
+    background-color:rgba(95, 167, 119, 0.568);
+    margin: 10px 10px;
+    padding:10px 10px;
+    border-radius: 20px;
+}
+.student-text2 h4{
+    padding: 10px;
+}
+.student-text2 p, .student-text4 p{
+    padding: 0px 10px;
+}
+.student-text4 h4{
+    padding: 10px;
+}
+.courses{
+    background-color: rgba(121, 101, 101, 0.253);
+    font-size: 18px;
+    font-family: 'Roboto';
+    margin: 10px 10px;
+    padding: 10px 10px;
+    border-radius: 15px;
+}
+.courses button{
+    background-color: #e26b6b;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: rgba(245, 245, 245, 0.925);
+}
+.courses button:hover{
+    background-color: #d32a2a;
+}
+.course-text1, .course-text3 {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(197, 149, 157, 0.637);
+  border-radius: 10px 50px;
+}
+.course-text1 h4 , .course-text3 h4 {
+    color: rgba(245, 245, 245, 0.925);
+    padding: 10px;
+}
+.course-text1 p , .course-text3 p {
+    color: rgba(0, 0, 0, 0.925);
+    padding: 10px;
+}
+.course-text1 h2{
+    color: rgba(209, 73, 39, 0.747);
+    text-align: center;
+    padding: 10px 0px;
+}
+.course-text2, .course-text4{
+    background-color: white;
+    margin: 10px 10px;
+    padding: 20px;
+    border-radius: 0px 5px 10px 70px;
+}
+.course-text2 h4, .course-text2 p{
+    padding: 0px 20px;
+}
+.course-text2 strong, .course-text4 strong{
+    color: rgba(8, 179, 179, 0.993);
+}
+.course-text5 h4{ 
+    background-color: rgba(0, 0, 255, 0.418);
+    margin: 0px 50px;
+    text-align: center;
+    color: rgba(245, 245, 245, 0.932);
+}
+.course-text5 p{
+    text-align: center;
+    padding: 0px 40px;
+    margin: 10px  70px;
+}
+.fees{
+    background-color: rgba(241, 241, 200, 0.925);
+    margin: 10px;
+    padding: 20px 15px;
+    border-radius: 10px 70px;
+    font-size: 17px;
+    font-family: 'Roboto';
+}
+.fees h2{
+    color: rgba(218, 186, 6, 0.89);
+    text-align: center;
+}
+.fees h4{
+    margin-left: 40px;
+}
+.fee-text1{
+    display: flex;
+    background-color: gainsboro;
+    margin: 20px;
+    padding: 40px;
+    justify-content: space-between;
+    border-radius: 20px 10px;
+}
+.fee-text-p{
+    padding-top: 20px;
+    font-size: 19px;
+}
+.fee-text-p strong{
+    color: rgba(167, 3, 3, 0.904);
+}
+.fee-text1 img{
+    width: 200px;
+    height: 200px;
+}
+.fee-text2 h5 {
+    padding: 5px 40px;
+}
+.fee-text2 p {
+  padding: 0px 40px;
+}
+.fee-text2 h4{
+    color: rgb(88, 23, 150);
+}
+.fee-text2 p strong{
+    color: rgba(255, 0, 0, 0.671);  
+}
+.fee-text3{
+    background-color: #4aeb4a33;
+    margin: 20px;
+    padding: 20px 25px;
+}
+.fee-text3 h4{
+    text-align: center;
+}
+.fee-text3 p strong{
+    color: chocolate;
+}
+.fee-text5{
+    margin: 20px;
+    padding: 0px 20px;
+    text-align: center;
+}
+.fee-text5 h3{
+    background-color: black;
+    color: white;
+}
+.feesfunds button{
+    border: none;
+    background-color: #be2222d0;
     font-size: 16px;
-    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 8px;
+    color: whitesmoke;
+    margin-left: 20px;
 }
-
-.graduate-student-life button:hover {
-    background-color: #004494;
+.distance{
+    background-color: rgba(172, 255, 47, 0.705);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px 100px;
+    font-size: 18px;
+    font-family: 'Roboto';
 }
-
-.gstudent1, .gstudent2, .gstudent3, .gstudent4 {
-    margin-bottom: 20px;
+.distance h2{
+    text-align: center;
+    padding: 10px;
+    color: black;
 }
-
-.gstudent1 h2, .gstudent3 h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
+.distance2 {
+    font-family: 'Roboto';
+    padding: 20px;
 }
-
-.gstudent1 h3, .gstudent2 h4, .gstudent4 h4 {
+.distance2 h4{
+    color: #d32a2a;
+}
+.distance-text1, .distance-text3{
+    background-color: rgba(19, 63, 65, 0.24);
+    margin: 0px;
+    padding:10px 20px;
     font-size: 20px;
-    color: #555;
-    margin-bottom: 10px;
 }
-
-.gstudent1 p, .gstudent2 p, .gstudent3 p, .gstudent4 p {
+.distance-text1 h4, .distance-text3 h4{
+    color: #e0168ce3;
+}
+.distance-text1 p, .distance-text3 p{
+    color: rgba(245, 245, 245, 0.911);
+}
+.distance-text1 p strong, .distance-text3 p strong{
+    color: black;
+}
+.distance-text2, .distance-text4{
+  background-color: wheat;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.distance-text5{
+    padding: 20px;
+}
+.distance-text5 h4{
+  background-color: rebeccapurple;
+  text-align: center;
+  color: white;
+}
+.distance-text5 p{
+    text-align: center;
+}
+.distance-course button{
+    border: none;
+    background-color: #be2222d0;
     font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 10px;
-    padding: 0;
-}
-
-.gstudent2 p strong, .gstudent3 p strong {
-    color: #333;
-}
-
-.gstudent2 p {
-    margin-left: 20px;
-}
-
-.gstudent3 p {
-    margin-left: 20px;
-}
-
-.gstudent4 p {
+    padding: 5px;
+    border-radius: 8px;
+    color: whitesmoke;
     margin-left: 20px;
 }

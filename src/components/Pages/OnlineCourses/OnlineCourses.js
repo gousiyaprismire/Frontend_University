@@ -160,7 +160,7 @@ const OnlineCourses = () => {
   return (
     <div className="online-courses-container">
       <h2 className="online-courses-title">Available Online Courses</h2>
-      <div className="course-list">
+      <div className="course-list" >
         {courses.map((course) => (
           <div key={course.id} className="course-item">
             <img className="course-image" src={course.image} alt={course.title} />

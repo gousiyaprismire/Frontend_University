@@ -184,7 +184,7 @@ function VerificationScreen() {
       </h1>
 
       <div className="student-table-container">
-        <table className="student-table">
+        <table className="student-table" >
           <thead>
             <tr>
               <th>ID</th>

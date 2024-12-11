@@ -64,13 +64,20 @@ const RegisterPage = () => {
               </Form.Item>
 
               <Form.Item
-                label="Student Id"
-                name="StudentId"
-                rules={[{ required: true, message: 'Please enter your Student Id!' }]}
+                label="Upload Id"
+                name="UploadId"
+                rules={[{ required: true, message: 'Please enter your Upload Id!' }]}
               >
-                <Input placeholder="Enter your mobile number" />
+                <Input placeholder="Enter your UploadId" />
               </Form.Item>
-
+              
+              <Form.Item
+                label="Country"
+                name="Country"
+                rules={[{ required: true, message: 'Please enter your Country!' }]}
+              >
+                <Input placeholder="Enter your country" />
+              </Form.Item>
               <Form.Item
                 label="Username"
                 name="username"

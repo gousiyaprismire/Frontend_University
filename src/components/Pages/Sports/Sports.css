@@ -1,6 +1,11 @@
 .event-section {
   transition: transform 0.2s ease-in-out;
   font-family: 'Roboto', sans-serif;
+  font-size: 26px;
+}
+
+.event-section *, .events-list *  {
+  font-size: 26px;
 }
 
 .event-section:hover {

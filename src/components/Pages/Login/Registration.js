@@ -10,14 +10,22 @@ const { Title, Text } = Typography;
 const RegisterPage = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
-
-  const handleSubmit = async (values) => {
+ 
+  const handleLoginSuccess = async (values) => {
     try {
       const response = await axios.post('http://localhost:8080/api/students/register', values);
 
       if (response.status === 200) {
-        message.success('Registration successful! Redirecting to login page...');
-        navigate('/login');
+
+
+        Modal.success({
+          title: 'Registration Successful',
+          content: 'You have Registered successfully. After background verification, you will get an email. Please wait for the mail.',
+          centered: true, 
+          onOk: () => {
+            navigate('/login');
+          },
+        });
       }
     } catch (error) {
       console.error('Error during registration:', error);
@@ -43,89 +51,90 @@ const RegisterPage = () => {
             <Text style={{ fontSize: '18px', color: 'white' }}>
               Fill in the details below to create your account.
             </Text>
-
-            <div className="register-form" style={{ marginTop: '20px' }}>
-              <Title level={4} style={{ color: 'white' }}>Register</Title>
-              <Form
-                form={form}
-                layout="vertical"
-                onFinish={handleSubmit}
-                style={{ maxWidth: '400px', margin: '0 auto' }}
+          </div>
+ 
+          <div className="register-form">
+            <Title level={4}>Register</Title>
+            <Form
+              form={form}
+              layout="vertical"
+              onFinish={(values) => {
+                handleLoginSuccess();
+              }}
+            >
+              <Form.Item
+                label="Full Name"
+                name="fullname"
+                rules={[{ required: true, message: 'Please enter your Fullname!' }]}
               >
-                <Form.Item
-                  label="Full Name"
-                  name="fullname"
-                  rules={[{ required: true, message: 'Please enter your Fullname!' }]}
-                >
-                  <Input placeholder="Enter your fullname" />
-                </Form.Item>
+                <Input placeholder="Enter your fullname" />
+              </Form.Item>
+ 
+              <Form.Item
+                label="Email"
+                name="email"
+                rules={[
+                  { required: true, message: 'Please enter your email!' },
+                  { type: 'email', message: 'Please enter a valid email!' },
+                ]}
+              >
+                <Input placeholder="Enter your email" />
+              </Form.Item>
+ 
+              <Form.Item
+                label="Mobile Number"
+                name="mobile"
+                rules={[{ required: true, message: 'Please enter your mobile number!' }]}
+              >
+                <Input placeholder="Enter your mobile number" />
+              </Form.Item>
+ 
+              <Form.Item
+                label="Upload Id"
+                name="uploadId"
+                rules={[{ required: true, message: 'Please enter your Upload Id!' }]}
+              >
+                <Input placeholder="Enter your UploadId" />
+              </Form.Item>
 
-                <Form.Item
-                  label="Email"
-                  name="email"
-                  rules={[
-                    { required: true, message: 'Please enter your email!' },
-                    { type: 'email', message: 'Please enter a valid email!' },
-                  ]}
-                >
-                  <Input placeholder="Enter your email" />
-                </Form.Item>
+              <Form.Item
+                label="Country"
+                name="Country"
+                rules={[{ required: true, message: 'Please enter your Country!' }]}
+              >
+                <Input placeholder="Enter your country" />
+              </Form.Item>
+ 
+              <Form.Item
+                label="Username"
+                name="username"
+                rules={[{ required: true, message: 'Please enter your username!' }]}
+              >
+                <Input placeholder="Enter your username" />
+              </Form.Item>
+ 
+              <Form.Item
+                label="Password"
+                name="password"
+                rules={[{ required: true, message: 'Please enter your password!' }]}
+              >
+                <Input.Password placeholder="Enter your password" />
+              </Form.Item>
+ 
+              <Form.Item
+                label="Re-enter Password"
+                name="rePassword"
+                rules={[{ required: true, message: 'Please reenter your password!' }]}
+              >
+                <Input.Password placeholder="Re-enter your password" />
+              </Form.Item>
 
-                <Form.Item
-                  label="Mobile Number"
-                  name="mobile"
-                  rules={[{ required: true, message: 'Please enter your mobile number!' }]}
-                >
-                  <Input placeholder="Enter your mobile number" />
-                </Form.Item>
-
-                <Form.Item
-                  label="Upload Id"
-                  name="uploadId"
-                  rules={[{ required: true, message: 'Please enter your Upload Id!' }]}
-                >
-                  <Input placeholder="Enter your Upload Id" />
-                </Form.Item>
-
-                <Form.Item
-                  label="Country"
-                  name="country"
-                  rules={[{ required: true, message: 'Please enter your Country!' }]}
-                >
-                  <Input placeholder="Enter your country" />
-                </Form.Item>
-
-                <Form.Item
-                  label="Username"
-                  name="username"
-                  rules={[{ required: true, message: 'Please enter your username!' }]}
-                >
-                  <Input placeholder="Enter your username" />
-                </Form.Item>
-
-                <Form.Item
-                  label="Password"
-                  name="password"
-                  rules={[{ required: true, message: 'Please enter your password!' }]}
-                >
-                  <Input.Password placeholder="Enter your password" />
-                </Form.Item>
-
-                <Form.Item
-                  label="Re-enter Password"
-                  name="rePassword"
-                  rules={[{ required: true, message: 'Please reenter your password!' }]}
-                >
-                  <Input.Password placeholder="Re-enter your password" />
-                </Form.Item>
-
-                <Form.Item>
-                  <Button type="primary" htmlType="submit" block>
-                    Register
-                  </Button>
-                </Form.Item>
-              </Form>
-            </div>
+              <Form.Item>
+                <Button type="primary" htmlType="submit" block>
+                  Register
+                </Button>
+              </Form.Item>
+            </Form>
           </div>
         </div>
       </Content>

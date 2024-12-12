@@ -10,16 +10,12 @@ const RegisterPage = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
 
-  // const handleSubmit = (values) => {
-  //   message.success('Registration successful! Redirecting to login page...');
-  //   navigate('/login');
-  // };
-
   const handleLoginSuccess = () => {
     Modal.success({
       title: 'Registration Successful',
-      content: 'You have Registered successfully. After background verification, you will get an email. Please wait for the mail.',
-      centered: true, 
+      content:
+        'You have Registered successfully. After background verification, you will get an email. Please wait for the mail.',
+      centered: true,
       onOk: () => {
         navigate('/login');
       },
@@ -29,9 +25,18 @@ const RegisterPage = () => {
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Content>
-        <div className="register-container">
-          <div className="register-content">
-            <Title level={2} style={{ marginBottom: '20px' }}>
+        <div
+          className="register-container"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: '100vh',
+            backgroundColor: '#2c3e50',
+          }}
+        >
+          <div className="register-content" style={{ textAlign: 'center' }}>
+            <Title level={2} style={{ marginBottom: '20px', color: 'white' }}>
               Create an Account
             </Title>
             <Text style={{ fontSize: '18px', color: 'white' }}>
@@ -39,16 +44,26 @@ const RegisterPage = () => {
             </Text>
           </div>
 
-          <div className="register-form">
+          <div
+            className="register-form"
+            style={{
+              marginTop: '20px',
+              textAlign: 'left',
+              backgroundColor: '#ffffff',
+              padding: '20px',
+              borderRadius: '10px',
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+              maxWidth: '400px',
+              width: '100%',
+            }}
+          >
             <Title level={4}>Register</Title>
             <Form
               form={form}
               layout="vertical"
               onFinish={(values) => {
-                //handleSubmit(values);
-                handleLoginSuccess();  
+                handleLoginSuccess();
               }}
-              style={{ maxWidth: '400px' }}
             >
               <Form.Item
                 label="Full Name"
@@ -83,7 +98,7 @@ const RegisterPage = () => {
               >
                 <Input placeholder="Enter your UploadId" />
               </Form.Item>
-              
+
               <Form.Item
                 label="Country"
                 name="Country"

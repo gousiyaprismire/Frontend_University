@@ -104,7 +104,7 @@ const HomeCarousel = () => {
         </Row>
       </div>
 
-      <div className="achievements-section">
+      <div className="achievements-section-home">
   <Title level={2} style={{ textAlign: 'center', marginBottom: '20px' }}>
     Recent Achievements
   </Title>

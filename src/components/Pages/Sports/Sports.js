@@ -101,23 +101,23 @@ const App = () => {
     <div className="app">
       <h1>UK University Sports Dashboard</h1>
       <div style={{ marginBottom: "20px", display: "flex", gap: "10px", flexWrap: "wrap" }}>
-        <Button
-          type={selectedSport === "All" ? "primary" : "default"}
-          onClick={() => handleSportChange("All")}
-        >
-          All Sports
-        </Button>
-        {Object.keys(sportStyles).map((sport) => (
-          <Button
-            key={sport}
-            type={selectedSport === sport ? "primary" : "default"}
-            onClick={() => handleSportChange(sport)}
-            style={{ borderColor: sportStyles[sport].color, color: sportStyles[sport].color }}
-          >
-            {sport}
-          </Button>
-        ))}
-      </div>
+  {["All", ...Object.keys(sportStyles)].map((sport) => (
+    <Button
+      key={sport}
+      type="default"
+      onClick={() => handleSportChange(sport)}
+      style={{
+        backgroundColor: "transparent", 
+        borderColor: selectedSport === sport ? sportStyles[sport]?.color || "#ccc" : "#ccc",
+        color: selectedSport === sport ? sportStyles[sport]?.color || "#000" : "#000",
+      }}
+    >
+      {sport}
+    </Button>
+  ))}
+</div>
+
+
       {loading ? (
         <Spin size="large" style={{ marginTop: "20px" }} />
       ) : (
@@ -232,7 +232,7 @@ const App = () => {
                       alt={event.name}
                       style={{
                         width: "100%",
-                        maxHeight: "400px",
+                        maxHeight: "300px",
                         borderRadius: "10px",
                         objectFit: "cover",
                       }}
@@ -247,7 +247,7 @@ const App = () => {
                       alt={event.name}
                       style={{
                         width: "100%",
-                        maxHeight: "400px",
+                        maxHeight: "300px",
                         borderRadius: "10px",
                         objectFit: "cover",
                       }}

@@ -22,7 +22,6 @@ const FacultyAchievements = () => {
             </p>
           </div>
         </div>
-
         <div className="faculty-achievement-item">
           <div className="faculty-image-column">
             <img
@@ -39,7 +38,6 @@ const FacultyAchievements = () => {
             </p>
           </div>
         </div>
-
         <div className="faculty-achievement-item">
           <div className="faculty-image-column">
             <img
@@ -56,7 +54,6 @@ const FacultyAchievements = () => {
             </p>
           </div>
         </div>
-
         <div className="faculty-achievement-item">
           <div className="faculty-image-column">
             <img
@@ -73,7 +70,6 @@ const FacultyAchievements = () => {
             </p>
           </div>
         </div>
-
         <div className="faculty-achievement-item">
           <div className="faculty-image-column">
             <img
@@ -99,4 +95,3 @@ const FacultyAchievements = () => {
 };
 
 export default FacultyAchievements;
-

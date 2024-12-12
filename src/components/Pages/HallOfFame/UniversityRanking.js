@@ -8,7 +8,6 @@ const UniversityRanking = () => {
       <p className='statement'>
         Recognized nationally and globally, our university continues to set new benchmarks in education, research, and innovation. Here are some of our most notable achievements:
       </p>
-
       <div className="ranking-highlights">
         <div className="ranking-item">
           <div className="content-column">
@@ -33,7 +32,6 @@ const UniversityRanking = () => {
             />
           </div>
         </div>
-
         <div className="ranking-item">
           <div className="content-column">
             <h3 className='heading'>National Accolades</h3>
@@ -57,7 +55,6 @@ const UniversityRanking = () => {
             />
           </div>
         </div>
-
         <div className="ranking-item">
           <div className="content-column">
             <h3 className='heading'>Research and Innovation</h3>
@@ -81,7 +78,6 @@ const UniversityRanking = () => {
             />
           </div>
         </div>
-
         <div className="ranking-item">
           <div className="content-column">
             <h3 className='heading'>Student Success</h3>

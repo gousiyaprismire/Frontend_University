@@ -133,7 +133,7 @@ const HallOfFame = () => {
                 <button className="nav-link btn btn-link" onClick={() => setActivePage("all")}>
                   All Achievers
                 </button>
-              </li>
+              </li>  
               <li className="nav-item">
                 <button className="nav-link btn btn-link" onClick={() => setActivePage("student-achievements")}>
                   Student Achievements
@@ -159,7 +159,6 @@ const HallOfFame = () => {
         </div>
       </nav>
       <div className="content-container">{renderContent()}</div>
-
       <Footer />
     </div>
   );

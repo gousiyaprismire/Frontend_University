@@ -12,7 +12,7 @@ const StudentAchievements = () => {
               src="https://img.freepik.com/free-photo/young-attractive-smiling-student-showing-thumb-up-outdoors-campus-university_8353-6394.jpg"
               alt="John Doe"
               className="student-image img-fluid"
-            />
+            />  
           </div>
           <div className="student-content-column">
             <h3 className='heading'>John Doe</h3>
@@ -22,7 +22,6 @@ const StudentAchievements = () => {
             </p>
           </div>
         </div>
-
         <div className="student-achievement-item">
           <div className="student-image-column">
             <img
@@ -39,7 +38,6 @@ const StudentAchievements = () => {
             </p>
           </div>
         </div>
-
         <div className="student-achievement-item">
           <div className="student-image-column">
             <img
@@ -56,7 +54,6 @@ const StudentAchievements = () => {
             </p>
           </div>
         </div>
-
         <div className="student-achievement-item">
           <div className="student-image-column">
             <img
@@ -73,7 +70,6 @@ const StudentAchievements = () => {
             </p>
           </div>
         </div>
-
         <div className="student-achievement-item">
           <div className="student-image-column">
             <img
@@ -91,7 +87,6 @@ const StudentAchievements = () => {
           </div>
         </div>
       </div>
-
       <p className='ptag'>
         These are just a few examples of how our students continue to inspire and lead in academics, sports, and extracurricular activities. Their hard work, creativity, and dedication contribute not only to the university’s legacy but also to society at large.
       </p>

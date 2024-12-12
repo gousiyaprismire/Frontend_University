@@ -1,28 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import './VerificationScreen.css';  // Import the CSS file here
+import './VerificationScreen.css';  
 import axios from 'axios';
- 
+
 function VerificationScreen() {
   const [students, setStudents] = useState([]);
   const [selectedStudent, setSelectedStudent] = useState(null);
   const [showModal, setShowModal] = useState(false);
- 
   // Fetching student data from the backend
   useEffect(() => {
     const fetchStudents = async () => {
       try {
         const response = await axios.get('http://localhost:8080/api/students');
-        // Ensure every student has a status, default to "Pending"
         const studentsWithStatus = response.data.map(student => ({
           ...student,
-          status: student.status || "Pending" // Set default status to "Pending"
+          status: student.status || "Pending" 
         }));
         setStudents(studentsWithStatus);
       } catch (error) {
         console.error("Error fetching student data:", error);
       }
     };
- 
     fetchStudents();
   }, []);
  
@@ -54,11 +51,9 @@ function VerificationScreen() {
       axios.put(`http://localhost:8080/api/students/${selectedStudent.id}`, selectedStudent);
     }
   };
- 
   return (
     <div className="app-container">
       <h1 className="verificationscreen-h1">Check Student Enrollment Information</h1>
- 
       <div className="student-table-container">
         <table className="student-table">
           <thead>
@@ -94,19 +89,16 @@ function VerificationScreen() {
             ))}
           </tbody>
         </table>
- 
         {showModal && selectedStudent && (
           <div className="modal">
             <div className="student-details-container">
               <h3 className="student-details-header">Student Details</h3>
- 
               <div><strong>Name:</strong> <span>{selectedStudent.fullname}</span></div>
               <div><strong>Email:</strong> <span>{selectedStudent.email}</span></div>
               <div><strong>Phone:</strong> <span>{selectedStudent.mobile}</span></div> 
               <div><strong>Country:</strong> <span>{selectedStudent.country}</span></div>
               <div><strong>Enroll Date:</strong> <span>{new Date(selectedStudent.enrollDate).toLocaleDateString()}</span></div>
               <div><strong>Status:</strong> <span>{selectedStudent.status}</span></div>
- 
               {/* Conditionally render Approve/Reject buttons */}
               {selectedStudent.status === "Pending" && (
                 <div className="approval-buttons">
@@ -114,7 +106,6 @@ function VerificationScreen() {
                   <button onClick={handleReject} style={{ backgroundColor: 'red' }}>Reject</button>
                 </div>
               )}
- 
               <div className="student-details-back-btn-container">
                 <button className="student-details-back-btn" onClick={handleBackToTable}>
                   Cancel
@@ -129,4 +120,3 @@ function VerificationScreen() {
 }
  
 export default VerificationScreen;
- 

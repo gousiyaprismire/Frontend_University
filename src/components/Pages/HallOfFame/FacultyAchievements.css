@@ -41,13 +41,11 @@
   font-weight: bold;
   color: #333;
 }
-
 .ptag {
   font-size: 1rem;
   color: #666;
   line-height: 1.6;
 }
-
 
 @media (max-width: 768px) {
   .faculty-achievement-item {
@@ -63,7 +61,6 @@
     padding-left: 0;
   }
 }
-
 
 .faculty-achievement-item:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);

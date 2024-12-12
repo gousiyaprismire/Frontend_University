@@ -1,15 +1,15 @@
 import React from "react";
 import { Typography, Link, Container, Box, Grid } from "@mui/material";
 import { Facebook, Twitter, LinkedIn, LocationOn, Email, Phone } from "@mui/icons-material";
-import { Link as RouterLink } from "react-router-dom"; 
+import { Link as RouterLink } from "react-router-dom";
 import './Footer.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Footer = () => {
   return (
-    <Box className="footer-container" py={3}  color="white">
+    <Box className="footer-container" py={3} color="white">
       <Container maxWidth="lg">
-      
+
         <Grid container spacing={4}>
           <Grid item xs={12} md={4}>
             <Typography variant="h6" className="footer-heading" gutterBottom>
@@ -30,9 +30,10 @@ const Footer = () => {
             <Typography variant="h6" className="footer-heading" gutterBottom>
               Quick Links
             </Typography>
+
             <Box>
               <Link
-                component={RouterLink}  
+                component={RouterLink}
                 to="/about-us"
                 color="inherit"
                 className="footer-link"
@@ -40,7 +41,7 @@ const Footer = () => {
                 About Us
               </Link>
               <Link
-                component={RouterLink} 
+                component={RouterLink}
                 to="/"
                 color="inherit"
                 className="footer-link"
@@ -48,7 +49,7 @@ const Footer = () => {
                 Home Page
               </Link>
               <Link
-                component={RouterLink}  
+                component={RouterLink}
                 to="/college-map"
                 color="inherit"
                 className="footer-link"
@@ -56,7 +57,7 @@ const Footer = () => {
                 Campus Life
               </Link>
               <Link
-                component={RouterLink}  
+                component={RouterLink}
                 to="/announcements"
                 color="inherit"
                 className="footer-link"
@@ -83,7 +84,7 @@ const Footer = () => {
             </Box>
           </Grid>
         </Grid>
-        
+
         <Box textAlign="center" mt={4}>
           <Typography variant="body2" color="inherit">
             © {new Date().getFullYear()} University of Dayton. All Rights Reserved.

@@ -1,75 +1,74 @@
 .faculty-achievements-content {
-    padding: 20px;
-    background-color: #f9f9f9;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .faculty-achiever-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: 'Roboto', sans-serif;
+}
+
+.faculty-achiever-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faculty-achievement-item {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  align-items: center;
+}
+
+.faculty-image-column {
+  flex: 0 0 150px;
+}
+
+.faculty-content-column {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.faculty-achiever-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.ptag {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
   .faculty-achievement-item {
-    display: flex;
-    flex-direction: row;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    flex-direction: column;
     align-items: center;
   }
-  
-  .faculty-image-column {
-    flex: 0 0 150px;
-  }
-  
-  .faculty-content-column {
-    flex: 1;
-    padding-left: 20px;
-  }
-  
-  .faculty-achiever-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  .heading {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-  }
-   
-  .ptag {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-  }
-  
 
-  @media (max-width: 768px) {
-    .faculty-achievement-item {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .faulty-image-column {
-      margin-bottom: 0px; 
-    }
-  
-    .faculty-content-column {
-      padding-left: 0;
-    }
+  .faulty-image-column {
+    margin-bottom: 0px;
   }
-  
-  
-  .faculty-achievement-item:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+  .faculty-content-column {
+    padding-left: 0;
   }
-  
-  .faculty-achiever-image .img-fluid {
-    width: 300px;
-  }
-  
+}
+
+
+.faculty-achievement-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.faculty-achiever-image .img-fluid {
+  width: 300px;
+}

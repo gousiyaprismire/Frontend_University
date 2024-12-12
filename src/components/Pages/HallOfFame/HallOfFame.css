@@ -1,4 +1,3 @@
-/* General Container */
 .hall-of-fame-container {
   font-family: 'Roboto', sans-serif;
   color: #333;
@@ -14,7 +13,7 @@
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
   color: #fff !important;
   padding-right: 50px;

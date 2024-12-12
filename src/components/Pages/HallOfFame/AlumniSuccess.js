@@ -48,7 +48,7 @@ const AlumniSuccess = () => {
               className="alumni-achiever-image img-fluid"
             />
           </div>
-          
+
           <div className="content-column">
             <h3 className='heading'>Michael Lee</h3>
             <p className='ptag'><strong>Achievement:</strong> Oscar-winning Film Director.</p>
@@ -83,7 +83,7 @@ const AlumniSuccess = () => {
               className="alumni-achiever-image img-fluid"
             />
           </div>
-          
+
           <div className="content-column">
             <h3 className='heading'>David Brown</h3>
             <p className='ptag'><strong>Achievement:</strong> SpaceX Lead Engineer.</p>

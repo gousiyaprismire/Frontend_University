@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import { Layout, Form, Input, Button, Typography, message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -13,7 +13,6 @@ const RegisterPage = () => {
 
   const handleSubmit = async (values) => {
     try {
-      // Send POST request directly using Axios
       const response = await axios.post('http://localhost:8080/api/students/register', values);
 
       if (response.status === 200) {
@@ -22,7 +21,7 @@ const RegisterPage = () => {
       }
     } catch (error) {
       console.error('Error during registration:', error);
-      
+
       if (error.response) {
         message.error(error.response?.data || 'Registration failed! Please try again later.');
       } else if (error.request) {

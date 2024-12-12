@@ -1,5 +1,5 @@
 import React from 'react';
-import './StudentAchievements.css'; 
+import './StudentAchievements.css';
 
 const StudentAchievements = () => {
   return (
@@ -33,8 +33,8 @@ const StudentAchievements = () => {
           </div>
           <div className="student-content-column">
             <h3 className='heading'>Jane Smith</h3>
-            <p  className='ptag'><strong>Achievement:</strong> Published groundbreaking research on renewable energy technologies.</p>
-            <p  className='ptag'>
+            <p className='ptag'><strong>Achievement:</strong> Published groundbreaking research on renewable energy technologies.</p>
+            <p className='ptag'>
               Jane’s research on renewable energy technologies was published in a leading scientific journal. Her innovative approach to improving energy efficiency has already attracted interest from energy companies and environmental organizations.
             </p>
           </div>
@@ -50,8 +50,8 @@ const StudentAchievements = () => {
           </div>
           <div className="student-content-column">
             <h3 className='heading'> Michael Brown</h3>
-            <p  className='ptag'><strong>Achievement:</strong> Gold medalist in the International Physics Olympiad.</p>
-            <p  className='ptag'>
+            <p className='ptag'><strong>Achievement:</strong> Gold medalist in the International Physics Olympiad.</p>
+            <p className='ptag'>
               Michael excelled in the International Physics Olympiad, securing a gold medal for his extraordinary performance in a range of challenging physics problems. His achievement has brought pride to the university and set a high bar for future physics students.
             </p>
           </div>
@@ -67,8 +67,8 @@ const StudentAchievements = () => {
           </div>
           <div className="student-content-column">
             <h3 className='heading'>Emily White</h3>
-            <p  className='ptag'><strong>Achievement:</strong> Represented the university in the World Debate Championship and secured first place.</p>
-            <p  className='ptag'>
+            <p className='ptag'><strong>Achievement:</strong> Represented the university in the World Debate Championship and secured first place.</p>
+            <p className='ptag'>
               Emily's exceptional public speaking and critical thinking skills helped her lead the university debate team to victory at the World Debate Championship. Her team's first-place finish showcased the high caliber of our students in global competitions.
             </p>
           </div>
@@ -84,15 +84,15 @@ const StudentAchievements = () => {
           </div>
           <div className="student-content-column">
             <h3 className='heading'>Team Innovators</h3>
-            <p  className='ptag'><strong>Achievement:</strong> Developed an award-winning app for mental health awareness, recognized by the Global Tech Forum.</p>
-            <p  className='ptag'>
+            <p className='ptag'><strong>Achievement:</strong> Developed an award-winning app for mental health awareness, recognized by the Global Tech Forum.</p>
+            <p className='ptag'>
               A team of talented students developed an app aimed at raising mental health awareness, which has since received recognition at the Global Tech Forum. The app uses AI to provide personalized mental health resources and support.
             </p>
           </div>
         </div>
       </div>
 
-      <p  className='ptag'>
+      <p className='ptag'>
         These are just a few examples of how our students continue to inspire and lead in academics, sports, and extracurricular activities. Their hard work, creativity, and dedication contribute not only to the university’s legacy but also to society at large.
       </p>
     </div>

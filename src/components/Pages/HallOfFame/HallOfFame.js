@@ -39,7 +39,7 @@ const HallOfFame = () => {
       title: 'Astronaut',
       image: 'https://www.unisys.com/siteassets/images/leadership/headshot/leadership-david-brown-3.jpg',
       description: 'Participated in multiple space missions and research on the ISS.David McDowell Brown (April 16, 1956 – February 1, 2003) was a United States Navy captain and NASA astronaut. He died on his first spaceflight, when the Space Shuttle Columbia (STS-107) disintegrated during orbital reentry into the Earths atmosphere. Brown became an astronaut in 1996 but had not served on a space mission prior to the Columbia disaster. He was posthumously awarded the Congressional Space Medal of Honor.',
-    },  
+    },
     {
       name: 'James Carter',
       title: 'Professional Basketball Player',
@@ -70,7 +70,7 @@ const HallOfFame = () => {
       image: 'https://m.media-amazon.com/images/M/MV5BNDY0YzQyZTQtZWVmMS00ODJkLWI4NGEtZDY0NjRmOWRmOGI0XkEyXkFqcGc@._V1_.jpg',
       description: 'Received Michelin stars for her innovative restaurant concepts.Michelin stars are awards coveted by chefs worldwide who want their restaurants to be put on the gastronomic map. It’s a badge of honor, for sure. However, it’s not always the indication of quality that many of us assume it to be.With three weeks of kaleidoscopic lighting displays, exhilarating live music and deep-dive discussions with thought-leaders from around the world, the festival of creativity, innovation and technology is set to hypnotise Sydneysiders and visitors once again when the sun sets on Friday.',
     },
-   
+
   ];
 
   const renderContent = () => {
@@ -159,6 +159,7 @@ const HallOfFame = () => {
         </div>
       </nav>
       <div className="content-container">{renderContent()}</div>
+
       <Footer />
     </div>
   );

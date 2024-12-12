@@ -6,7 +6,7 @@
 .head2 {
   text-align: center;
   margin-top: 30px;
-  font-size: 2rem;
+  font-size: 22px;
   color: black;
 }
 .para
@@ -60,7 +60,7 @@
   font-family: 'Roboto';
 }
 
-.achievements-container {
+.aboutachievements-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,7 +68,7 @@
 }
 
 
-.achievements-section {
+.aboutachievements-section {
   width: 70%;
   margin-top: 40px;
   text-align: left;
@@ -101,7 +101,7 @@
 }
 
 .timeline-content {
-  margin-left: 20px;
+  margin-left: 25px;
   background-color: #f9f9f9;
   padding: 35px 25px;
   border-radius: 8px;
@@ -119,12 +119,13 @@
   font-family: 'Roboto';
 }
 
-.achievement-image {
+.aboutachievement-image {
   width: 120px;
   height: 120px;
   border-radius: 60%;
   float: left;
-  margin-right: 15px;
+  margin-right: 45px;
+  margin-top: -15px;
 }
 
 .university-members-section {
@@ -133,7 +134,7 @@
   font-family: 'Roboto';
 }
 
-.section-title {
+.section-title { 
   margin-bottom: 30px;
   color: #2c3e50;
   font-size: 28px;

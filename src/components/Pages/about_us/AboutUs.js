@@ -1,15 +1,12 @@
 import React from 'react';
 import './AboutUs.css';
-import {Typography, Layout, Row, Col, Space } from 'antd';
-import { FacebookOutlined, TwitterOutlined, LinkedinOutlined, InstagramOutlined } from '@ant-design/icons';
+import Footer from '../Footer/Footer';
  
-const { Title, Text } = Typography;
-const { Footer } = Layout;
 
 const AboutUs = () => {
   return (
     <>
-    <h2 className='head2'>AboutUs</h2>
+    <h2 style={{textAlign:'center'}}>AboutUs</h2>
       <img className='img1'
         src="https://jcpatriot.com/wp-content/uploads/2016/04/REAL-university-of-florida-pic.jpg"
         title="Dayton University"
@@ -29,7 +26,7 @@ const AboutUs = () => {
      
      
       <div style={{ backgroundColor: '#E0F7FA', padding: '20px' }}>
-        <h2 className="head2">Our Goals</h2>
+        <h2 style={{textAlign:'center'}}>Our Goals</h2>
         <div className="row row-cols-1 row-cols-md-3 g-4">
           <div className="col">
             <div className="card h-auto" style={{ width: '100%', maxWidth: '430px', margin: '0 auto' }}>
@@ -164,16 +161,17 @@ const AboutUs = () => {
       every student has the opportunity to thrive. Whether you're focused on academics, career readiness, or 
       personal growth, Dayton University is the perfect place to start your journey.
     </p>
-    <h4><b>Join us today and unlock your potential!</b></h4>
+    <h6><b>Join us today and unlock your potential!</b></h6>
   </div>
 </div>
 
-    <div className="achievements-container">
+<br></br><br></br>
 
-      <div className="achievements-section">
+    <div className="aboutachievements-container">
+      <div className="aboutachievements-section">
         
-<h2 className="head2">Discover Dayton University: Excellence, Innovation, and Success!</h2>
-        <h2 className="head2">Our Awards and Achievements</h2>
+        <h2 className="head2">Discover Dayton University: Excellence, Innovation, and Success!</h2>
+        <h2 className="head2">Our Awards and aboutachievements</h2>
         <div className="timeline">
       
           <div className="timeline-item">
@@ -182,9 +180,9 @@ const AboutUs = () => {
               <img
                 src="https://www.vdgood.org/themes/default/assets/img/research-awards.jpg"
                 alt="Top University Award"
-                className="achievement-image"
+                className="aboutachievement-image"
               />
-              <h3>Top University in Research</h3>
+              <h5>Top University in Research</h5>
               <p>
                 Dayton University has been recognized as a leader in innovative research, fostering advancements in various fields.
               </p>
@@ -198,9 +196,9 @@ const AboutUs = () => {
               <img
                 src="https://www.iul.ac.in/Times/images/ExcellenceAward.JPG"
                 alt="Community Engagement Award"
-                className="achievement-image"
+                className="aboutachievement-image"
               />
-              <h3>Community Engagement Excellence</h3>
+              <h5>Community Engagement Excellence</h5>
               <p>
                 We are proud of our commitment to community development and
                 social responsibility through various outreach programs.
@@ -215,9 +213,9 @@ const AboutUs = () => {
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8s8evyJVjbWltAGQpwmFeujdCJpbs6E3pMQ&s"
                 alt="Best Campus Environment"
-                className="achievement-image"
+                className="aboutachievement-image"
               />
-              <h3>Best Campus Environment</h3>
+              <h5>Best Campus Environment</h5>
               <p>
                 Dayton University is known for its vibrant, green campus that
                 encourages creativity, collaboration, and well-being.
@@ -231,9 +229,9 @@ const AboutUs = () => {
     <img
       src="https://images.squarespace-cdn.com/content/v1/5c9f9713e66669098db00b5a/1657723115646-S0Q2BCB3X565ZK67IDXW/_TTI+Stamp+Award+Diversity+%26+Inclusion.png"
       alt="Global Diversity Award"
-      className="achievement-image"
+      className="aboutachievement-image"
     />
-    <h3>Global Diversity Award</h3>
+    <h5>Global Diversity Award</h5>
     <p>
       Dayton University is honored for fostering an inclusive and diverse environment, embracing students and faculty from all cultural and social backgrounds.
     </p>
@@ -248,9 +246,9 @@ const AboutUs = () => {
               <img
                 src="https://previews.123rf.com/images/ctrlh/ctrlh1611/ctrlh161100080/68959940-best-employer-of-the-year-business-award-ribbon-golden-red-colors-distinction-with-champions-cup.jpg"
                 alt="Top Employer Ranking"
-                className="achievement-image"
+                className="aboutachievement-image"
               />
-              <h3>Top Employer Ranking</h3>
+              <h5>Top Employer Ranking</h5>
               <p>
                 Our graduates are sought after by leading global companies,
                 thanks to the quality education and career preparation at
@@ -263,6 +261,7 @@ const AboutUs = () => {
     </div> 
 
 
+<br></br><br></br>
     <div className="university-members-section"  style={{ marginTop: '-20px' }}>
       <h1 className="section-title">Members of the University</h1><br></br>
       <div className="members-container">
@@ -272,7 +271,7 @@ const AboutUs = () => {
             alt="Steven Pinker"
             className="member-image"
           />
-          <h4 className="member-name">Steven Pinker</h4>
+          <h5 className="member-name">Steven Pinker</h5>
           <p className="member-role">Chancellor</p>
         </div>
  
@@ -282,7 +281,7 @@ const AboutUs = () => {
             alt="Albert"
             className="member-image"
           />
-          <h4 className="member-name">Albert</h4>
+          <h5 className="member-name">Albert</h5>
           <p className="member-role">Vice Chancellor</p>
         </div>
 
@@ -293,7 +292,7 @@ const AboutUs = () => {
             alt="Edward"
             className="member-image"
           />
-          <h4 className="member-name">Edward</h4>
+          <h5 className="member-name">Edward</h5>
           <p className="member-role">Payroll Manager</p>
         </div>
 
@@ -303,42 +302,13 @@ const AboutUs = () => {
             alt="Lusy"
             className="member-image"
           />
-          <h4 className="member-name">Lusy</h4>
+          <h5 className="member-name">Lusy</h5>
           <p className="member-role">Dean of Academics</p>
         </div>
       </div>
     </div>
 
-<Footer style={{ backgroundColor: '#001529', color: '#fff', padding: '20px 0', marginTop: '50px' }}>
-  <Row justify="center" align="middle">
-    <Col span={12} style={{ textAlign: 'center' }}>
-      <Title level={4} style={{ color: '#fff' }}>
-        University Portal
-      </Title>
-      <Text style={{ color: '#fff' }}>
-        A place where your academic journey begins. Stay connected with us to unlock more opportunities.
-      </Text>
-      <div style={{ marginTop: '20px' }}>
-        <Space size="large">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-            <FacebookOutlined style={{ color: '#fff', fontSize: '24px' }} />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <TwitterOutlined style={{ color: '#fff', fontSize: '24px' }} />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <LinkedinOutlined style={{ color: '#fff', fontSize: '24px' }} />
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-            <InstagramOutlined style={{ color: '#fff', fontSize: '24px' }} />
-          </a>
-        </Space>
-      </div>
-    </Col>
-  </Row>
-</Footer>
-
-
+<Footer/>
 
     </>
   );

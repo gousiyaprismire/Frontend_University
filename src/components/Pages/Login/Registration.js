@@ -91,7 +91,7 @@ const RegisterPage = () => {
               <Form.Item
                 label="Username"
                 name="username"
-                rules={[{ required: true, message: 'Please enter your username!' }]}
+                rules={[{ required: true, message: 'Please enter your username !' }]}
               >
                 <Input placeholder="Enter your username" />
               </Form.Item>

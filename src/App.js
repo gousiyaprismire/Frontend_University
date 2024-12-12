@@ -167,7 +167,7 @@ const App = () => {
               <Route path="/news" element={<News />} />
 
               <Route path="/gym-opening" element={<GymOpening/>}/>
-              <Route path="/annaul-day" element={<AnnualDay/>}/>
+              <Route path="/annual-day" element={<AnnualDay/>}/>
               <Route path="/celebrating-women-in-sports" element={<CelebratingWomeninSports/>}/>
               <Route path="/sports-and-wellness" element={<SportsandWellness/>}/>
 

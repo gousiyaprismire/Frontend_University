@@ -1,0 +1,88 @@
+/* SportsandWellness.css */
+
+.event-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .event-title {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .event-image {
+    width: 100%;
+    max-height: 750px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .event-passage {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 1250px;
+    text-align: justify;
+    margin: 20px auto;
+  }
+  
+  .image-text-row, .text-image-row {
+    display: flex;
+    align-items: center;
+    max-width: 1250px;
+    margin: 20px 0;
+    padding: 0 10px;
+  }
+  
+  .side-image {
+    width: 40%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin: 0 20px;
+  }
+  
+  .side-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    width: 60%;
+    text-align: justify;
+  }
+  
+  .card-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1250px;
+    margin: 20px 0;
+    padding: 0 10px;
+  }
+  
+  .card {
+    flex: 1;
+    margin: 0 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    height: 300px; /* Increased height */
+    max-width: 45%; /* Decreased width */
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .final-passage {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 1250px;
+    text-align: justify;
+    margin: 20px auto;
+  }
+  

@@ -1,80 +1,82 @@
 /* News.css */
 
 .news-section {
-    font-family: 'Arial', sans-serif;
-    margin: 20px;
-    width: 800px;
-  }
-  
-  .dim-line {
-    border: 0;
-    border-top: 1px solid #857777;
-    margin: 20px 0;
-  }
-  
-  .news-container {
-    padding-bottom: 20px;
-    height: 300px;
-  }
-  
-  .news-item {
-    display: flex;
-    align-items: flex-start;
-  }
-  
-  .news-image {
-    width: 200px; /* Make the image a rectangular box shape */
-    height: 220px;
-    margin-right: 20px;
-    border-radius: 8px; /* Slightly rounded corners */
-    object-fit: cover;
-  }
-  
-  .news-content {
-    flex: 1;
-   
-  }
-  
-  .headline-container {
-    background-color: red;
-    color: white;
-    padding: 5px;
-    display: inline-block;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    text-align: center; /* Center the text horizontally */
-    align-items: center;
-  }
-  
-  .news-headline {
-    margin: 0;
-    font-size: 1.2em;
-    line-height: 1.5; /* Center the text vertically */
-    align-items: center;
-    text-align: center;
-  }
-  
-  .news-date {
-    margin: 0px 0;
-    font-size: 1em;
-    color: #555;
-  }
-  
-  .news-event {
-    margin: 0px 0;
-    font-size: 1em;
-    color: #333; /* Dark color for the event text */
-    font-weight: bold; /* Make the event text bold */
-  }
-  
-  .news-passage {
-    font-size: 0.9em;
-    color: #333;
-    margin: 0px 0;
-    line-height: 1.5;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis; /* Truncate the text after 3 lines */
-  }
-  
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  width: 800px;
+}
+
+.dim-line {
+  border: 0;
+  border-top: 1px solid #857777;
+  margin: 20px 0;
+}
+
+.news-container {
+  padding-bottom: 20px;
+  height: 300px;
+}
+
+.news-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.news-image {
+  width: 200px; /* Make the image a rectangular box shape */
+  height: 220px;
+  margin-right: 20px;
+  border-radius: 8px; /* Slightly rounded corners */
+  object-fit: cover;
+}
+
+.news-content {
+  flex: 1;
+ 
+}
+
+.headline-container {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  text-align: center; /* Center the text horizontally */
+  align-items: center;
+}
+
+.news-headline {
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 1.5; /* Center the text vertically */
+  align-items: center;
+  text-align: center;
+}
+
+.news-date {
+  margin: 0px 0;
+  font-size: 1em;
+  color: #555;
+  margin-top: 10px;
+}
+
+.news-event {
+  margin: 0px 0;
+  font-size: 1em;
+  color: #333; /* Dark color for the event text */
+  font-weight: bold; /* Make the event text bold */
+  margin-top: 10px;
+}
+
+.news-passage {
+  font-size: 0.9em;
+  color: #333;
+  margin: 0px 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Truncate the text after 3 lines */
+  margin-top: 10px;
+}

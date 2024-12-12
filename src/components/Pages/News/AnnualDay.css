@@ -1,28 +1,78 @@
 /* AnnualDay.css */
 
 .annual-day {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .annual-day h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: black;
-  }
-  
-  .annual-day-image {
-    width: 100%;
-    max-height: 750px;
-    object-fit: cover;
-    margin-bottom: 20px;
-  }
-  
-  .annual-day-passage {
-    font-size: 1.2em;
-    line-height: 1.6;
-    /* margin: 0 auto; */
-    max-width: 1300px;
-    text-align: justify;
-  }
-  
+  text-align: center;
+  padding: 20px;
+}
+
+.annual-day h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.annual-day-image {
+  width: 100%;
+  max-height: 750px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.annual-day-passage {
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 1250px;
+  text-align: justify;
+  margin-bottom: 80px;
+}
+
+.row-container,.add-row-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 20px auto; /* Adjusted for spacing */
+  text-align: left;
+  margin-bottom: 80px;
+}
+
+.side-image {
+  width: 30%; /* Adjust as necessary */
+  max-width: 350px;
+  border-radius: 8px;
+  margin-left: 70px;
+  height: 300px;
+}
+
+.side-text {
+  width: 55%; /* Adjust as necessary */
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-right: 70px;
+  text-align: justify;
+}
+
+.another-row-container ,.another-one-row-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 20px auto; /* Adjusted for spacing */
+  text-align: left;
+}
+
+.another-side-image {
+  width: 30%; /* Adjust as necessary */
+  max-width: 350px;
+  border-radius: 8px;
+  margin-right: 70px;
+  height: 300px;
+}
+
+.another-side-text {
+  width: 55%; /* Adjust as necessary */
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-left: 70px;
+  text-align: justify;
+}

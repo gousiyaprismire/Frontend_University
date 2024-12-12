@@ -1,7 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link, Routes } from 'react-router-dom';
-import './News.css';
-
+import { Link } from 'react-router-dom';
+import './News.css'; // Import your styles
 
 const newsItems = [
   {
@@ -10,7 +9,7 @@ const newsItems = [
     date: "01 Jan 2023",
     event: "Annual Day",
     passage: "This is a brief passage about the event. The graduation ceremony was a momentous occasion, celebrating the achievements of students.",
-    link: "/annaul-day",
+    link: "/annual-day",
   },
   {
     image: "https://media.istockphoto.com/id/1420057741/photo/victory-is-ours.jpg?s=612x612&w=0&k=20&c=-RI_q9aFxEW4B0aBOgmN0qpt4AW2BJ3MVzhELZdir6I=",
@@ -40,29 +39,30 @@ const newsItems = [
 
 const News = () => {
   return (
-    
-      <div className="news-section">
-        <hr className="dim-line" />
-        {newsItems.map((item, index) => (
-          <div key={index} className="news-container">
-            <div className="news-item">
-              <img src={item.image} alt="News" className="news-image" />
-              <div className="news-content">
-                <div className="headline-container">
-                  <h3 className="news-headline">{item.headline}</h3>
-                </div>
-                <p className="news-date">{item.date}</p>
-                <p className="news-event">
-                  <Link to={item.link} className="event-link">{item.event}</Link>
-                </p>
-                <p className="news-passage">{item.passage}</p>
+    <div className="news-section">
+      <hr className="dim-line" />
+      
+      {/* Loop through all news items */}
+      {newsItems.map((item, index) => (
+        <div key={index} className="news-container">
+          <div className="news-item">
+            <img src={item.image} alt="News" className="news-image" />
+            <div className="news-content">
+              <div className="headline-container">
+                <h3 className="news-headline">{item.headline}</h3>
               </div>
+              <p className="news-date">{item.date}</p>
+              <p className="news-event">
+                <Link to={item.link} className="event-link">{item.event}</Link>
+              </p>
+              <p className="news-passage">{item.passage}</p>
             </div>
-            <hr className="dim-line" />
           </div>
-        ))}
-      </div>
-    
+          <hr className="dim-line" />
+        </div>
+      ))}
+
+    </div>
   );
 };
 

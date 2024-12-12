@@ -22,8 +22,6 @@ const HallOfFame = () => {
       image: 'https://i.cbc.ca/1.7351783.1728876751!/fileImage/httpImage/image.jpg_gen/derivatives/4x3_1180/2178281531.jpg',
       description: 'Founder and CEO of a Fortune 500 tech company.When Steve Smith joined Zayo as CEO, he found himself at the head of a company that was a Frankenstein of 46 acquisitions. And while the company’s decentralized approach had served it well in the early years, Steve saw an opportunity to take the company further. This time — and almost paradoxically — through centralization.',
     },
-    
-    
     {
       name: 'Michael Lee',
       title: 'Renowned Author',
@@ -41,17 +39,13 @@ const HallOfFame = () => {
       title: 'Astronaut',
       image: 'https://www.unisys.com/siteassets/images/leadership/headshot/leadership-david-brown-3.jpg',
       description: 'Participated in multiple space missions and research on the ISS.David McDowell Brown (April 16, 1956 – February 1, 2003) was a United States Navy captain and NASA astronaut. He died on his first spaceflight, when the Space Shuttle Columbia (STS-107) disintegrated during orbital reentry into the Earths atmosphere. Brown became an astronaut in 1996 but had not served on a space mission prior to the Columbia disaster. He was posthumously awarded the Congressional Space Medal of Honor.',
-    },
-    
+    },  
     {
       name: 'James Carter',
       title: 'Professional Basketball Player',
       image: 'https://frontofficesports.com/wp-content/uploads/2023/10/USATSI_19435449_168393969_lowres-scaled-e1697819953633.jpg?quality=100',
       description: 'NBA MVP and multiple-time champion.James Raymond Carter Gaudino (born March 27, 1964) is a retired Puerto Rican basketball player. Carter spent most of his career as a point guard for the Brujos de Guayama of the Baloncesto Superior Nacional (BSN). Carter is currently the all-time assists leader of the league.[1] During his 20-year career, he also played for the Indios de Mayagüez, Criollos de Caguas, Maratonistas de Coamo, and Capitanes de Arecibo. Carter also played since 1992 to the year 2000 for the Explosivos de Moca of the Liga de Baloncesto Puertorriqueña.',
     },
-   
-    
-    
     {
       name: 'Mark Wilson',
       title: 'Famous Architect',
@@ -164,9 +158,7 @@ const HallOfFame = () => {
           </div>
         </div>
       </nav>
-
       <div className="content-container">{renderContent()}</div>
-
       <Footer />
     </div>
   );

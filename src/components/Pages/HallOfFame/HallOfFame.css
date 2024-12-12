@@ -30,7 +30,6 @@
   text-decoration: underline;
 }
 
-/* Achievers Section */
 .all-achievers-container {
   max-width: 1200px;
   margin: 20px auto;
@@ -77,12 +76,10 @@
   color: #555;
 }
 
-/* Content Container */
 .content-container {
   padding: 20px;
 }
 
-/* Footer */
 footer {
   background-color: #343a40;
   color: #fff;
@@ -92,7 +89,6 @@ footer {
   margin-top: 20px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .row {
     flex-direction: column;

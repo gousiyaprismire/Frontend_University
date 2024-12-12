@@ -1,5 +1,5 @@
 import React from 'react';
-import './UniversityRanking.css'; // Ensure this CSS file exists for styling
+import './UniversityRanking.css';
 
 const UniversityRanking = () => {
   return (

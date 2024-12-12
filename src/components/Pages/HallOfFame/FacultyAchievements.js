@@ -99,3 +99,4 @@ const FacultyAchievements = () => {
 };
 
 export default FacultyAchievements;
+

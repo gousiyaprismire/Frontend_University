@@ -20,20 +20,18 @@
 
 .footer-social-icon {
   display: block;
-  /* margin-bottom: 10px; */
   padding-left: 100px;
 }
 
 .footer-link {
   display: block;
-  /* margin-bottom: 10px; */
   text-decoration: none;
   color: inherit;
   padding-left: 100px;
 }
 
 .footer-link:hover {
-  color: #ff4081; /* Example hover effect */
+  color: #ff4081;
 }
 
 .footer-copyright {
@@ -44,7 +42,6 @@
   margin-right: 8px;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 600px) {
   .footer-grid {
     display: block;

@@ -24,6 +24,7 @@
 font-size: 2.5rem;
 margin-bottom: 20px;
 color: #97b5ce;
+text-align: center
 }
 .location-container img{
 max-width: 100%;
@@ -198,6 +199,7 @@ margin-top: 15px;
 font-size: 2.5rem;
 margin-bottom: 20px;
 color: #97b5ce;
+text-align: center;
 }
 .library1 {
   display: flex;
@@ -238,6 +240,17 @@ color: #97b5ce;
   color: #1f1d1d;
   margin: 0;
   flex: 1;
+}
+.library-craft{
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  justify-content: space-between;
+}
+.library-craft img{
+   width:630px;
+   height: 630px;
+   border-radius: 20px;
 }
 .library2 img{
   max-width: 40%;
@@ -295,6 +308,7 @@ color: #97b5ce;
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #97b5ce;
+  text-align: center;
 }
 .admin-block {
   display: flex; 
@@ -368,6 +382,7 @@ color: #97b5ce;
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #97b5ce;
+  text-align: center;
 }
 .medical1 {
   background-color: #f9f9f9;
@@ -404,10 +419,24 @@ color: #97b5ce;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.medical-pics{
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.medical-pics img{
+  width: 550px;
+  height: 550;
+  border-radius: 20px;
+}
 .location-container5 h1{
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #97b5ce;
+  text-align: center;
 }
 .parking{
   background-color: #c5c1c1;
@@ -444,6 +473,8 @@ color: #97b5ce;
 }
 
 .canteen h4 {
+  text-align: center;
+  font-size: 30px;
   margin-bottom: 15px;
   color: #c76262;
 }

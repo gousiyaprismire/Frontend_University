@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Admissions.css';
-import admission1 from '../../../images/admission3.avif';
 import dayton from  '../../../images/dayton1.jpg';
 const Admissions = () => {
   const [activeTab, setActiveTab] = useState('');
@@ -24,12 +23,20 @@ const Admissions = () => {
                  in their disciplines. Additionally, many programs offer flexible scheduling options, including evening and online classes, to accommodate working professionals. Explore our diverse offerings and find the program that aligns 
                  with your career goals and interests.</p>
             </div>
+            <div className='student-image1'>
+             <img src='https://media.istockphoto.com/id/1066324992/photo/graduation-day.jpg?s=612x612&w=0&k=20&c=cleRpjTZbo430AbH-luZFYMMNqPwhwyTnFgWMbi_AiI='/>
+            <img src='https://www.shutterstock.com/image-photo/group-diverse-international-graduating-students-600nw-183400235.jpg'/>
+             </div>
                  <div className='student-text2'>
                 <h4>Why Choose UD for Your Graduate Studies?</h4>
                 <p><strong>Expert Faculty:</strong>Learn from experienced faculty members who are leaders in their disciplines and dedicated to your success.</p>
                 <p><strong>Flexible Scheduling</strong>Many programs offer evening and online classes to accommodate your busy schedule.</p>
                 <p><strong>Research Opportunities</strong>Engage in cutting-edge research projects that address real-world challenges.</p>
                 <p><strong>Supportive Community: </strong>Join a vibrant and inclusive community that supports your academic and professional growth.</p>
+                </div>
+                <div className='student-image2'>
+                  <img src='https://www.stonybrook.edu/commcms/studentaffairs/stu/_images/Web_Ready-180516_Doctoral%20Hooding_006.JPG.JPG' style={{ maxWidth: '50%', height: 'auto' }}/>
+                  <img src='https://prod.ucwe.capgemini.com/in-en/wp-content/uploads/sites/18/2022/09/Students-and-Graduates-1-e1664459301829.jpg' style={{ maxWidth: '50%', height: 'auto' }}/>
                 </div>
                 <div className='student-text3'>
                   <h2>Application Process</h2>
@@ -40,9 +47,14 @@ const Admissions = () => {
                   <p><strong>Personal Statement:</strong> Write a personal statement outlining your goals and reasons for pursuing graduate studies</p>
                   <p><strong>Test Scores:</strong>Some programs may require GRE or other standardized test scores.</p>
                   </div>
+                  <div className='student-image3'>
+                    <img src='https://www.thoughtco.com/thmb/ns4o64YYn6j6YVwP0ip4GL1KMOU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-168367619-d5be4ccbe9c3477a96fbf8f02f364eec.jpg' style={{maxWidth: '50%'}}/>
+                      <img src='https://sps.columbia.edu/sites/default/files/styles/4_3_800x600/public/2019-04/front-announcement-f5-sps-application-on-laptop.jpg.webp?itok=1vVQKrU7' style={{maxWidth:'50%'}}/>
+                  </div>
                   <div className='student-text4'>
-                    <h4>Financial Aid and Scholarships</h4>
-                    <p>We are committed to making graduate education affordable. Explore our financial aid options, including scholarships, assistantships, and loans, to help fund your studies.</p>
+                  <h4>Financial Aid and Scholarships</h4>
+                  <img src='https://www.uwgb.edu/UWGBCMS/media/FinancialAid/images/Medium/financial-aid-process.png'/>
+                    <p>We are committed to making graduate education affordable. Explore our financial aid options, including scholarships, assistantships, and loans, to help fund your studies.Additionally, we offer work-study programs and flexible payment plans to ease your financial burden. Our dedicated financial aid office is here to assist you every step of the way. Don't hesitate to reach out for personalized guidance and support.</p>
                   </div>
                 
             </div>
@@ -68,11 +80,19 @@ const Admissions = () => {
               <p><strong>Hybrid Programs:</strong>Some programs offer a blend of online and in-person classes, giving you the best of both worlds.</p>
              </div>
              <div className='course-text3'>
+              <div>
               <h4>Course Structure</h4>
               <p>Our graduate courses are designed to provide a rigorous and engaging learning experience. You'll participate in lectures, seminars, and hands-on projects that challenge you to apply your knowledge 
                 in real-world scenarios. Collaboration with peers and faculty is a key component, fostering a dynamic and supportive learning environment.</p>
               <h4>Research Opportunities</h4>
               <p>Engage in cutting-edge research that addresses real-world challenges. Our graduate programs offer numerous opportunities to collaborate with faculty on research projects, present your findings at conferences, and publish your work in academic journals.</p>
+              </div>
+              <div>
+                <img src='https://icerac.in/images/courses-img1.jpg'/>
+              </div>
+             </div>
+             <div className='support'>
+              <img src='https://eswa.org/wp-content/uploads/2018/10/AdobeStock_41399639.jpeg' style={{maxWidth:'30%'}}/>
              </div>
              <div className='course-text4'>
               <h4>Support and Resources</h4>
@@ -140,6 +160,14 @@ const Admissions = () => {
                  in their disciplines. Additionally, many programs offer flexible scheduling options, including evening and online classes, to accommodate working professionals. Explore our diverse offerings and find the program that aligns 
                  with your career goals and interests.</p>
                 </div>
+                <div className='ug-images'>
+                <div>
+                  <img src='https://www.avanse.com/blogs/images/Website%20Blog%20Image%20(43).png'/>
+                </div>
+                <div className='ug-image2'>
+                  <img src='https://vihaaneducation.in/wp-content/uploads/2024/03/positive-indian-man-young-students-casual-clothes-are-together-outdoors-1-1.jpg' style={{maxWidth:'95%'}}/>
+                </div>
+                </div>
                  <div className='student-text2'>
                 <h4>Why Choose UD for Your Under Graduate Studies?</h4>
                 <p><strong>Expert Faculty:</strong>Learn from experienced faculty members who are leaders in their disciplines and dedicated to your success.</p>
@@ -172,6 +200,10 @@ const Admissions = () => {
               <h4>Discover Your Path with Our Diverse Undergraduate Programs</h4>
               <p>The University of Dayton offers a comprehensive range of undergraduate courses designed to provide a strong foundation in your chosen field. Our programs are tailored to meet the needs of students from various backgrounds, preparing you for a successful future. </p>
               </div>
+              <div className='ug-course-image'>
+                <img src='https://steinhardt.nyu.edu/sites/default/files/styles/card_grid_medium/public/2020-06/students_masters_statistics_20-0234-210.jpg?h=7bb66314&itok=Q7Kt9wRU'/>
+                <img src='https://sustainability.stanford.edu/sites/sustainability/files/styles/card_3_2_1920x1280_/public/media/image/nicoleardoin_teaching_0.jpeg?itok=otAgBmpz' style={{maxWidth:'40%'}}/>
+              </div>
               <div className='course-text2'>
               <h4>Program Highlights</h4>
               <p><strong>College of Arts and Sciences:</strong>Explore majors in humanities, social sciences, natural sciences, and more. Programs include Biology, Psychology, Political Science, and English.</p>
@@ -183,7 +215,7 @@ const Admissions = () => {
               <p><strong>Minors and Certificates:</strong>Enhance your major with over 100 minors and nearly 50 certificates, allowing you to customize your education.</p>
               <p><strong>Study Abroad:</strong>Broaden your horizons with study abroad programs that offer global learning experiences.</p>
             </div>
-            <div className='course-text3'>
+            <div className='course-structure'>
               <h4>Course Structure</h4>
               <p>Our undergraduate courses are designed to provide a rigorous and engaging learning experience. You'll participate in lectures, labs, seminars, and hands-on projects that challenge you to apply your knowledge in real-world scenarios. Collaboration with peers and faculty is a key component, fostering a dynamic and supportive learning environment.</p>
             </div>
@@ -255,6 +287,10 @@ const Admissions = () => {
                 <p>The University of Dayton offers a variety of distance learning programs designed to fit your busy schedule. Our online courses provide the same high-quality education as our on-campus programs, delivered by experienced faculty who are experts in their fields.</p>
               </div>
               </div>
+              <div className='distance-images'>
+                <img src='https://media.istockphoto.com/id/1411110345/photo/side-view-of-a-successful-smart-guy-listening-to-an-online-lecture-taking-notes-in-a-notebook.jpg?s=612x612&w=0&k=20&c=j4aaAo1pIm6W5LjqZSNNxCtm4OFNJcFWoH2S9bLqDLc='/>
+                <img src='https://academicfamilies.com/wp-content/uploads/online-learning.jpg'/>
+              </div>
               <div className='distance-text1'>
                 <h4>Program Highlights</h4>
                 <p><strong>High-Quality Academics:</strong>As a top-tier Catholic research university, our online programs are designed to provide rigorous and engaging learning experiences. Our faculty are accomplished scholars who inspire students to think critically and create meaningful change.</p>
@@ -272,6 +308,9 @@ const Admissions = () => {
                 </div>
               </div>
               <div className='distance-text3'>
+                <div>
+                  <img src='https://futureeducationmagazine.com/wp-content/uploads/2024/04/1.1-Adaptability.jpg'/>
+                </div>
                 <h4>Flexible Learning Options</h4>
                 <p><strong>Evening and Weekend Classes:</strong>Many of our online courses are offered in the evenings and on weekends to accommodate your busy schedule.</p>
                 <p><strong>Hybrid Programs:</strong>Some programs offer a blend of online and in-person classes, giving you the flexibility to learn in a way that suits you best.</p>
@@ -294,14 +333,23 @@ const Admissions = () => {
           <div>
           <div className='admission-default'>
            <h1>Welcome to University of Dayton Admissions</h1>
-           <h2><strong>Discover Your Future at UD</strong></h2>
+           <div className='admission-gallery'>
+           <div className='admission-pic1'>
+           <img src='https://media.istockphoto.com/id/1246282408/photo/black-graduation-cap-or-a-mortarboard-blue-and-red-pencils-in-a-bottle.jpg?s=612x612&w=0&k=20&c=ayZbvEvpWYWvSV7XyW151FR8CKLc75FjVFBBH2XxYK0='/>
+           </div>
+           <div className='admission-pic2'>
+            <img src='https://st3.depositphotos.com/4678277/16129/i/450/depositphotos_161299614-stock-photo-its-more-easy-together-six.jpg'/>
+            <img src='https://d3rsva8zdn1qpf.cloudfront.net/sites/company/files/styles/default/public/2021-11/inspired-university-admissions-thumbs-up.jpg.jpeg?itok=iDudJMTa'/>
+           </div>
+           </div>
+           <h3><strong>Discover Your Future at UD</strong></h3>
            <p>At the University of Dayton, we believe in the power of education to transform lives. Our admissions process is designed to identify students who will thrive in our inclusive and vibrant community. Whether you're a high school student, a transfer student,
              or looking to pursue graduate studies, we are here to support you every step of the way.
            Our dedicated admissions team is committed to making your application process as smooth as possible. We offer personalized guidance and resources to help you showcase your unique strengths and achievements. With a focus on holistic review, we consider not just your academic performance, but also your extracurricular involvement, leadership qualities, and personal experiences. Join us at UD, where your potential is nurtured, 
             and your future is bright. Apply today and become part of a community that values innovation, collaboration, and lifelong learning.</p>
           </div>
           <div className='admission-image'>
-            <img src={admission1} alt='admission-photo'/>
+            <img src='https://st2.depositphotos.com/1008096/42874/i/450/depositphotos_428749176-stock-photo-university-word-cloud-collage-education.jpg' alt='admission-photo'/>
           </div>
           <div className='default2'>
             <h3><strong>Visit Our Campus</strong></h3>
@@ -311,6 +359,30 @@ const Admissions = () => {
             <p>Ready to join the Flyer family? Start your application today and take the first step towards your future at the University of Dayton.
              Embrace the opportunity to grow academically, personally, and professionally in a supportive environment. Our community is excited to welcome you and help you achieve your dreams. Apply now and begin your journey with us!</p>
           </div>
+           <div className='footer'>
+             <div className='footer-image'>
+              <img src='https://www.shutterstock.com/image-photo/college-admission-office-sign-600nw-3165397.jpg'/>
+             </div>
+             <div className='study-type'>
+              <h4>Graduates</h4>
+              <h6 onClick={() => handleSelectChange('graduate-studentlife')}>Graduate Student life</h6>
+              <h6 onClick={() => handleSelectChange('graduate-courses')}>Graduate Courses</h6>
+              <h6 onClick={() => handleSelectChange('graduate-fees')}>Graduate  Fees</h6>
+              <h6 onClick={() => handleSelectChange('graduate-fees')}>Graduate Funds</h6>
+             </div>
+             <div className='study-type'>
+              <h4>Under Graduates</h4>
+              <h6 onClick={() => handleSelectChange('undergraduate-studentlife')}>Under Graduate Student life</h6>
+              <h6 onClick={() => handleSelectChange('undergraduate-courses')}>Under Graduate Courses</h6>
+              <h6 onClick={() => handleSelectChange('undergraduate-fees')}>Under Graduate  Fees</h6>
+              <h6 onClick={() => handleSelectChange('undergraduate-fees')}>Under Graduate Funds</h6>
+             </div>
+             <div className='study-type'> 
+              <h4>Continuing Education</h4>
+              <h6  onClick={() => handleSelectChange('distance')}>Distance Course</h6>
+              <h6>Online Course</h6>
+             </div>
+           </div>
           </div>
         );
     }

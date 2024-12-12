@@ -36,29 +36,21 @@
 }
 
 .headline-container {
-  background-color: red;
   color: white;
   padding: 5px;
   display: inline-block;
   border-radius: 5px;
   margin-bottom: 5px;
-  text-align: center; /* Center the text horizontally */
+  text-align: center; 
   align-items: center;
-}
-
-.news-headline {
-  margin: 0;
-  font-size: 1.2em;
-  line-height: 1.5; /* Center the text vertically */
-  align-items: center;
-  text-align: center;
 }
 
 .news-date {
   margin: 0px 0;
   font-size: 1em;
   color: #555;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .news-event {
@@ -67,6 +59,8 @@
   color: #333; /* Dark color for the event text */
   font-weight: bold; /* Make the event text bold */
   margin-top: 10px;
+  margin-bottom: 20px;
+
 }
 
 .news-passage {

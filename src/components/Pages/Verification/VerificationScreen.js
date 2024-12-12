@@ -55,7 +55,7 @@ function VerificationScreen() {
     <div className="app-container">
       <h1 className="verificationscreen-h1">Check Student Enrollment Information</h1>
       <div className="student-table-container">
-        <table className="student-table">
+        <table className="student-table" >
           <thead>
             <tr>
               <th>ID</th>

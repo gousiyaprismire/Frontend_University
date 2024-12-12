@@ -3,48 +3,44 @@
   font-family: 'Roboto'
 }
 
-.aboutus h1 {
+.head2 {
   text-align: center;
   margin-top: 30px;
-  font-size: 2.5rem;
-  color: #333;
-}
-
-.aboutus h2 {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 2rem;
+  font-size: 22px;
   color: black;
 }
+.para
+{
+  font-size: 15px;
+  text-align: justify;
+  font-family: 'Roboto';
+  padding: 10px;
+  line-height: 23px;
+}
 
-.aboutus.img1 {
+.card-title
+{
+  text-align: center;
+}
+.img1 {
   margin-left: 10px;
   height: 500px;
   width: 98%;
 }
 
-.aboutus.card:hover {
+.card:hover {
   transform: scale(1.06);
   box-shadow: 2px 4px 8px rgba(19, 16, 16, 0.86);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.aboutus p {
-  font-size: 14px;
-  color: black;
-  line-height: 1.8;
-  margin: 10px auto;
-  width: 92%;
-  text-align: justify;
-  padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 .video-text-container {
   display: flex;
   flex-direction: row;
   gap: 30px;
   padding: 12px;
+  margin-bottom: 20px;
 }
 
 .video-section {
@@ -52,45 +48,47 @@
   padding-left: 50px;
 }
 
-.aboutus.text-section {
+.text-section {
   width: 50%;
   font-size: 16px;
   font-family: 'Roboto';
 }
 
-.aboutus.text {
+.text {
   font-size: 23px;
   font-weight: bold;
   font-family: 'Roboto';
 }
 
-.aboutus.achievements-container {
+.aboutachievements-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  margin-top: -80px;
 }
 
-.aboutus.achievements-section {
-  width: 75%;
+
+.aboutachievements-section {
+  width: 70%;
   margin-top: 40px;
   text-align: left;
 }
 
-.aboutus.timeline {
+.timeline {
   position: relative;
   padding: 20px 0;
   border-left: 4px solid #4CAF50;
   margin-left: 20px;
 }
 
-.aboutus.timeline-item {
+.timeline-item {
   position: relative;
   margin-bottom: 30px;
   padding-left: 30px;
+  height: 180px;
 }
 
-.aboutus.timeline-marker {
+.timeline-marker {
   position: absolute;
   left: -9px;
   top: 10px;
@@ -102,59 +100,60 @@
   z-index: 1;
 }
 
-.aboutus.timeline-content {
-  margin-left: 20px;
+.timeline-content {
+  margin-left: 25px;
   background-color: #f9f9f9;
-  padding: 20px 25px;
+  padding: 35px 25px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.aboutus.timeline-content h3 {
+.timeline-content h3 {
   color: black;
   margin-bottom: 10px;
 }
 
-.aboutus.timeline-content p {
+.timeline-content p {
   color: #182a2bbc;
   font-size: 16px;
   font-family: 'Roboto';
 }
 
-.aboutus.achievement-image {
-  width: 150px;
-  height: 150px;
+.aboutachievement-image {
+  width: 120px;
+  height: 120px;
   border-radius: 60%;
   float: left;
-  margin-right: 15px;
+  margin-right: 45px;
+  margin-top: -15px;
 }
 
-.aboutus.university-members-section {
+.university-members-section {
   padding: 20px;
   text-align: center;
   font-family: 'Roboto';
 }
 
-.aboutus.section-title {
+.section-title { 
   margin-bottom: 30px;
   color: #2c3e50;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
 }
 
-.aboutus.members-container {
+.members-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
 }
 
-.aboutus.member {
+.member {
   text-align: center;
   width: 200px;
 }
 
-.aboutus.member-image {
+.member-image {
   width: 180px;
   height: 180px;
   border-radius: 60%;
@@ -163,19 +162,19 @@
   border: 5px solid #285c28;
 }
 
-.aboutus.member-name {
+.member-name {
   margin: 5px 0;
-  margin-left: -45px;
+  margin-left: 15px;
   color: #2c3e50;
   font-size: 18px;
   font-weight: bold;
 }
 
-.aboutus.member-role {
-  margin: -15px 0;
+.member-role {
+  margin: 15px 0;
   color: #48686b;
-  margin-left: 35px;
+  margin-left: 5px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   
 }   

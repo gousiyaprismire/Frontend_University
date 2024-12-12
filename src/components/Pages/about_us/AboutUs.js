@@ -1,23 +1,21 @@
 import React from 'react';
 import './AboutUs.css';
-import { Carousel, Typography, Button, Layout, Row, Col, Space } from 'antd';
-import { FacebookOutlined, TwitterOutlined, LinkedinOutlined, InstagramOutlined } from '@ant-design/icons';
+import Footer from '../Footer/Footer';
  
-const { Title, Text } = Typography;
-const { Footer } = Layout;
 
 const AboutUs = () => {
   return (
     <>
-      <h1>About Us</h1>
+    <h2 style={{textAlign:'center'}}>AboutUs</h2>
       <img className='img1'
         src="https://jcpatriot.com/wp-content/uploads/2016/04/REAL-university-of-florida-pic.jpg"
-        title="Prismire University"
+        title="Dayton University"
         alt="university pic"
-        style={{ width: '100%', height: '500px' }}
+        style={{ width: '100%', height: '600px' }}
       />
-      <p>
-        Dalton University is a distinguished institution dedicated to academic excellence, innovation, and community
+      <br></br><br></br>
+      <p className='para'>
+        Dayton University is a distinguished institution dedicated to academic excellence, innovation, and community
         engagement. Offering a wide range of undergraduate, graduate, and professional programs, it provides students with
         the knowledge and skills necessary for success in a dynamic world. The university is renowned for its world-class
         faculty, cutting-edge research opportunities, and modern facilities. With a focus on critical thinking, hands-on
@@ -28,7 +26,7 @@ const AboutUs = () => {
      
      
       <div style={{ backgroundColor: '#E0F7FA', padding: '20px' }}>
-        <h2>Our Goals</h2>
+        <h2 style={{textAlign:'center'}}>Our Goals</h2>
         <div className="row row-cols-1 row-cols-md-3 g-4">
           <div className="col">
             <div className="card h-auto" style={{ width: '100%', maxWidth: '430px', margin: '0 auto' }}>
@@ -40,7 +38,7 @@ const AboutUs = () => {
               />
               <div className="card-body">
                 <h5 className="card-title">Academic Excellence</h5>
-                <p className="card-text">
+                <p className="card-text para">
                 Providing high-quality education that empowers students with the knowledge, skills, and critical
                 thinking needed for personal development and professional success in a dynamic world.
                 </p>
@@ -58,7 +56,7 @@ const AboutUs = () => {
               />
               <div className="card-body">
                 <h5 className="card-title">Research and Innovation</h5>
-                <p className="card-text">
+                <p className="card-text para">
                 Research and innovation in universities foster knowledge growth, creativity, and solutions to global challenges, advancing academics and societal development.</p>
               </div>
             </div>
@@ -74,7 +72,7 @@ const AboutUs = () => {
               />
               <div className="card-body">
                 <h5 className="card-title">Social & Ethical Responsibility</h5>
-                <p className="card-text">
+                <p className="card-text para">
                   Encouraging students and faculty to contribute to social causes and work toward the betterment of society. Promoting values such as integrity, respect, sustainability, and justice.
                 </p>
               </div>
@@ -91,7 +89,7 @@ const AboutUs = () => {
               />
               <div className="card-body">
                 <h5 className="card-title">Career Preparation</h5>
-                <p className="card-text">
+                <p className="card-text para">
                   Providing opportunities for students to gain practical experience through internships, cooperative education & professional networks.
                 </p>
               </div>
@@ -108,7 +106,7 @@ const AboutUs = () => {
               />
               <div className="card-body">
                 <h5 className="card-title">Collaboration and Partnership</h5>
-                <p className="card-text">
+                <p className="card-text para">
                   Encouraging collaboration between students, faculty, industries, and other academic institutions to foster innovation and progress.
                 </p>
               </div>
@@ -125,7 +123,7 @@ const AboutUs = () => {
               />
               <div className="card-body">
                 <h5 className="card-title">Personal Development</h5>
-                <p className="card-text">
+                <p className="card-text para">
                  It emphasizes enhancing students' self-awareness, emotional intelligence, leadership skills, and overall growth for future success.
                 </p>
               </div>
@@ -141,43 +139,39 @@ const AboutUs = () => {
     </div>
     <br/>
 
-     <div className="video-text-container">
-      <div className="video-section">
-        <iframe
-          width="100%"
-          height="380"
-          src="https://www.youtube.com/embed/RgMBdVvqswM"
-          title="YouTube video player"
-     
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
+    <div className="video-text-container" style={{ marginBottom: '20px' }}>
+  <div className="video-section">
+    <iframe
+      width="100%"
+      height="380"
+      src="https://www.youtube.com/embed/RgMBdVvqswM"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </div>
 
-    
-      <div className="text-section">
-        <h2>Inside our University: A Journey of Knowledge and Innovation</h2>
-        <p>
-        Welcome to Dalton University, where we help students achieve their dreams. With modern facilities, 
-        a variety of academic programs, and a supportive campus community, Dalton offers an environment 
-        where you can learn, grow, and succeed. Our dedicated faculty guide students to excel and prepare 
-        for a successful future. At Dalton, we celebrate diversity, innovation, and collaboration, ensuring 
-        every student has the opportunity to thrive. Whether you're focused on academics, career readiness, or 
-        personal growth, Dalton University is the perfect place to start your journey.............................
-        <b>Join us today and unlock your potential!</b>
-        </p>
-       
-      </div>
-    </div>
+  <div className="text-section">
+    <h2 className="head2">Inside our University: A Journey of Knowledge and Innovation</h2>
+    <p className="para">
+      Welcome to Dayton University, where we help students achieve their dreams. With modern facilities, 
+      a variety of academic programs, and a supportive campus community, Dayton offers an environment 
+      where you can learn, grow, and succeed. Our dedicated faculty guide students to excel and prepare 
+      for a successful future. At Dayton, we celebrate diversity, innovation, and collaboration, ensuring 
+      every student has the opportunity to thrive. Whether you're focused on academics, career readiness, or 
+      personal growth, Dayton University is the perfect place to start your journey.
+    </p>
+    <h6><b>Join us today and unlock your potential!</b></h6>
+  </div>
+</div>
 
+<br></br><br></br>
 
-
-    <div className="achievements-container">
-
-      <div className="achievements-section">
+    <div className="aboutachievements-container">
+      <div className="aboutachievements-section">
         
-<h2>Discover Dalton University: Excellence, Innovation, and Success!</h2>
-        <h2>Our Awards and Achievements</h2>
+        <h2 className="head2">Discover Dayton University: Excellence, Innovation, and Success!</h2>
+        <h2 className="head2">Our Awards and aboutachievements</h2>
         <div className="timeline">
       
           <div className="timeline-item">
@@ -186,11 +180,11 @@ const AboutUs = () => {
               <img
                 src="https://www.vdgood.org/themes/default/assets/img/research-awards.jpg"
                 alt="Top University Award"
-                className="achievement-image"
+                className="aboutachievement-image"
               />
-              <h3>Top University in Research</h3>
+              <h5>Top University in Research</h5>
               <p>
-                Dalton University has been recognized as a leader in innovative research, fostering advancements in various fields.
+                Dayton University has been recognized as a leader in innovative research, fostering advancements in various fields.
               </p>
             </div>
           </div>
@@ -202,9 +196,9 @@ const AboutUs = () => {
               <img
                 src="https://www.iul.ac.in/Times/images/ExcellenceAward.JPG"
                 alt="Community Engagement Award"
-                className="achievement-image"
+                className="aboutachievement-image"
               />
-              <h3>Community Engagement Excellence</h3>
+              <h5>Community Engagement Excellence</h5>
               <p>
                 We are proud of our commitment to community development and
                 social responsibility through various outreach programs.
@@ -219,15 +213,31 @@ const AboutUs = () => {
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8s8evyJVjbWltAGQpwmFeujdCJpbs6E3pMQ&s"
                 alt="Best Campus Environment"
-                className="achievement-image"
+                className="aboutachievement-image"
               />
-              <h3>Best Campus Environment</h3>
+              <h5>Best Campus Environment</h5>
               <p>
-                Dalton University is known for its vibrant, green campus that
+                Dayton University is known for its vibrant, green campus that
                 encourages creativity, collaboration, and well-being.
               </p>
             </div>
           </div>
+
+          <div className="timeline-item">
+  <div className="timeline-marker"></div>
+  <div className="timeline-content">
+    <img
+      src="https://images.squarespace-cdn.com/content/v1/5c9f9713e66669098db00b5a/1657723115646-S0Q2BCB3X565ZK67IDXW/_TTI+Stamp+Award+Diversity+%26+Inclusion.png"
+      alt="Global Diversity Award"
+      className="aboutachievement-image"
+    />
+    <h5>Global Diversity Award</h5>
+    <p>
+      Dayton University is honored for fostering an inclusive and diverse environment, embracing students and faculty from all cultural and social backgrounds.
+    </p>
+  </div>
+</div>
+
 
       
           <div className="timeline-item">
@@ -236,21 +246,24 @@ const AboutUs = () => {
               <img
                 src="https://previews.123rf.com/images/ctrlh/ctrlh1611/ctrlh161100080/68959940-best-employer-of-the-year-business-award-ribbon-golden-red-colors-distinction-with-champions-cup.jpg"
                 alt="Top Employer Ranking"
-                className="achievement-image"
+                className="aboutachievement-image"
               />
-              <h3>Top Employer Ranking</h3>
+              <h5>Top Employer Ranking</h5>
               <p>
                 Our graduates are sought after by leading global companies,
                 thanks to the quality education and career preparation at
-                Dalton.
+                Dayton.
               </p>
             </div>
           </div>
         </div>
       </div>
     </div> 
-    <div className="university-members-section">
-      <h2 className="section-title">Members of the University</h2>
+
+
+<br></br><br></br>
+    <div className="university-members-section"  style={{ marginTop: '-20px' }}>
+      <h1 className="section-title">Members of the University</h1><br></br>
       <div className="members-container">
         <div className="member">
           <img
@@ -258,17 +271,17 @@ const AboutUs = () => {
             alt="Steven Pinker"
             className="member-image"
           />
-          <h4 className="member-name">Steven Pinker</h4>
+          <h5 className="member-name">Steven Pinker</h5>
           <p className="member-role">Chancellor</p>
         </div>
-
+ 
         <div className="member">
           <img
             src="https://www.law.columbia.edu/sites/default/files/styles/260x312/public/2024-11/madhav.0435cc_crop.jpg?h=7f3af489&itok=6HL2hRVM"
             alt="Albert"
             className="member-image"
           />
-          <h4 className="member-name">Albert</h4>
+          <h5 className="member-name">Albert</h5>
           <p className="member-role">Vice Chancellor</p>
         </div>
 
@@ -279,7 +292,7 @@ const AboutUs = () => {
             alt="Edward"
             className="member-image"
           />
-          <h4 className="member-name">Edward</h4>
+          <h5 className="member-name">Edward</h5>
           <p className="member-role">Payroll Manager</p>
         </div>
 
@@ -289,42 +302,13 @@ const AboutUs = () => {
             alt="Lusy"
             className="member-image"
           />
-          <h4 className="member-name">Lusy</h4>
+          <h5 className="member-name">Lusy</h5>
           <p className="member-role">Dean of Academics</p>
         </div>
       </div>
     </div>
 
-<Footer style={{ backgroundColor: '#001529', color: '#fff', padding: '20px 0', marginTop: '50px' }}>
-  <Row justify="center" align="middle">
-    <Col span={12} style={{ textAlign: 'center' }}>
-      <Title level={4} style={{ color: '#fff' }}>
-        University Portal
-      </Title>
-      <Text style={{ color: '#fff' }}>
-        A place where your academic journey begins. Stay connected with us to unlock more opportunities.
-      </Text>
-      <div style={{ marginTop: '20px' }}>
-        <Space size="large">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-            <FacebookOutlined style={{ color: '#fff', fontSize: '24px' }} />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <TwitterOutlined style={{ color: '#fff', fontSize: '24px' }} />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <LinkedinOutlined style={{ color: '#fff', fontSize: '24px' }} />
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-            <InstagramOutlined style={{ color: '#fff', fontSize: '24px' }} />
-          </a>
-        </Space>
-      </div>
-    </Col>
-  </Row>
-</Footer>
-
-
+<Footer/>
 
     </>
   );

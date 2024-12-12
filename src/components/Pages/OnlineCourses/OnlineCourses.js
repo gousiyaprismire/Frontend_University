@@ -1,6 +1,7 @@
 import React from 'react';
 import './OnlineCourses.css'; 
-import Footer from '../Footer/Footer'
+import Footer from '../Footer/Footer';
+import { Link } from 'react-router-dom'; 
 
 const OnlineCourses = () => {
   const courses = [
@@ -159,7 +160,7 @@ const OnlineCourses = () => {
   return (
     <div className="online-courses-container">
       <h2 className="online-courses-title">Available Online Courses</h2>
-      <div className="course-list">
+      <div className="course-list" >
         {courses.map((course) => (
           <div key={course.id} className="course-item">
             <img className="course-image" src={course.image} alt={course.title} />
@@ -168,8 +169,8 @@ const OnlineCourses = () => {
             <p className="course-duration"><strong>Duration:</strong> {course.duration}</p>
             <p className="course-instructor"><strong>Instructor:</strong> {course.instructor}</p>
             <p className="course-rating"><strong>Rating:</strong> {course.rating} ★ </p>
-            <a href={course.link} className="course-link">Enroll Now</a>
-          </div>
+            <Link to="/login" className="course-link">Enroll Now</Link>
+            </div>
         ))}
       </div>
       
@@ -182,3 +183,9 @@ const OnlineCourses = () => {
 };
 
 export default OnlineCourses;
+
+
+
+
+
+

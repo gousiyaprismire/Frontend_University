@@ -102,11 +102,11 @@ const FacultyInfo = () => {
         console.error('Error fetching faculty data:', error);
       });
   }, []);
-  
+
   const hod = {
     name: "Will Smith",
     designation: "Head of the Department",
-    biodata: "Will Smith is an accomplished academic and educator with over 15 years of experience in the field of Applied Physics. He currently serves as the Head of the Department of Physics, overseeing faculty development, research initiatives, and academic programs. Will specializes in experimental physics, with a particular focus on renewable energy systems and sustainable technologies. He has led numerous pioneering projects that have significantly advanced clean energy solutions.",
+    biodata: "Will Smith is an accomplished academic and educator with over 15 years of experience in the field of Applied Physics. He currently serves as the Head of the Department of Physics, overseeing faculty development, research initiatives, and academic programs. Will specializes in experimental physics, with a particular focus on renewable energy systems and sustainable technologies.",
     email: "will.smith@college.com",
     image: "https://img.freepik.com/premium-photo/portrait-senior-teacher-sitting-desk-classroom-teacher-best-friend-learners-school-teach_265223-80232.jpg"
   };
@@ -127,25 +127,28 @@ const FacultyInfo = () => {
           </div>
         </Carousel>
       </div>
+
       <div className="faculty-student-bonding">
-         <p>Our faculty members foster strong, collaborative relationships with students by providing mentorship and guidance both academically and personally. We prioritize open communication, ensuring that students feel supported and encouraged throughout their academic journey. Beyond the classroom, our faculty play a key role in students' growth, offering career advice, personal development, and a sense of community within the college.</p>
-     </div>
+        <p>Our faculty members foster strong, collaborative relationships with students by providing mentorship and guidance both academically and personally. We prioritize open communication, ensuring that students feel supported and encouraged throughout their academic journey. Beyond the classroom, our faculty play a key role in students' growth, offering career advice, personal development, and a sense of community within the college.</p>
+      </div>
+
       <div className="hod-info">
-  <div className="hod-image">
-    <img src={hod.image} alt={hod.name} className="hod-image-circle" />
-  </div>
-  <div className="hod-details">
-    <h3>{hod.name}</h3>
-    <p><strong>Designation:</strong>{hod.designation}</p>
-    <p><strong>Biodata:</strong>{hod.biodata}</p>
-    <p><strong>Email: </strong><a href={`mailto:${hod.email}`}>{hod.email}</a></p>
-  </div>
-</div>
-      <div className="card-container">
+        <div className="hod-image">
+          <img src={hod.image} alt={hod.name} className="hod-image-circle" />
+        </div>
+        <div className="hod-details">
+          <h3>{hod.name}</h3>
+          <p><strong>Designation:</strong>{hod.designation}</p>
+          <p><strong>Biodata:</strong>{hod.biodata}</p>
+          <p><strong>Email: </strong><a href={`mailto:${hod.email}`}>{hod.email}</a></p>
+        </div>
+      </div>
+
+      <div className="faculty-card-container">
         {faculty.map((facultyMember, index) => (
-          <div key={index} className="card">
-            <img src={facultyMember.image} alt={facultyMember.name} className="card-image" />
-            <div className="card-content">
+          <div key={index} className="faculty-card">
+            <img src={facultyMember.image} alt={facultyMember.name} className="faculty-card-image" />
+            <div className="faculty-card-content">
               <h2>{facultyMember.name}</h2>
               <p><strong>Designation:</strong> {facultyMember.designation}</p>
               <p><strong>Biodata:</strong> {facultyMember.biodata}</p>
@@ -154,6 +157,7 @@ const FacultyInfo = () => {
           </div>
         ))}
       </div>
+
       <div className="carousel-container">
         <Carousel showThumbs={false} autoPlay infiniteLoop>
           <div>
@@ -167,12 +171,15 @@ const FacultyInfo = () => {
           </div>
         </Carousel>
       </div>
+
       <div className="faculty-summary">
         <h3>About Our Faculty</h3>
         <p>Our faculty members are renowned experts in their fields, with decades of combined experience in academia and industry. They are dedicated to fostering a supportive learning environment and encouraging students to reach their full potential. Each professor brings unique insights and a wealth of knowledge, making our institution a hub of innovation and excellence. Our faculty actively engage in cutting-edge research, contributing to advancements in their respective disciplines. They also collaborate with industry partners to ensure that the curriculum remains relevant and up-to-date. Their commitment to academic excellence is reflected in their numerous publications, awards, and recognitions. Beyond the classroom, our faculty members serve as mentors, advisors, and role models to our students. They are passionate about education and go above and beyond to inspire and motivate the next generation of leaders and innovators.</p>
       </div>
-    { <Footer/> }
+
+      <Footer />
     </div>
   );
 };
+
 export default FacultyInfo;

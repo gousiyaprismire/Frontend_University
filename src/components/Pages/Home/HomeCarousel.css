@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 .carousel-slide {
@@ -49,7 +50,7 @@ body {
 
 .carousel-container,
 .director-section,
-.achievements-section,
+.achievements-section-home,
 .testimonials-section {
   max-width: 100vw;
   overflow-x: hidden;
@@ -62,7 +63,7 @@ body {
   object-fit: cover;
 }
 
-.achievements-section {
+.achievements-section-home {
   display: flex; 
   flex-direction: column; 
   align-items: center; 
@@ -71,26 +72,32 @@ body {
   
 }
 
-.achievements-section .ant-row {
+.achievements-section-home .ant-row {
   max-width: 1200px; 
   width: 100%; 
   margin: 0 auto; 
 }
 
-.achievements-section .ant-card {
+.achievements-section-home .ant-card {
   height: 100%; 
   display: flex;
   flex-direction: column;
   justify-content: space-between; 
 }
 
-.achievements-section .ant-card-meta-title {
+.achievements-section-home .ant-card-meta-title {
   font-size: 1.25rem; 
   font-weight: 600;
 }
 
-.achievements-section .ant-card-meta-description {
+.achievements-section-home .ant-card-meta-description {
   color: #555;
 }
 
 
+img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+body,h1, h2, p, button, footer {
+  font-family: 'Roboto', sans-serif;
+}

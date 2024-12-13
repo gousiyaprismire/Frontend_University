@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Form, Input, Button, Typography, message } from 'antd';
+import { Layout, Form, Input, Button, Typography, message, Modal } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Registration.css';

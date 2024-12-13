@@ -55,7 +55,7 @@ const ContactUs = () => {
       />
     <div className="address-container">
       <p className="address-text">
-        The Registrar<br />
+        The Register<br />
         Jawaharlal Nehru Technological University, Kakinada<br />
         Kakinada, East Godavari District<br />
         Andhra Pradesh, India<br />
@@ -77,8 +77,8 @@ const ContactUs = () => {
   </div>
 </div>
 <br/><br/><br/>
-      <h1 style={{ color: 'black', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', fontWeight: 'bold' ,paddingTop:'0px',marginTop:'0px'}}>
-  Submit Your Admission Inquiry
+      <h1 style={{ color: 'black', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', fontWeight: 'bold' ,paddingTop:'0px',marginTop:'0px',textAlign:'center'}}>
+  Submit Your Admission Enquiry
 </h1>
  
    

@@ -89,13 +89,14 @@ const CollegeMap = () => {
             <img src={library} alt='library photo'/>
             <p>The library houses a vast collection of books and digital resources for students. It offers a wide range of academic texts, journals, and reference materials to support your studies. Additionally, the library provides access to numerous online databases and e-books, ensuring that you have the resources you need at your fingertips. Our dedicated staff is always available to assist you in finding the right materials and making the most of the library’s offerings. We encourage all students to take advantage of these valuable resources. The library is designed to cater to the diverse needs of our student body. It features quiet study areas for individual work, as well as group study rooms equipped with collaborative tools and technology. These spaces are perfect for group projects, study sessions, and brainstorming meetings.</p>
           </div>
-          <div className='library2'>
-            <p>For those who prefer a more relaxed environment, the library also includes comfortable seating areas where you can read or work on your laptop. High-speed Wi-Fi is available throughout the library, ensuring you can stay connected and productive. In addition to physical resources, the library's digital collection is extensive. Students can access a variety of e-books, academic journals, and research databases from anywhere on campus. This digital library is continually updated to include the latest publications and research in various fields of study.</p>
-            <img src={library1} alt='library photo'/>
-          </div>
           <div className='library-craft'>
            <img src='https://b3620413.smushcdn.com/3620413/wp-content/uploads/2024/04/WhatsApp-Image-2024-04-04-at-6.22.48-PM.jpeg-1-scaled.jpg?lossy=2&strip=1&webp=1' alt='library-craft'/>
            <img src='https://mctcrlib.weebly.com/uploads/1/1/3/6/11365926/img-20221110-wa0062_orig.jpg' alt='library-craft'/>
+           <img src='https://images.stockcake.com/public/5/b/2/5b2c54c4-145d-464d-934b-2057eae643fd_large/studying-in-library-stockcake.jpg'/>
+          </div>
+          <div className='library2'>
+            <p>For those who prefer a more relaxed environment, the library also includes comfortable seating areas where you can read or work on your laptop. High-speed Wi-Fi is available throughout the library, ensuring you can stay connected and productive. In addition to physical resources, the library's digital collection is extensive. Students can access a variety of e-books, academic journals, and research databases from anywhere on campus. This digital library is continually updated to include the latest publications and research in various fields of study.</p>
+            <img src={library1} alt='library photo'/>
           </div>
           <div className='library-imagerow'>
             <img src={library5} alt='photo'/>

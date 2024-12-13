@@ -24,32 +24,34 @@ const Admissions = () => {
                  with your career goals and interests.</p>
             </div>
             <div className='student-image1'>
-             <img src='https://media.istockphoto.com/id/1066324992/photo/graduation-day.jpg?s=612x612&w=0&k=20&c=cleRpjTZbo430AbH-luZFYMMNqPwhwyTnFgWMbi_AiI='/>
-            <img src='https://www.shutterstock.com/image-photo/group-diverse-international-graduating-students-600nw-183400235.jpg'/>
+             <img src='https://media.istockphoto.com/id/1066324992/photo/graduation-day.jpg?s=612x612&w=0&k=20&c=cleRpjTZbo430AbH-luZFYMMNqPwhwyTnFgWMbi_AiI=' style={{maxWidth:'50%'}}/>
+             <img src='https://www.shutterstock.com/image-photo/group-diverse-international-graduating-students-600nw-183400235.jpg' style={{maxWidth:'50%'}}/>
+              <img src='https://img.freepik.com/premium-photo/happy-graduates-group-graduates-standing-park-feeling-amazing_259150-52096.jpg' style={{maxWidth:'50%'}}/>
              </div>
                  <div className='student-text2'>
                 <h4>Why Choose UD for Your Graduate Studies?</h4>
                 <p><strong>Expert Faculty:</strong>Learn from experienced faculty members who are leaders in their disciplines and dedicated to your success.</p>
-                <p><strong>Flexible Scheduling</strong>Many programs offer evening and online classes to accommodate your busy schedule.</p>
-                <p><strong>Research Opportunities</strong>Engage in cutting-edge research projects that address real-world challenges.</p>
+                <p><strong>Flexible Scheduling:</strong>Many programs offer evening and online classes to accommodate your busy schedule.</p>
+                <p><strong>Research Opportunities:</strong>Engage in cutting-edge research projects that address real-world challenges.</p>
                 <p><strong>Supportive Community: </strong>Join a vibrant and inclusive community that supports your academic and professional growth.</p>
                 </div>
                 <div className='student-image2'>
                   <img src='https://www.stonybrook.edu/commcms/studentaffairs/stu/_images/Web_Ready-180516_Doctoral%20Hooding_006.JPG.JPG' style={{ maxWidth: '50%', height: 'auto' }}/>
                   <img src='https://prod.ucwe.capgemini.com/in-en/wp-content/uploads/sites/18/2022/09/Students-and-Graduates-1-e1664459301829.jpg' style={{ maxWidth: '50%', height: 'auto' }}/>
+                  <img src='https://img.freepik.com/premium-photo/medium-shot-happy-graduate-student_926199-2749623.jpg' style={{maxWidth:'50%'}}/>
                 </div>
                 <div className='student-text3'>
                   <h2>Application Process</h2>
                   <p>Each program has specific requirements and deadlines. Be sure to check the program's page for detailed information. Generally, the application process includes:</p>
+                  <div className='student-image3'>
+                      <img src='https://www.thoughtco.com/thmb/ns4o64YYn6j6YVwP0ip4GL1KMOU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-168367619-d5be4ccbe9c3477a96fbf8f02f364eec.jpg' style={{maxWidth: '40%'}}/>
+                      <img src='https://sps.columbia.edu/sites/default/files/styles/4_3_800x600/public/2019-04/front-announcement-f5-sps-application-on-laptop.jpg.webp?itok=1vVQKrU7' style={{maxWidth:'40%'}}/>
+                  </div>
                   <p><strong>Application Form: </strong>Complete the online application form.</p>
                   <p><strong>Transcripts:</strong>Submit official transcripts from all previously attended institutions.</p>
                   <p><strong>Letters of Recommendation:</strong>Provide letters of recommendation from academic or professional references.</p>
                   <p><strong>Personal Statement:</strong> Write a personal statement outlining your goals and reasons for pursuing graduate studies</p>
                   <p><strong>Test Scores:</strong>Some programs may require GRE or other standardized test scores.</p>
-                  </div>
-                  <div className='student-image3'>
-                    <img src='https://www.thoughtco.com/thmb/ns4o64YYn6j6YVwP0ip4GL1KMOU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-168367619-d5be4ccbe9c3477a96fbf8f02f364eec.jpg' style={{maxWidth: '50%'}}/>
-                      <img src='https://sps.columbia.edu/sites/default/files/styles/4_3_800x600/public/2019-04/front-announcement-f5-sps-application-on-laptop.jpg.webp?itok=1vVQKrU7' style={{maxWidth:'50%'}}/>
                   </div>
                   <div className='student-text4'>
                   <h4>Financial Aid and Scholarships</h4>
@@ -74,6 +76,10 @@ const Admissions = () => {
               <p><strong>Master's Programs:</strong>Our master's programs cover a wide array of disciplines, including engineering, business, education, and the sciences. Each program is designed to deepen your expertise and enhance your career prospects.</p>
               <p><strong>Doctoral Programs:</strong>Pursue advanced research and contribute to the body of knowledge in your field with our doctoral programs. You'll work closely with faculty mentors and engage in innovative research projects.</p>
               <p><strong>Certificate Programs:</strong>Enhance your skills and credentials with our specialized certificate programs. These programs are ideal for professionals looking to gain expertise in specific areas without committing to a full degree program.</p>
+              <div className='course-text2-image'>
+                <img src='https://media.istockphoto.com/id/506554668/photo/team-of-creative-professionals-meeting-in-conference-room.jpg?s=612x612&w=0&k=20&c=Bu9u82oORsYhBqnMPpoDi-8Ut2ZR39blv8HxZxYgVdk='/>
+                <img src='https://media.istockphoto.com/id/1344939844/photo/hand-holding-drawing-virtual-lightbulb-with-brain-on-bokeh-background-for-creative-and-smart.jpg?s=612x612&w=0&k=20&c=2GLUy6eqCSr0NFRO8CHm8_PUMy9Qc8ryqcsRoe0DEYM='/>
+              </div>
               <h4>Flexible Learning Options</h4>
               <p><strong>Evening and Weekend Classes:</strong>Many of our graduate courses are offered in the evenings and on weekends to accommodate your busy schedule.</p>
               <p><strong>Online Learning:</strong>Take advantage of our online courses, which provide the flexibility to learn from anywhere while maintaining the same high standards of education.</p>
@@ -140,6 +146,11 @@ const Admissions = () => {
                   <h4>Additional Funding Opportunities</h4>
                   <p><strong>External Scholarships:</strong>Explore external scholarship opportunities from private organizations, foundations, and community groups.</p>
                   <p><strong>Payment Plans:</strong>The University of Dayton offers flexible payment plans to help you manage your tuition payments over the course of the academic year.</p>
+                  <div className='fee-text-image'>
+                    <img src='https://149818895.v2.pressablecdn.com/wp-content/uploads/2012/11/Undergraduate-Scholarships-1024x683.jpg'/>
+                    <img src='https://foundationmag.ca/wp-content/uploads/2021/11/givinggatewaypost-550x350.jpg'/>
+                    <img src='https://media.istockphoto.com/id/1344027171/photo/campus-pastime-happy-international-teens-walking-in-park-indian-lady-sharing-her-tablet.jpg?s=612x612&w=0&k=20&c=j4HIdLnVyXUkfKGVZ_-HD6PJx1hP7lNgbyAHG76AB3o='/>
+                  </div>
                 </div>
                 <div  className='fee-text5'>
                   <h3>Contact Us</h3>
@@ -251,6 +262,7 @@ const Admissions = () => {
               </div>
               <div className='fee-text2'>
                 <h4>Financial Aid</h4>
+                <img src='https://img.freepik.com/premium-vector/financial-aid-concept-life-buoy-lifebelt-with-big-cash-money-bag-isolated-white-background-isometric-vector-business-finance-illustration-3d-thin-line-design_570429-14361.jpg'/>
                 <h5>We offer a range of financial aid options to help you finance your undergraduate education</h5>
                 <p><strong>Scholarships:</strong>Merit-based scholarships are available for students who demonstrate academic excellence, leadership, and other achievements.</p>
                 <p><strong>Grants:</strong>Need-based grants are available to students who demonstrate financial need. These grants do not need to be repaid.</p>
@@ -258,13 +270,27 @@ const Admissions = () => {
                 <p><strong>Work-Study Programs:</strong>Eligible students can participate in work-study programs, which provide part-time employment opportunities on campus to help offset educational expenses.</p>
               </div>
               <div className='fee-text3'>
+                  <div>
                   <h4>How to Apply for Financial Aid</h4>
                   <p><strong>Complete the FAFSA:</strong>Submit the Free Application for Federal Student Aid (FAFSA) to determine your eligibility for federal and state financial aid. The University of Dayton's school code is 003127.</p>
                   <p><strong>Review Your Financial Aid Offer:</strong>Once your FAFSA is processed, you will receive a financial aid offer outlining the types and amounts of aid you are eligible to receive.</p>
                   <p><strong>Accept Your Aid:</strong>Log in to your student portal to accept or decline your financial aid offer. Be sure to complete any additional requirements, such as loan counseling or promissory notes.</p>
+                  </div>
+                  <div className='fee-aid-image'>
+                    <img src='https://regionalcollegepa.org/wp-content/uploads/2018/10/dreamstime_xxl_107569041-1-300x200.jpg'/>
+                    <img src='https://www.studentdebtrelief.us/wp-content/uploads/2018/01/pay-back-financial-aid.jpg'/>
+                  </div>
                 </div>
                 <div className='fee-text4'>
                   <h4>Additional Funding Opportunities</h4>
+                  <div className='scholarships'>
+                  <div className='scholarship1'>
+                    <img src='https://storage-prtl-co.imgix.net/endor/articles/3156/images/1689065662_shutterstock_1202806684.jpg'/>
+                  </div>
+                  <div className='scholarship2'>
+                    <img src='https://www.maynoothuniversity.ie/sites/default/files/assets/images/Website%20carousel%20scholarships.png'/>
+                  </div>
+                  </div>
                   <p><strong>External Scholarships:</strong>Explore external scholarship opportunities from private organizations, foundations, and community groups.</p>
                   <p><strong>Payment Plans:</strong>The University of Dayton offers flexible payment plans to help you manage your tuition payments over the course of the academic year.</p>
                 </div>
@@ -308,7 +334,7 @@ const Admissions = () => {
                 </div>
               </div>
               <div className='distance-text3'>
-                <div>
+                <div className='distance-image'>
                   <img src='https://futureeducationmagazine.com/wp-content/uploads/2024/04/1.1-Adaptability.jpg'/>
                 </div>
                 <h4>Flexible Learning Options</h4>
@@ -333,14 +359,12 @@ const Admissions = () => {
           <div>
           <div className='admission-default'>
            <h1>Welcome to University of Dayton Admissions</h1>
-           <div className='admission-gallery'>
            <div className='admission-pic1'>
            <img src='https://media.istockphoto.com/id/1246282408/photo/black-graduation-cap-or-a-mortarboard-blue-and-red-pencils-in-a-bottle.jpg?s=612x612&w=0&k=20&c=ayZbvEvpWYWvSV7XyW151FR8CKLc75FjVFBBH2XxYK0='/>
            </div>
            <div className='admission-pic2'>
             <img src='https://st3.depositphotos.com/4678277/16129/i/450/depositphotos_161299614-stock-photo-its-more-easy-together-six.jpg'/>
             <img src='https://d3rsva8zdn1qpf.cloudfront.net/sites/company/files/styles/default/public/2021-11/inspired-university-admissions-thumbs-up.jpg.jpeg?itok=iDudJMTa'/>
-           </div>
            </div>
            <h3><strong>Discover Your Future at UD</strong></h3>
            <p>At the University of Dayton, we believe in the power of education to transform lives. Our admissions process is designed to identify students who will thrive in our inclusive and vibrant community. Whether you're a high school student, a transfer student,

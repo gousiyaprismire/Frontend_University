@@ -59,7 +59,7 @@
 .admission-default{
     font-size: 18px;
     font-family: 'Roboto';
-    background-color: #bd8d8d21;
+    background-color: #bd8d8d13;
     border-radius: 10px;
     padding:20px;
     margin: 5px 0px;
@@ -74,11 +74,12 @@
 }
 .admission-default h3{
     margin-left: 30px;
+    color: #d32a2ae5;
 }
 .admission-default p{
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Roboto';
-    background-color: rgb(207, 174, 131);
+    background-color: rgba(207, 174, 131, 0.205);
     border-radius: 10px;
     text-align: left;
     padding: 50px;
@@ -89,35 +90,32 @@
     text-align: left;
     font-family: 'Roboto';
 }
-.admission-gallery{
+.admission-pic1 {
+    text-align: center;
+  }
+.admission-pic1 img {
+    display: block;
+    margin-top:30px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 70px;    
+}
+.admission-pic2 {
     display: flex;
-    border-radius: 20px;
-    margin: 10px;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: 20px;
-    margin-left: 30px;
-}
-.admission-pic1 img{
-    
-    border: 5px solid rgb(173, 144, 12);
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-left: 20px;
-}
-.admission-pic2{
-  margin: 30px;
-  width: 400px;
-  margin-bottom: 40px;
-}
-.admission-pic2 img{
-    width: 300px;
-    height: 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 125px;
+  }
+  
+.admission-pic2 img {
+    margin-top: 70px;
+    margin-bottom: 50px;
     border-radius: 50%;
-    margin-bottom: 5px;
-    border: 4px solid rgb(173, 144, 12);
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
 }
-
 .admission-image {
     width: 100%;
     height: 100vh; 
@@ -180,7 +178,7 @@
 }
 
 .student-life{
-    background-color: #babbbb33;
+    background-color: #babbbb1f;
     margin: 10px 10px;
     padding: 20px 10px;
     font-size: 18px;
@@ -197,72 +195,76 @@
     margin-left: 20px;
 }
 .student-life button:hover{
-    background-color:rgb(197, 167, 129);
+    background-color:rgb(92, 24, 4);
 }
 .student-image1{
-    margin: 30px;
-    max-width: 40%;
+    margin: 10px;
+    max-width: 65%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 6px;
 }
 .student-image1 img{
-    border: 2px solid rgba(173, 143, 12, 0.699);
+    border: 2px solid rgba(173, 143, 12, 0.288);
     border-radius: 6px 20px;
 }
 .student-image2 {
-    margin: 30px;
-    max-width: 100%;
+    margin: 20px;
+    max-width: 62%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 6px;
+    gap: 25px;
 }
 .student-image2 img{
     border: 2px solid rgba(56, 47, 5, 0.699);
     border-radius: 6px;
 }
 .student-image3{
-    margin: 20px;
-    max-width: 100%;
+    margin: 20px 230px;
+    max-width: 55%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 12px;
+    gap: 200px;
+}
+.student-image3 img{
+    border-radius: 50%;
 }
 .student-text1, .student-text3{
-    background: linear-gradient(145deg, rgba(28, 83, 56, 0.438), rgba(192, 136, 136, 0.5));
+    background: rgba(143, 160, 152, 0.123);
     padding: 10px 10px;
     margin: 10px;
     border-radius: 10px 30px;
 }
 .student-text1 h2, .student-text3 h2{
-    color: rgba(226, 38, 38, 0.644);
+    color: rgba(226, 38, 38, 0.76);
     text-align: center;
     padding: 10px;
     font-size: 40px;
 }
 .student-text1 h3{
-    color: rgba(61, 55, 46, 0.856);
+    color: rgba(20, 18, 16, 0.932);
     padding-left:10px;
 }
 .student-text1 p{
-    color: rgba(241, 241, 200, 0.925);
+    color: rgba(26, 26, 20, 0.925);
     padding: 10px;
 }
 .student-text3 p{
     padding: 0px;
-    color: rgba(241, 241, 200, 0.925);
+    color: rgba(26, 26, 20, 0.925);
 }
 .student-text3 p strong{
-    color: #030169;
+    color: rgba(12, 12, 9, 0.952);
+    line-height: 1.0;
 }
 .student-text2, .student-text4{
-    background-color:rgba(95, 167, 119, 0.568);
+    background-color:rgba(95, 167, 119, 0.11);
     margin: 10px 10px;
     padding:10px 10px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 .student-text2 h4{
     padding: 10px;
@@ -272,7 +274,7 @@
 }
 .student-text4 p{
     padding: 10px 10px; 
-    color: #0e0f03d3; 
+    color: #0e0f03f3; 
     text-align: center;
 }
 .student-text4 h4{
@@ -300,7 +302,7 @@
     margin-top: 100px;
 }
 .courses{
-    background-color: rgba(121, 101, 101, 0.253);
+    background-color: rgba(121, 101, 101, 0.13);
     font-size: 18px;
     font-family: 'Roboto';
     margin: 10px 10px;
@@ -323,18 +325,18 @@
  
   margin: 10px;
   padding: 10px;
-  background-color: rgba(197, 149, 157, 0.637);
+  background-color: rgba(209, 178, 183, 0.274);
   border-radius: 10px 50px;
 }
 .course-text1 h4 , .course-text3 h4 {
-    color: rgba(245, 245, 245, 0.925);
-    padding: 10px;
+    color: rgba(27, 10, 10, 0.925);
+    padding: 0px 10px;
 }
 .course-text3 {
     display: flex;
 }
 .course-structure{
-    background-color:rgba(197, 149, 157, 0.637) ;
+    background-color:rgba(201, 167, 173, 0.329) ;
     margin: 10px;
     padding: 10px;
     border-radius: 10px 50px;
@@ -348,12 +350,12 @@
     padding: 10px;
 }
 .course-text1 h2{
-    color: rgba(209, 73, 39, 0.747);
+    color: rgba(196, 43, 5, 0.966);
     text-align: center;
     padding: 10px 0px;
 }
 .course-text2, .course-text4{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.342);
     margin: 10px 10px;
     padding: 20px;
     border-radius: 0px 5px 10px 70px;
@@ -362,8 +364,21 @@
     padding: 0px 20px;
 }
 .course-text2 strong, .course-text4 strong{
-    color: rgba(8, 179, 179, 0.993);
+    color: rgba(2, 31, 31, 0.993);
 }
+.course-text2-image{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px 0px; 
+}
+.course-text2-image img {
+    width: 400px; 
+    height: auto;
+    border-radius: 20px;
+    padding: 2px;
+    
+  }
 .ug-course-image{
     display: flex;
     margin: 30px;
@@ -388,7 +403,7 @@
     margin: 10px  70px;
 }
 .fees{
-    background-color: rgba(241, 241, 200, 0.925);
+    background-color: rgba(241, 241, 200, 0.568);
     margin: 10px;
     padding: 20px 15px;
     border-radius: 10px 70px;
@@ -396,7 +411,7 @@
     font-family: 'Roboto';
 }
 .fees h2{
-    color: rgba(218, 186, 6, 0.89);
+    color: rgba(218, 73, 6, 0.89);
     text-align: center;
 }
 .fees h4{
@@ -404,45 +419,102 @@
 }
 .fee-text1{
     display: flex;
-    background-color: gainsboro;
+    background-color: rgba(220, 220, 220, 0.514);
     margin: 20px;
-    padding: 40px;
+    padding: 0px 40px;
     justify-content: space-between;
     border-radius: 20px 10px;
 }
 .fee-text-p{
-    padding-top: 20px;
+    padding: 15px;
     font-size: 19px;
 }
 .fee-text-p strong{
-    color: rgba(167, 3, 3, 0.904);
+    color: rgba(27, 1, 1, 0.918);
 }
 .fee-text1 img{
+    padding-top: 10px;
     width: 200px;
     height: 200px;
 }
 .fee-text2 h5 {
     padding: 5px 40px;
 }
+.fee-text2 img{
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    margin-left: 500px;
+    margin-bottom: 20px;
+}
 .fee-text2 p {
   padding: 0px 40px;
 }
 .fee-text2 h4{
-    color: rgb(88, 23, 150);
+    color: rgb(19, 5, 32);
 }
 .fee-text2 p strong{
-    color: rgba(255, 0, 0, 0.671);  
+    color: rgb(19, 5, 32);  
 }
 .fee-text3{
-    background-color: #4aeb4a33;
+    background-color: #92c79233;
     margin: 20px;
     padding: 20px 25px;
+}
+.fee-text-image{
+    display: flex;
+    justify-content: center;
+    gap:30px;
+}
+.fee-text-image img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.fee-aid-image{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.scholarships{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.scholarship1 img{
+    width: 350px;
+    height: auto;
+    border: 1px solid red;
+    border-radius: 50%;
+    margin: 30px;
+}
+.scholarship2 img{
+    width: 500px;
+    margin-top: 55px;
+    margin-left: 30px;
+}
+
+.fee-aid-image img{
+    justify-content: center;
+    width: 300px;
+    height: 300px;
 }
 .fee-text3 h4{
     text-align: center;
 }
 .fee-text3 p strong{
-    color: chocolate;
+    color: rgb(39, 17, 1);
+}
+.fee-text4 p{
+    margin: 0px 40px;
+}
+.fee-text4 h4{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 40px;
 }
 .fee-text5{
     margin: 20px;
@@ -463,7 +535,7 @@
     margin-left: 20px;
 }
 .distance{
-    background-color: rgba(172, 255, 47, 0.705);
+    background-color: rgba(236, 201, 84, 0.26);
     margin: 10px;
     padding: 20px;
     border-radius: 20px 100px;
@@ -497,23 +569,29 @@
     padding:10px 20px;
     font-size: 20px;
 }
-.distance-text3 img{
+.distance-image{
+    display: flex;
+    justify-content: center;
+}
+.distance-image img{
     margin-left: 10px;
     padding: 10px;
     border-radius: 40px;
     margin-bottom: 30px;
+    width: 500px;
+    height: 400px;
 }
 .distance-text1 h4, .distance-text3 h4{
-    color: #e0168ce3;
+    color: #13010be3;
 }
 .distance-text1 p, .distance-text3 p{
-    color: rgba(13, 87, 100, 0.911);
+    color: rgba(3, 16, 19, 0.911);
 }
 .distance-text1 p strong, .distance-text3 p strong{
     color: black;
 }
 .distance-text2, .distance-text4{
-  background-color: wheat;
+  background-color: rgba(245, 222, 179, 0.486);
   margin: 10px;
   padding: 20px;
   border-radius: 20px;

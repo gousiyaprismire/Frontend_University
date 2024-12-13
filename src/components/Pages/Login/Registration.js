@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Form, Input, Button, Typography, message } from 'antd';
+import { Layout, Form, Input, Button, Typography, message, Modal } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Registration.css';
@@ -10,14 +10,22 @@ const { Title, Text } = Typography;
 const RegisterPage = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
-
-  const handleSubmit = async (values) => {
+ 
+  const handleLoginSuccess = async (values) => {
     try {
       const response = await axios.post('http://localhost:8080/api/students/register', values);
 
       if (response.status === 200) {
-        message.success('Registration successful! Redirecting to login page...');
-        navigate('/login');
+
+
+        Modal.success({
+          title: 'Registration Successful',
+          content: 'You have Registered successfully. After background verification, you will get an email. Please wait for the mail.',
+          centered: true, 
+          onOk: () => {
+            navigate('/login');
+          },
+        });
       }
     } catch (error) {
       console.error('Error during registration:', error);
@@ -44,14 +52,15 @@ const RegisterPage = () => {
               Fill in the details below to create your account.
             </Text>
           </div>
-
+ 
           <div className="register-form">
             <Title level={4}>Register</Title>
             <Form
               form={form}
               layout="vertical"
-              onFinish={handleSubmit}
-              style={{ maxWidth: '400px' }}
+              onFinish={(values) => {
+                handleLoginSuccess();
+              }}
             >
               <Form.Item
                 label="Full Name"
@@ -60,7 +69,7 @@ const RegisterPage = () => {
               >
                 <Input placeholder="Enter your fullname" />
               </Form.Item>
-
+ 
               <Form.Item
                 label="Email"
                 name="email"
@@ -71,7 +80,7 @@ const RegisterPage = () => {
               >
                 <Input placeholder="Enter your email" />
               </Form.Item>
-
+ 
               <Form.Item
                 label="Mobile Number"
                 name="mobile"
@@ -79,15 +88,23 @@ const RegisterPage = () => {
               >
                 <Input placeholder="Enter your mobile number" />
               </Form.Item>
-
+ 
               <Form.Item
                 label="Upload Id"
                 name="uploadId"
                 rules={[{ required: true, message: 'Please enter your Upload Id!' }]}
               >
-                <Input placeholder="Enter your Upload Id" />
+                <Input placeholder="Enter your UploadId" />
               </Form.Item>
 
+              <Form.Item
+                label="Country"
+                name="Country"
+                rules={[{ required: true, message: 'Please enter your Country!' }]}
+              >
+                <Input placeholder="Enter your country" />
+              </Form.Item>
+ 
               <Form.Item
                 label="Username"
                 name="username"
@@ -95,7 +112,7 @@ const RegisterPage = () => {
               >
                 <Input placeholder="Enter your username" />
               </Form.Item>
-
+ 
               <Form.Item
                 label="Password"
                 name="password"
@@ -103,21 +120,13 @@ const RegisterPage = () => {
               >
                 <Input.Password placeholder="Enter your password" />
               </Form.Item>
-
+ 
               <Form.Item
                 label="Re-enter Password"
                 name="rePassword"
                 rules={[{ required: true, message: 'Please reenter your password!' }]}
               >
                 <Input.Password placeholder="Re-enter your password" />
-              </Form.Item>
-
-              <Form.Item
-                label="Country"
-                name="country"
-                rules={[{ required: true, message: 'Please enter your country!' }]}
-              >
-                <Input placeholder="Enter your country" />
               </Form.Item>
 
               <Form.Item>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layout, Form, Input, Button, Typography, message } from 'antd';
+import { Layout, Form, Input, Button, Typography, Modal } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 
@@ -11,8 +11,14 @@ const RegisterPage = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (values) => {
-    message.success('Login successful!');
-    navigate('/');
+    Modal.success({
+      title: 'Login Successful',
+      content: 'You have logged in successfully.',
+      centered: true, 
+      onOk: () => {
+        navigate('/');
+      },
+    });
   };
 
   return (
@@ -33,7 +39,7 @@ const RegisterPage = () => {
               onFinish={handleSubmit}
               style={{ maxWidth: '400px' }}
             >
-              <div style={{ marginBottom: '20px', textAlign: 'right', right:'50px', position:'relative' }}>
+              <div style={{ marginBottom: '20px', textAlign: 'right', right: '50px', position: 'relative' }}>
                 Don’t have an account? &nbsp;
                 <Link to="/register" style={{ fontSize: '14px' }}>
                   Register here

@@ -1,28 +1,116 @@
-/* AnnualDay.css */
-
 .annual-day {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .annual-day h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: black;
-  }
-  
-  .annual-day-image {
-    width: 100%;
-    max-height: 750px;
-    object-fit: cover;
-    margin-bottom: 20px;
-  }
-  
-  .annual-day-passage {
-    font-size: 1.2em;
-    line-height: 1.6;
-    /* margin: 0 auto; */
-    max-width: 1300px;
-    text-align: justify;
-  }
-  
+  text-align: center;
+  padding: 20px;
+}
+
+.annual-day h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.annual-day-image {
+  width: 100%;
+  max-height: 750px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.annual-day-passage {
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 1250px;
+  text-align: justify;
+  margin-bottom: 80px;
+}
+
+.row-container, .add-row-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 20px auto; 
+  text-align: left;
+  margin-bottom: 80px;
+}
+
+.side-image {
+  width: 30%; 
+  max-width: 350px;
+  border-radius: 8px;
+  margin-left: 70px;
+  height: 300px;
+}
+
+.side-text {
+  width: 55%; 
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-right: 70px;
+  text-align: justify;
+}
+
+.another-row-container, .another-one-row-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 20px auto; 
+  text-align: left;
+}
+
+.another-side-image {
+  width: 30%; 
+  max-width: 350px;
+  border-radius: 8px;
+  margin-right: 70px;
+  height: 300px;
+}
+
+.another-side-text {
+  width: 55%; 
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-left: 70px;
+  text-align: justify;
+}
+
+
+.cards-row {
+  display: flex;
+  justify-content: space-around; 
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.card {
+  width: 250px; 
+  height: 300px; 
+  background-color: #f0f0f0; 
+  border-radius: 8px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  margin: 0 20px; 
+}
+
+.card-image {
+  width: 100%;
+  height: 180px; 
+  object-fit: cover; 
+  border-radius: 8px 8px 0 0; 
+}
+
+
+.final-passage {
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 1250px;
+  text-align: justify;
+  margin: 20px auto;
+}
+
+
+.newelement {
+  display: flex;
+  justify-content: center; 
+  margin-top: 40px; 
+}

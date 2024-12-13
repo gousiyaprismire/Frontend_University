@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Layout, Form, Input, Button, Typography, message } from 'antd';
+import { Layout, Form, Input, Button, Typography, message, Modal } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Registration.css';
@@ -30,6 +31,17 @@ const RegisterPage = () => {
         message.error('An unexpected error occurred. Please try again later.');
       }
     }
+
+  const handleLoginSuccess = () => {
+    Modal.success({
+      title: 'Registration Successful',
+      content:
+        'You have Registered successfully. After background verification, you will get an email. Please wait for the mail.',
+      centered: true,
+      onOk: () => {
+        navigate('/login');
+      },
+    });
   };
  
   return (
@@ -38,6 +50,20 @@ const RegisterPage = () => {
 <div className="register-container">
 <div className="register-content">
 <Title level={2} style={{ marginBottom: '20px' }}>
+    <Layout style={{ minHeight: '100vh' }}>
+      <Content>
+        <div
+          className="register-container"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: '100vh',
+            backgroundColor: '#2c3e50',
+          }}
+        >
+          <div className="register-content" style={{ textAlign: 'center' }}>
+            <Title level={2} style={{ marginBottom: '20px', color: 'white' }}>
               Create an Account
 </Title>
 <Text style={{ fontSize: '18px', color: 'white' }}>
@@ -54,6 +80,31 @@ const RegisterPage = () => {
               style={{ maxWidth: '400px' }}
 >
 <Form.Item
+            </Text>
+          </div>
+
+          <div
+            className="register-form"
+            style={{
+              marginTop: '20px',
+              textAlign: 'left',
+              backgroundColor: '#ffffff',
+              padding: '20px',
+              borderRadius: '10px',
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+              maxWidth: '400px',
+              width: '100%',
+            }}
+          >
+            <Title level={4}>Register</Title>
+            <Form
+              form={form}
+              layout="vertical"
+              onFinish={(values) => {
+                handleLoginSuccess();
+              }}
+            >
+              <Form.Item
                 label="Full Name"
                 name="fullname"
                 rules={[{ required: true, message: 'Please enter your Fullname!' }]}
@@ -88,6 +139,17 @@ const RegisterPage = () => {
 <Input placeholder="Enter your Upload Id" />
 </Form.Item>
  
+              >
+                <Input placeholder="Enter your UploadId" />
+              </Form.Item>
+
+              <Form.Item
+                label="Country"
+                name="Country"
+                rules={[{ required: true, message: 'Please enter your Country!' }]}
+              >
+                <Input placeholder="Enter your country" />
+              </Form.Item>
               <Form.Item
                 label="Username"
                 name="username"
@@ -96,6 +158,10 @@ const RegisterPage = () => {
 <Input placeholder="Enter your username" />
 </Form.Item>
  
+              >
+                <Input placeholder="Enter your username" />
+              </Form.Item>
+
               <Form.Item
                 label="Password"
                 name="password"
@@ -120,6 +186,10 @@ const RegisterPage = () => {
 <Input placeholder="Enter your country" />
 </Form.Item>
  
+              >
+                <Input.Password placeholder="Enter your password" />
+              </Form.Item>
+
               <Form.Item>
 <Button type="primary" htmlType="submit" block>
                   Register

@@ -1,5 +1,5 @@
 import React from 'react';
-import './FacultyAchievements.css'; 
+import './FacultyAchievements.css';
 
 const FacultyAchievements = () => {
   return (
@@ -16,13 +16,12 @@ const FacultyAchievements = () => {
           </div>
           <div className="faculty-content-column">
             <h3 className='heading'>Dr. Sarah Johnson</h3>
-            <p  className='ptag'><strong>Achievement:</strong> Published over 50 research papers in AI and ML.</p>
-            <p  className='ptag'>
+            <p className='ptag'><strong>Achievement:</strong> Published over 50 research papers in AI and ML.</p>
+            <p className='ptag'>
               Dr. Johnson's work in Artificial Intelligence and Machine Learning has garnered international recognition. She has been a keynote speaker at several global conferences and is a recipient of the Best Educator Award in 2023.
             </p>
           </div>
         </div>
-
         <div className="faculty-achievement-item">
           <div className="faculty-image-column">
             <img
@@ -33,13 +32,12 @@ const FacultyAchievements = () => {
           </div>
           <div className="faculty-content-column">
             <h3 className='heading'>Prof. Michael Brown</h3>
-            <p  className='ptag'><strong>Achievement:</strong> Led groundbreaking renewable energy research.</p>
-            <p  className='ptag'>
+            <p className='ptag'><strong>Achievement:</strong> Led groundbreaking renewable energy research.</p>
+            <p className='ptag'>
               Prof. Brown's research has secured $5 million in grants for sustainable technologies. He is the author of three bestselling books and an advocate for renewable energy solutions worldwide.
             </p>
           </div>
         </div>
-
         <div className="faculty-achievement-item">
           <div className="faculty-image-column">
             <img
@@ -50,13 +48,12 @@ const FacultyAchievements = () => {
           </div>
           <div className="faculty-content-column">
             <h3 className='heading'>Dr. Emily Davis</h3>
-            <p  className='ptag'><strong>Achievement:</strong> National Science Medal recipient for neuroscience.</p>
-            <p  className='ptag'>
+            <p className='ptag'><strong>Achievement:</strong> National Science Medal recipient for neuroscience.</p>
+            <p className='ptag'>
               Dr. Davis's innovative research in neuroscience has revolutionized our understanding of brain functions. She has mentored over 20 PhD students and is a leader in her field.
             </p>
           </div>
         </div>
-
         <div className="faculty-achievement-item">
           <div className="faculty-image-column">
             <img
@@ -67,13 +64,12 @@ const FacultyAchievements = () => {
           </div>
           <div className="faculty-content-column">
             <h3 className='heading'>Prof. James Wilson</h3>
-            <p  className='ptag'><strong>Achievement:</strong> Collaborated with NASA on space exploration projects.</p>
-            <p  className='ptag'>
+            <p className='ptag'><strong>Achievement:</strong> Collaborated with NASA on space exploration projects.</p>
+            <p className='ptag'>
               Prof. Wilson’s contributions to advanced space exploration have been integral to multiple NASA projects. He frequently represents the university as a keynote speaker at international aerospace conferences.
             </p>
           </div>
         </div>
-
         <div className="faculty-achievement-item">
           <div className="faculty-image-column">
             <img
@@ -91,8 +87,7 @@ const FacultyAchievements = () => {
           </div>
         </div>
       </div>
-
-      <p  className='ptag'>
+      <p className='ptag'>
         These achievements highlight the dedication and excellence of our faculty members, who are shaping the future through research, education, and leadership. Their work inspires our students and contributes to society at large.
       </p>
     </div>

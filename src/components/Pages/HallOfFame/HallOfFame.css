@@ -1,59 +1,103 @@
 .hall-of-fame-container {
-  padding: 20px;
-  background-color: #f8f9fa;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
   margin: 0;
-  font-family: 'Roboto';
+  padding: 0;
+  background-color: #f8f9fa;
 }
 
-.hall-of-fame-title {
-  text-align: center;
-  font-size: 3rem;
-  
+.navbar {
+  margin-bottom: 20px;
+  background-color: #343a40;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.achievers-container {
-  margin-top: 0px;
-}
-
-.achiever-card-content {
-  padding: 0px;
-  text-align: center;
-}
-
-.achiever-name {
-  font-size: 1.5rem;
+.navbar-brand {
+  font-size: 1.7rem;
   font-weight: bold;
+  color: #fff !important;
+  padding-right: 50px;
 }
 
-.achiever-title {
-  font-size: 1.2rem;
-  color: #6c757d;
-  text-align: center;
+.navbar-nav .nav-link {
+  color: #ddd !important;
+  cursor: pointer;
+}
+ 
+.navbar-nav .nav-link:hover {
+  color: #fff !important;
+  text-decoration: underline;
 }
 
-.achiever-description {
-  font-size: 1rem;
-  margin-top: 10px;
+.all-achievers-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .all-achiever-image {
-  width: 600px;
-  height: 400px;
+  border-radius: 10px;
+  width: 100%;
+  max-height: 300px;
   object-fit: cover;
-  border-radius: 8px;
-  margin: 0 auto;
-  display: block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.achievers-container .all-achiever-image {
-  width: 600px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 0 auto;
-  display: block;
+.all-achiever-card-content {
+  padding: 20px;
 }
 
-.point{
+.all-achiever-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #343a40;
+}
+
+.all-achiever-title {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.all-achiever-description {
   font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.content-container {
+  padding: 20px;
+}
+
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .all-achiever-card-content {
+    text-align: center;
+  }
+
+  .all-achiever-image {
+    margin-bottom: 15px;
+  }
 }

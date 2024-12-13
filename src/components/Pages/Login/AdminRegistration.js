@@ -37,7 +37,7 @@ const AdminRegistration = () => {
               style={{ maxWidth: '400px' }}
             >
 
-<Form.Item
+              <Form.Item
                 label="Full Name"
                 name="Fullname"
                 rules={[{ required: true, message: 'Please enter your Fullname!' }]}

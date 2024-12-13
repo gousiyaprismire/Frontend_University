@@ -22,11 +22,11 @@ const ContactUs = () => {
     <div>
 
    
-    <div className="contact-container" >
-    <div className="card map-card">
-    <h4 className='keepIntouch'>Contact Us</h4>
+    <div className="contact-containers" >
+    <div className="cards map-cards">
+    <h4 className='keepIntouchs'>Contact Us</h4>
     <div className="line"></div>
-    <h3 className='keepIntouch1'>Keep In Touch</h3>
+    <h3 className='keepIntouchs1'>Keep In Touch</h3>
    
     <div className="map-image-wrapper">
       <img
@@ -46,7 +46,7 @@ const ContactUs = () => {
     </div>
   </div>
 
-  <div className="card contact-card">
+  <div className="cards contact-cards">
     <div className="info-item">
       <img
         src={home}

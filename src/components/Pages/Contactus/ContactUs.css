@@ -89,7 +89,7 @@ button.submit-btn:hover {
   color: #66ff66;
 }
  
-.contact-container {
+.contact-containers {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -100,7 +100,7 @@ button.submit-btn:hover {
   margin-bottom: 0px;
 }
  
-.card {
+.cards {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -109,14 +109,14 @@ button.submit-btn:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
   background-color: white;
-  width: 45%;
+  width: 50%;
   min-height: 160px;
   text-align: left;
 }
  
-.map-card {
+.map-cards {
   position: relative;
-  width: 100%;
+  width: 50%;
   min-height: 200px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
@@ -126,6 +126,7 @@ button.submit-btn:hover {
   width: 80%;
   padding-left: 0;
   margin-left: 50px;
+  border-radius: 10px;
 }
  
 .map-image {
@@ -168,16 +169,16 @@ button.submit-btn:hover {
 .view-large-map-link:hover {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;          
-}
- 
-.contact-card {
+} 
+
+.contact-cards {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 100%;
-  height: 400px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  width: 50%;
+  min-height: 365px;
 }
  
 .info-item {
@@ -215,12 +216,12 @@ button.submit-btn:hover {
  
 
 
-.keepIntouch1{
+.keepIntouchs1{
   font-size: 2rem;
   margin: 0;
   padding-left: 50px;
 }
-.keepIntouch{
+.keepIntouchs{
   font-size: 1.5rem;
   margin: 0;
   padding-left: 50px;

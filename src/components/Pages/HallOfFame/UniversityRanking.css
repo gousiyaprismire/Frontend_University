@@ -1,29 +1,29 @@
-.university-ranking-content {
+  .university-ranking-content {
     padding: 20px;
     background-color: #f9f9f9;
     font-family: 'Roboto', sans-serif;
   }
-  
+
   .university-ranking-content .header {
     font-size: 2rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
   }
-  
+ 
   .university-ranking-content .statement {
     font-size: 1.2rem;
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6;
   }
-  
+
   .ranking-highlights {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .ranking-item {
     display: flex;
     align-items: center;
@@ -33,50 +33,54 @@
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
+
   .content-column {
     flex: 2;
   }
-  
+
   .image-column {
     flex: 1;
   }
-  
+
   .ranking-image {
     width: 100%;
     height: 200px;
     border-radius: 8px;
   }
-  
+
   .ranking-item .heading {
     font-size: 1.5rem;
     font-weight: bold;
     color: #444;
     margin-bottom: 10px;
   }
-  
+
   .ranking-item .unordered {
     list-style-type: disc;
     padding-left: 20px;
   }
-  
+
   .ranking-item .list-items {
     font-size: 1rem;
     color: #666;
     margin-bottom: 10px;
   }
-  
+
   @media (max-width: 768px) {
     .ranking-item {
       flex-direction: column;
     }
-  
+
     .image-column {
       margin-top: 15px;
     }
-  
+
     .content-column {
       flex: 1;
     }
   }
-  
+
+  .last-tag {
+    margin-top: 20px;
+    font-size: 1rem;
+  }

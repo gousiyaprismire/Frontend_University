@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Form, Input, Button, Typography, message, Modal } from 'antd';
+import { Layout, Form, Input, Button, Typography, message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Registration.css';
@@ -13,7 +13,6 @@ const RegisterPage = () => {
 
   const handleSubmit = async (values) => {
     try {
-      // Send POST request directly using Axios
       const response = await axios.post('http://localhost:8080/api/students/register', values);
 
       if (response.status === 200) {
@@ -36,18 +35,9 @@ const RegisterPage = () => {
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Content>
-        <div
-          className="register-container"
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            minHeight: '100vh',
-            backgroundColor: '#2c3e50',
-          }}
-        >
-          <div className="register-content" style={{ textAlign: 'center' }}>
-            <Title level={2} style={{ marginBottom: '20px', color: 'white' }}>
+        <div className="register-container">
+          <div className="register-content">
+            <Title level={2} style={{ marginBottom: '20px' }}>
               Create an Account
             </Title>
             <Text style={{ fontSize: '18px', color: 'white' }}>

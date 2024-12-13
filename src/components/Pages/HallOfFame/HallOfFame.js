@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Tabs, Tab } from 'react-bootstrap';
 import './HallOfFame.css';
 import Footer from '../Footer/Footer';
 import StudentAchievements from './StudentAchievements';
@@ -8,7 +7,7 @@ import AlumniSuccess from './AlumniSuccess';
 import UniversityRanking from './UniversityRanking';
 
 const HallOfFame = () => {
-  const [activeTab, setActiveTab] = useState("all");
+  const [activePage, setActivePage] = useState("all");
 
   const achievers = [
     {
@@ -23,8 +22,6 @@ const HallOfFame = () => {
       image: 'https://i.cbc.ca/1.7351783.1728876751!/fileImage/httpImage/image.jpg_gen/derivatives/4x3_1180/2178281531.jpg',
       description: 'Founder and CEO of a Fortune 500 tech company.When Steve Smith joined Zayo as CEO, he found himself at the head of a company that was a Frankenstein of 46 acquisitions. And while the company’s decentralized approach had served it well in the early years, Steve saw an opportunity to take the company further. This time — and almost paradoxically — through centralization.',
     },
-    
-    
     {
       name: 'Michael Lee',
       title: 'Renowned Author',
@@ -43,16 +40,12 @@ const HallOfFame = () => {
       image: 'https://www.unisys.com/siteassets/images/leadership/headshot/leadership-david-brown-3.jpg',
       description: 'Participated in multiple space missions and research on the ISS.David McDowell Brown (April 16, 1956 – February 1, 2003) was a United States Navy captain and NASA astronaut. He died on his first spaceflight, when the Space Shuttle Columbia (STS-107) disintegrated during orbital reentry into the Earths atmosphere. Brown became an astronaut in 1996 but had not served on a space mission prior to the Columbia disaster. He was posthumously awarded the Congressional Space Medal of Honor.',
     },
-    
     {
       name: 'James Carter',
       title: 'Professional Basketball Player',
       image: 'https://frontofficesports.com/wp-content/uploads/2023/10/USATSI_19435449_168393969_lowres-scaled-e1697819953633.jpg?quality=100',
       description: 'NBA MVP and multiple-time champion.James Raymond Carter Gaudino (born March 27, 1964) is a retired Puerto Rican basketball player. Carter spent most of his career as a point guard for the Brujos de Guayama of the Baloncesto Superior Nacional (BSN). Carter is currently the all-time assists leader of the league.[1] During his 20-year career, he also played for the Indios de Mayagüez, Criollos de Caguas, Maratonistas de Coamo, and Capitanes de Arecibo. Carter also played since 1992 to the year 2000 for the Explosivos de Moca of the Liga de Baloncesto Puertorriqueña.',
     },
-   
-    
-    
     {
       name: 'Mark Wilson',
       title: 'Famous Architect',
@@ -77,71 +70,95 @@ const HallOfFame = () => {
       image: 'https://m.media-amazon.com/images/M/MV5BNDY0YzQyZTQtZWVmMS00ODJkLWI4NGEtZDY0NjRmOWRmOGI0XkEyXkFqcGc@._V1_.jpg',
       description: 'Received Michelin stars for her innovative restaurant concepts.Michelin stars are awards coveted by chefs worldwide who want their restaurants to be put on the gastronomic map. It’s a badge of honor, for sure. However, it’s not always the indication of quality that many of us assume it to be.With three weeks of kaleidoscopic lighting displays, exhilarating live music and deep-dive discussions with thought-leaders from around the world, the festival of creativity, innovation and technology is set to hypnotise Sydneysiders and visitors once again when the sun sets on Friday.',
     },
-   
+
   ];
 
-  const renderAllAchievers = () => {
-    return (
-      <div className="achievers-container">
-        {achievers.map((achiever, index) => (
-          <div className="row mb-4" key={index}>
-            <div className={`col-md-6 ${index % 2 === 0 ? 'order-md-1' : 'order-md-2'}`}>
-              <img
-                src={achiever.image}
-                alt={achiever.name}
-                className="all-achiever-image img-fluid"
-              />
-            </div>
-            <div className={`col-md-6 ${index % 2 === 0 ? 'order-md-2' : 'order-md-1'}`}>
-              <div className="achiever-card-content">
-                <h2 className="achiever-name">{achiever.name}</h2>
-                <p className="achiever-title">{achiever.title}</p>
-                <p className="achiever-description">{achiever.description}</p>
+  const renderContent = () => {
+    switch (activePage) {
+      case "all":
+        return (
+          <div className="all-achievers-container">
+            {achievers.map((achiever, index) => (
+              <div className="row mb-4" key={index}>
+                <div className={`col-md-6 ${index % 2 === 0 ? 'order-md-1' : 'order-md-2'}`}>
+                  <img
+                    src={achiever.image}
+                    alt={achiever.name}
+                    className="all-achiever-image img-fluid"
+                  />
+                </div>
+                <div className={`col-md-6 ${index % 2 === 0 ? 'order-md-2' : 'order-md-1'}`}>
+                  <div className="all-achiever-card-content">
+                    <h2 className="all-achiever-name">{achiever.name}</h2>
+                    <p className="all-achiever-title">{achiever.title}</p>
+                    <p className="all-achiever-description">{achiever.description}</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
-    );
+        );
+      case "student-achievements":
+        return <StudentAchievements />;
+      case "faculty-achievements":
+        return <FacultyAchievements />;
+      case "alumni-success":
+        return <AlumniSuccess />;
+      case "university-ranking":
+        return <UniversityRanking />;
+      default:
+        return null;
+    }
   };
 
   return (
     <div className="hall-of-fame-container">
-      <header className="hall-of-fame-header">
-        <h1>University Hall of Fame</h1>
-        <p className='point'>
-          Honoring the achievements and contributions of our students, faculty, and alumni, 
-          and celebrating the milestones that have shaped our university's legacy of excellence.
-        </p>
-      </header>
-      <Tabs
-        defaultActiveKey="all"
-        id="hall-of-fame-tabs"
-        className="mb-3"
-        onSelect={(k) => setActiveTab(k)}
-      >
-        <Tab eventKey="all" title="All">
-          <div className="tab-content">
-            {renderAllAchievers()}
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container-fluid">
+          <span className="navbar-brand">Hall of Fame</span>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <button className="nav-link btn btn-link" onClick={() => setActivePage("all")}>
+                  All Achievers
+                </button>
+              </li>  
+              <li className="nav-item">
+                <button className="nav-link btn btn-link" onClick={() => setActivePage("student-achievements")}>
+                  Student Achievements
+                </button>
+              </li>
+              <li className="nav-item">
+                <button className="nav-link btn btn-link" onClick={() => setActivePage("faculty-achievements")}>
+                  Faculty Achievements
+                </button>
+              </li>
+              <li className="nav-item">
+                <button className="nav-link btn btn-link" onClick={() => setActivePage("alumni-success")}>
+                  Alumni Success
+                </button>
+              </li>
+              <li className="nav-item">
+                <button className="nav-link btn btn-link" onClick={() => setActivePage("university-ranking")}>
+                  University Rankings
+                </button>
+              </li>
+            </ul>
           </div>
-        </Tab>
-
-        <Tab eventKey="student-achievements" title="Student Achievements">
-          <StudentAchievements />
-        </Tab>
-
-        <Tab eventKey="faculty-achievements" title="Faculty Achievements">
-          <FacultyAchievements />
-        </Tab>
-
-        <Tab eventKey="alumni-success" title="Alumni Success Stories">
-          <AlumniSuccess />
-        </Tab>
-
-        <Tab eventKey="university-ranking" title="University Rankings & Awards">
-          <UniversityRanking />
-        </Tab>
-      </Tabs>
+        </div>
+      </nav>
+      <div className="content-container">{renderContent()}</div>
       <Footer />
     </div>
   );

@@ -1,6 +1,5 @@
 import React from 'react';
 import './AlumniSuccess.css';
-
 const AlumniSuccess = () => {
   return (
     <div className="alumni-success-content">
@@ -22,7 +21,6 @@ const AlumniSuccess = () => {
             </p>
           </div>
         </div>
-
         <div className="alumni-achievement-item">
           <div className="alumni-image-column">
             <img
@@ -39,7 +37,6 @@ const AlumniSuccess = () => {
             </p>
           </div>
         </div>
-
         <div className="alumni-achievement-item">
           <div className="alumni-image-column">
             <img
@@ -56,7 +53,6 @@ const AlumniSuccess = () => {
             </p>
           </div>
         </div>
-
         <div className="alumni-achievement-item">
           <div className="alumni-image-column">
             <img
@@ -73,7 +69,6 @@ const AlumniSuccess = () => {
             </p>
           </div>
         </div>
-
         <div className="alumni-achievement-item">
           <div className="alumni-image-column">
             <img
@@ -91,7 +86,6 @@ const AlumniSuccess = () => {
           </div>
         </div>
       </div>
-
       <p className='ptag'>
         These remarkable alumni continue to make their mark in diverse fields, embodying the values and education they received at our university. Their achievements inspire our community to strive for excellence.
       </p>

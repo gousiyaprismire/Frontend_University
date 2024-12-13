@@ -1,35 +1,27 @@
 import React from 'react';
-import { Layout, Form, Input, Button, Typography, message, Modal } from 'antd';
+import { Layout, Form, Input, Button, Typography, message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Registration.css';
-
+ 
 const { Content } = Layout;
 const { Title, Text } = Typography;
-
+ 
 const RegisterPage = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
  
-  const handleLoginSuccess = async (values) => {
+  const handleSubmit = async (values) => {
     try {
       const response = await axios.post('http://localhost:8080/api/students/register', values);
-
+ 
       if (response.status === 200) {
-
-
-        Modal.success({
-          title: 'Registration Successful',
-          content: 'You have Registered successfully. After background verification, you will get an email. Please wait for the mail.',
-          centered: true, 
-          onOk: () => {
-            navigate('/login');
-          },
-        });
+        message.success('Registration successful! Redirecting to login page...');
+        navigate('/login');
       }
     } catch (error) {
       console.error('Error during registration:', error);
-
+ 
       if (error.response) {
         message.error(error.response?.data || 'Registration failed! Please try again later.');
       } else if (error.request) {
@@ -39,7 +31,7 @@ const RegisterPage = () => {
       }
     }
   };
-
+ 
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Content>
@@ -58,9 +50,8 @@ const RegisterPage = () => {
             <Form
               form={form}
               layout="vertical"
-              onFinish={(values) => {
-                handleLoginSuccess();
-              }}
+              onFinish={handleSubmit}
+              style={{ maxWidth: '400px' }}
             >
               <Form.Item
                 label="Full Name"
@@ -94,15 +85,7 @@ const RegisterPage = () => {
                 name="uploadId"
                 rules={[{ required: true, message: 'Please enter your Upload Id!' }]}
               >
-                <Input placeholder="Enter your UploadId" />
-              </Form.Item>
-
-              <Form.Item
-                label="Country"
-                name="Country"
-                rules={[{ required: true, message: 'Please enter your Country!' }]}
-              >
-                <Input placeholder="Enter your country" />
+                <Input placeholder="Enter your Upload Id" />
               </Form.Item>
  
               <Form.Item
@@ -128,7 +111,15 @@ const RegisterPage = () => {
               >
                 <Input.Password placeholder="Re-enter your password" />
               </Form.Item>
-
+ 
+              <Form.Item
+                label="Country"
+                name="country"
+                rules={[{ required: true, message: 'Please enter your country!' }]}
+              >
+                <Input placeholder="Enter your country" />
+              </Form.Item>
+ 
               <Form.Item>
                 <Button type="primary" htmlType="submit" block>
                   Register
@@ -141,5 +132,5 @@ const RegisterPage = () => {
     </Layout>
   );
 };
-
+ 
 export default RegisterPage;

@@ -213,8 +213,9 @@ text-align: center;
 }
 
 .library1 img {
-  width: 250px;
-  height: auto;
+  margin-top: 20px;
+  width: 350px;
+  height: 350px;
   border-radius: 10px;
 }
 
@@ -242,14 +243,16 @@ text-align: center;
   flex: 1;
 }
 .library-craft{
+  background-color: #a7a3a32f;
   display: flex;
-  margin: 5px;
+  margin: 30px;
   padding: 5px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .library-craft img{
-   width:630px;
-   height: 630px;
+  margin: 40px;
+   width:330px;
+   height: 330px;
    border-radius: 20px;
 }
 .library2 img{

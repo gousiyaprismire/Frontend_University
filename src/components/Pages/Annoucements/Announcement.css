@@ -16,7 +16,10 @@
   text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+.announcements h1{
+   text-align: center;
+   color: rgba(48, 78, 8, 0.877);
+}
 .announcement-image {
   width: 150px;
   height: 150px;
@@ -30,7 +33,7 @@
 }
 
 .announcement-details h2 {
-  margin-top: 0;
+  margin-bottom: 10px;
   font-size: 1.3rem;
   font-weight: bold;
 }
@@ -52,6 +55,10 @@
   .sports-event h2{
     color: rgba(38, 41, 27, 0.808)
   }
+  .sports-event p{
+    padding-top: 20px;
+    font-size: 18px;
+  }
   .round-image {
     border-radius: 75%;
     width: 200px; /* Adjust the size as needed */
@@ -62,4 +69,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+  .announcement-footer{
+    background-color: rgb(15, 12, 12);
+    text-align: center;
+    color: whitesmoke;
+    padding: 20px 0px;
   }

@@ -176,7 +176,7 @@ button.submit-btn:hover {
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
-  min-height: 160px;
+  height: 400px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
  
@@ -209,7 +209,7 @@ button.submit-btn:hover {
   line-height: 1.5;
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
-
+  padding-top: 45px;
  
 }
  

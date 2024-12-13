@@ -232,7 +232,7 @@ const App = () => {
                       alt={event.name}
                       style={{
                         width: "100%",
-                        maxHeight: "400px",
+                        maxHeight: "300px",
                         borderRadius: "10px",
                         objectFit: "cover",
                       }}
@@ -247,7 +247,7 @@ const App = () => {
                       alt={event.name}
                       style={{
                         width: "100%",
-                        maxHeight: "400px",
+                        maxHeight: "300px",
                         borderRadius: "10px",
                         objectFit: "cover",
                       }}

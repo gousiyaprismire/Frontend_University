@@ -6,7 +6,6 @@ function VerificationScreen() {
   const [students, setStudents] = useState([]);
   const [selectedStudent, setSelectedStudent] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  // Fetching student data from the backend
   useEffect(() => {
     const fetchStudents = async () => {
       try {
@@ -38,7 +37,6 @@ function VerificationScreen() {
     if (selectedStudent) {
       selectedStudent.status = "Approved";
       setSelectedStudent({ ...selectedStudent });
-      // Optionally, you could update the backend here too
       axios.put(`http://localhost:8080/api/students/${selectedStudent.id}`, selectedStudent);
     }
   };
@@ -47,7 +45,6 @@ function VerificationScreen() {
     if (selectedStudent) {
       selectedStudent.status = "Rejected";
       setSelectedStudent({ ...selectedStudent });
-      // Optionally, you could update the backend here too
       axios.put(`http://localhost:8080/api/students/${selectedStudent.id}`, selectedStudent);
     }
   };
@@ -99,7 +96,6 @@ function VerificationScreen() {
               <div><strong>Country:</strong> <span>{selectedStudent.country}</span></div>
               <div><strong>Enroll Date:</strong> <span>{new Date(selectedStudent.enrollDate).toLocaleDateString()}</span></div>
               <div><strong>Status:</strong> <span>{selectedStudent.status}</span></div>
-              {/* Conditionally render Approve/Reject buttons */}
               {selectedStudent.status === "Pending" && (
                 <div className="approval-buttons">
                   <button onClick={handleApprove} style={{ backgroundColor: 'green' }}>Approve</button>

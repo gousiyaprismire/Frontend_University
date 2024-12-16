@@ -140,7 +140,7 @@ const RegisterPage = () => {
               <Form.Item>
                 <Button type="primary" htmlType="submit" block>
                   Register
-                </Button>
+               </Button>
               </Form.Item>
             </Form>
           </div>

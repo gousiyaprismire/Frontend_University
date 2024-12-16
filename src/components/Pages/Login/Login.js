@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Layout, Form, Input, Button, Typography, Modal } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Import Axios for API requests
+import axios from 'axios'; 
 import './Login.css';
 
 const { Content } = Layout;

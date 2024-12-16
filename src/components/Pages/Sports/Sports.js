@@ -43,46 +43,49 @@ const App = () => {
       .catch(() => {
         const mockData = [
           {
-            name: "Cricket Tournament",
-            category: "Cricket",
-            date: "2024-12-12",
-            location: "UK Grounds",
-            image: "https://images.tv9kannada.com/wp-content/uploads/2023/12/test-cricket-6.jpg",
-            description: "Join us for an exciting Cricket Tournament at UK Grounds.",
+              name: "Cricket Tournament",
+              category: "Cricket",
+              date: "2024-12-12",
+              location: "UK Grounds",
+              image: "https://images.tv9kannada.com/wp-content/uploads/2023/12/test-cricket-6.jpg",
+              description: "Join us for an exciting Cricket Tournament at UK Grounds. Watch as teams compete in thrilling matches with world-class players showcasing their batting, bowling, and fielding skills. There will be live commentary and interactive fan zones for a complete cricket experience.",
+             
           },
           {
-            name: "Soccer Cup",
-            category: "Soccer",
-            date: "2024-12-10",
-            location: "Oxford University",
-            image: "https://venturebeat.com/wp-content/uploads/2024/06/UFL-Game-Ronaldo.jpg",
-            description: "Experience the thrill of the Soccer Cup at Oxford University.",
+              name: "Soccer Cup",
+              category: "Soccer",
+              date: "2024-12-10",
+              location: "Oxford University",
+              image: "https://venturebeat.com/wp-content/uploads/2024/06/UFL-Game-Ronaldo.jpg",
+              description: "Experience the thrill of the Soccer Cup at Oxford University. Watch intense gameplay with top college teams and professional scouts looking for the next big talent. Expect a mix of fast-paced action and strategic maneuvers on the field. The event will also feature halftime shows and fan interactions.",
           },
           {
-            name: "Rugby Championship",
-            category: "Rugby",
-            date: "2024-12-15",
-            location: "London Stadium",
-            image: "https://images.ctfassets.net/uiu4umqyl5b5/4zJKfLWaQvScMWIUfK4qQu/b033b376eb798d133da2a152cd54081a/inpho_02135425.jpg?fm=webp&f=center",
-            description: "Feel the energy at the Rugby Championship in London Stadium.",
+              name: "Rugby Championship",
+              category: "Rugby",
+              date: "2024-12-15",
+              location: "London Stadium",
+              image: "https://images.ctfassets.net/uiu4umqyl5b5/4zJKfLWaQvScMWIUfK4qQu/b033b376eb798d133da2a152cd54081a/inpho_02135425.jpg?fm=webp&f=center",
+              description: "Feel the energy at the Rugby Championship in London Stadium. Teams from around the world will showcase their strength and agility in hard-hitting matches. Expect thrilling tackles, powerful runs, and moments of sheer determination. The championship will feature an award ceremony honoring the top players and teams.",
+            
           },
           {
-            name: "Tennis Tournament",
-            category: "Tennis",
-            date: "2024-12-20",
-            location: "USA Arena",
-            image: "https://files.satsportnews.com/Document/Blog/4ac9d682c23c4472a83ff62b2f37c2c2_indiantennisplayers730x371.jpg",
-            description: "Watch the best college players compete at USA Arena.",
+              name: "Tennis Tournament",
+              category: "Tennis",
+              date: "2024-12-20",
+              location: "USA Arena",
+              image: "https://files.satsportnews.com/Document/Blog/4ac9d682c23c4472a83ff62b2f37c2c2_indiantennisplayers730x371.jpg",
+              description: "Watch the best college players compete at USA Arena in a high-stakes Tennis Tournament. Expect grueling rallies, fast serves, and intense competition as players aim for victory. Whether you're a fan of singles or doubles, this tournament has it all. There will be expert coaching sessions and meet-and-greet opportunities with the players.",
           },
           {
-            name: "Golf Open",
-            category: "Golf",
-            date: "2024-12-25",
-            location: "Hyderabad Golf Course",
-            image: "https://images.ctfassets.net/56u5qdsjym8c/SPzCzheqtbdmSFuksn6al/e59fab16c644c1e92a24dc0df7eab1ce/_FAM8746-Enhanced-NR_copy.jpg",
-            description: "Enjoy a prestigious day at the Golf Open in Hyderabad.",
+              name: "Golf Open",
+              category: "Golf",
+              date: "2024-12-25",
+              location: "Hyderabad Golf Course",
+              image: "https://images.ctfassets.net/56u5qdsjym8c/SPzCzheqtbdmSFuksn6al/e59fab16c644c1e92a24dc0df7eab1ce/_FAM8746-Enhanced-NR_copy.jpg",
+              description: "Enjoy a prestigious day at the Golf Open in Hyderabad. Watch top golfers from around the globe compete in a series of challenging rounds. Expect perfect swings, precision shots, and a chance to see the sport's finest talents in action. The event will also feature golf clinics and tips from the pros.",
           },
-        ];
+      ];
+      
         setSportsData(mockData);
         setLoading(false);
       });
@@ -132,8 +135,12 @@ const App = () => {
         backgroundColor: "transparent", 
       }}
     >
-      <h2 style={{ color: sportStyles.Soccer.color }}>About Soccer</h2>
-      <p>{SoccerDescription}</p>
+      <h2 style={{ color: sportStyles.Soccer.color, textAlign: 'center', fontSize: '2rem' }}>
+    About Soccer
+</h2>
+<p>{SoccerDescription}</p>
+      
+      
     </Card>
     
       )}
@@ -148,7 +155,9 @@ const App = () => {
           backgroundColor: "transparent", 
         }}
         >
-          <h2 style={{ color: sportStyles.Cricket.color }}>About Cricket</h2>
+          <h2 style={{ color: sportStyles.Cricket.color, textAlign: 'center', fontSize: '2rem' }}>
+    About Cricket
+</h2>
           <p>{cricketDescription}</p>
         </Card>
       )}
@@ -162,7 +171,9 @@ const App = () => {
           backgroundColor: "transparent", 
         }}
         >
-          <h2 style={{ color: sportStyles.Rugby.color }}>About Rugby</h2>
+         <h2 style={{ color: sportStyles.Rugby.color, textAlign: 'center', fontSize: '2rem' }}>
+    About Rugby
+</h2>
           <p>{rugbyDescription}</p>
         </Card>
       )}
@@ -176,7 +187,9 @@ const App = () => {
           backgroundColor: "transparent", 
         }}
         >
-          <h2 style={{ color: sportStyles.Tennis.color }}>About Tennis</h2>
+          <h2 style={{ color: sportStyles.Tennis.color, textAlign: 'center', fontSize: '2rem' }}>
+    About Tennis
+</h2>
           <p>{tennisDescription}</p>
         </Card>
       )}
@@ -190,8 +203,11 @@ const App = () => {
           backgroundColor: "transparent", 
         }}
         >
-          <h2 style={{ color: sportStyles.Golf.color }}>About Golf</h2>
+          <h2 style={{ color: sportStyles.Golf.color, textAlign: 'center', fontSize: '2rem' }}>
+    About Golf
+</h2>
           <p>{golfDescription}</p>
+          
         </Card>
       )}
           {filteredSportsData.map((event, index) => (
@@ -215,6 +231,7 @@ const App = () => {
                     </h2>
                     <p>
                       <strong>Description:</strong> {event.description}
+                     
                     </p>
                     <p>
                       <strong>Category:</strong> {event.category}
@@ -225,6 +242,8 @@ const App = () => {
                     <p>
                       <strong>Location:</strong> {event.location}
                     </p>
+               
+                   
                   </Col>
                   <Col xs={24} md={12} style={{ textAlign: "center" }}>
                     <img
@@ -290,7 +309,7 @@ const App = () => {
   </small>
 </footer>
 
-    </div>
+   </div>
   );
 };
 

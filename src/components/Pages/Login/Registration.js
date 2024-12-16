@@ -42,14 +42,22 @@ const RegisterPage = () => {
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <Content>
-        <div className="register-container">
-          <div className="register-content">
-            <Title level={2} style={{ marginBottom: '20px' }}>
-              Create an Account
-            </Title>
-            <Text style={{ fontSize: '18px', color: 'white' }}>
-              Fill in the details below to create your account.
+    <Content>
+      <div
+        className="register-container"
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          minHeight: '100vh',
+        }}
+      >
+        <div className="register-content" style={{ textAlign: 'center' }}>
+          <Title level={2} style={{ marginBottom: '20px' }}>
+            Create an Account
+          </Title>
+          <Text style={{ fontSize: '18px', color: 'white' }}>
+            Fill in the details below to create your account.
             </Text>
           </div>
  

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Layout, Form, Input, Button, Typography, Modal } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios'; // Import Axios for API requests
 import './Login.css';
 
 const { Content } = Layout;
@@ -10,15 +11,29 @@ const RegisterPage = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
 
-  const handleSubmit = (values) => {
-    Modal.success({
-      title: 'Login Successful',
-      content: 'You have logged in successfully.',
-      centered: true, 
-      onOk: () => {
-        navigate('/');
-      },
-    });
+  const handleSubmit = async (values) => {
+    try {
+     
+      const response = await axios.post('http://localhost:8080/api/students/login', values);
+      
+      if (response.status === 200) {
+        Modal.success({
+          title: 'Login Successful',
+          content: 'You have logged in successfully.',
+          centered: true,
+          onOk: () => {
+            navigate('/');
+          },
+        });
+      }
+    } catch (error) {
+     
+      Modal.error({
+        title: 'Login Failed',
+        content: error.response?.data?.message || 'An error occurred. Please try again.',
+        centered: true,
+      });
+    }
   };
 
   return (

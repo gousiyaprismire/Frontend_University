@@ -70,7 +70,15 @@ function VerificationScreen() {
               <tr key={student.id}>
                 <td>{student.id}</td>
                 <td>
-                  <img src={student.uploadId} alt={student.name} />
+                  {student.uploadId ? (
+                    <img
+                      src={`http://localhost:8080${student.uploadId}`}
+                      alt="Uploaded ID"
+                      style={{ width: "50px", height: "50px", objectFit: "cover" }}
+                    />
+                  ) : (
+                    "No ID Uploaded"
+                  )}
                 </td>
                 <td>{student.fullname}</td>
                 <td>{student.country}</td>

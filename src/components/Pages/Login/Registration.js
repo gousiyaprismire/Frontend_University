@@ -2,33 +2,58 @@ import React, { useState } from 'react';
 import { Layout, Form, Input, Button, Typography, Modal } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
 import './Registration.css';
 
 const { Content } = Layout;
 const { Title, Text } = Typography;
 
 const RegisterPage = () => {
+  const [userId, setUserId] = useState("");
   const [form] = Form.useForm();
   const navigate = useNavigate();
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const handleSubmit = async (values) => {
+    const newId = uuidv4(); // Generate unique ID
+    setUserId(newId);
+    console.log("Generated User ID:", newId);
     try {
-      const response = await axios.post('http://localhost:8080/api/students/register', values);
-
-      if (response.status === 200) {
-        setIsModalVisible(true); 
+      const { fullname, email, mobile, country, uploadId, username, password } = values;
+  
+      // Upload file separately using FormData
+      const fileInput = document.getElementById("uploadIdInput");
+      const formData = new FormData();
+      formData.append("file", fileInput.files[0]);
+  
+      const uploadResponse = await axios.post(`http://localhost:8080/api/students/${uuidv4()}/upload`,
+        formData
+      );
+  
+      if (uploadResponse.status === 200) {
+        const uploadedFilePath = uploadResponse.data;
+  
+        // Register student with file path
+        const registrationData = {
+          fullname,
+          email,
+          mobile,
+          country,
+          uploadId: uploadedFilePath, // Attach uploaded file path
+          username,
+          password,
+        };
+        const registerResponse = await axios.post(
+          "http://localhost:8080/api/students/register",
+          registrationData
+        );
+  
+        if (registerResponse.status === 200) {
+          setIsModalVisible(true);
+        }
       }
     } catch (error) {
-      console.error('Error during registration:', error);
-
-      if (error.response) {
-        alert(error.response?.data || 'Registration failed! Please try again later.');
-      } else if (error.request) {
-        alert('No response from server. Please check your network connection.');
-      } else {
-        alert('An unexpected error occurred. Please try again later.');
-      }
+      console.error("Error during registration:", error);
     }
   };
 
@@ -66,6 +91,8 @@ const RegisterPage = () => {
               onFinish={handleSubmit}
               style={{ maxWidth: '400px' }}
             >
+
+            
               <Form.Item
                 label="Full Name"
                 name="fullname"
@@ -94,12 +121,12 @@ const RegisterPage = () => {
               </Form.Item>
 
               <Form.Item
-                label="Upload Id"
-                name="uploadId"
-                rules={[{ required: true, message: 'Please enter your Upload Id!' }]}
-              >
-                <Input placeholder="Enter your Upload Id" />
-              </Form.Item>
+              label="Upload ID"
+              name="uploadId"
+              rules={[{ required: true, message: "Please upload your ID!" }]}
+            >
+              <Input type="file" id="uploadIdInput" />
+            </Form.Item>
 
               <Form.Item
                 label="Username"

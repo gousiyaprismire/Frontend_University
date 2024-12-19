@@ -15,13 +15,12 @@ const RegisterPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const handleSubmit = async (values) => {
-    const newId = uuidv4(); // Generate unique ID
+    const newId = uuidv4(); 
     setUserId(newId);
     console.log("Generated User ID:", newId);
     try {
       const { fullname, email, mobile, country, uploadId, username, password } = values;
-  
-      // Upload file separately using FormData
+
       const fileInput = document.getElementById("uploadIdInput");
       const formData = new FormData();
       formData.append("file", fileInput.files[0]);
@@ -32,14 +31,13 @@ const RegisterPage = () => {
   
       if (uploadResponse.status === 200) {
         const uploadedFilePath = uploadResponse.data;
-  
-        // Register student with file path
+
         const registrationData = {
           fullname,
           email,
           mobile,
           country,
-          uploadId: uploadedFilePath, // Attach uploaded file path
+          uploadId: uploadedFilePath, 
           username,
           password,
         };
@@ -91,8 +89,6 @@ const RegisterPage = () => {
               onFinish={handleSubmit}
               style={{ maxWidth: '400px' }}
             >
-
-            
               <Form.Item
                 label="Full Name"
                 name="fullname"

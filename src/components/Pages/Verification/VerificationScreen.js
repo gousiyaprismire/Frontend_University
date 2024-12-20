@@ -6,21 +6,29 @@ function VerificationScreen() {
   const [students, setStudents] = useState([]);
   const [selectedStudent, setSelectedStudent] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  let serialNumber = 1;
   useEffect(() => {
     const fetchStudents = async () => {
       try {
         const response = await axios.get('http://localhost:8080/api/students');
-        const studentsWithStatus = response.data.map(student => ({
-          ...student,
-          status: student.status || "Pending" 
-        }));
-        setStudents(studentsWithStatus);
+        const studentsWithCustomId = response.data.map((student, index) => {
+          const randomIncrement = Math.floor(Math.random() * 1000) + 1; 
+          const customId = `PSS${index + randomIncrement}`; 
+  
+          return {
+            ...student,
+            customId, 
+            status: student.status || "Pending" 
+          };
+        });
+        setStudents(studentsWithCustomId);
       } catch (error) {
         console.error("Error fetching student data:", error);
       }
     };
     fetchStudents();
   }, []);
+  
  
   const handleViewDetails = (studentId) => {
     const student = students.find((s) => s.id === studentId);
@@ -55,8 +63,8 @@ function VerificationScreen() {
         <table className="student-table" >
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Uploaded ID</th>
+              <th>S.No</th>
+              <th>Student ID</th>
               <th>Name</th>
               <th>Country</th>
               <th>Email</th>
@@ -66,33 +74,24 @@ function VerificationScreen() {
             </tr>
           </thead>
           <tbody>
-            {students.map((student) => (
-              <tr key={student.id}>
-                <td>{student.id}</td>
-                <td>
-                  {student.uploadId ? (
-                    <img
-                      src={`http://localhost:8080${student.uploadId}`}
-                      alt="Uploaded ID"
-                      style={{ width: "50px", height: "50px", objectFit: "cover" }}
-                    />
-                  ) : (
-                    "No ID Uploaded"
-                  )}
-                </td>
-                <td>{student.fullname}</td>
-                <td>{student.country}</td>
-                <td>{student.email}</td>
-                <td>{new Date(student.enrollDate).toLocaleDateString()}</td>
-                <td>{student.status}</td>
-                <td>
-                  <button onClick={() => handleViewDetails(student.id)}>
-                    View Details
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
+  {students.map((student) => (
+    <tr key={student.id}>
+      <td>{serialNumber++}</td>
+      <td>{student.customId}</td> {/* Display the custom ID */}
+      <td>{student.fullname}</td>
+      <td>{student.country}</td>
+      <td>{student.email}</td>
+      <td>{new Date(student.enrollDate).toLocaleDateString()}</td>
+      <td>{student.status}</td>
+      <td>
+        <button onClick={() => handleViewDetails(student.id)}>
+          View Details
+        </button>
+      </td>
+    </tr>
+  ))}
+</tbody>
+
         </table>
         {showModal && selectedStudent && (
           <div className="modal">

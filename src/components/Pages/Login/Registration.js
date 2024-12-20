@@ -25,8 +25,9 @@ const RegisterPage = () => {
       const formData = new FormData();
       formData.append("file", fileInput.files[0]);
   
-      const uploadResponse = await axios.post(`http://localhost:8080/api/students/${uuidv4()}/upload`,
-        formData
+      const uploadResponse = await axios.post(`http://localhost:8080/api/upload`,
+        formData,
+        { headers: { "Content-Type": "multipart/form-data" } }
       );
   
       if (uploadResponse.status === 200) {

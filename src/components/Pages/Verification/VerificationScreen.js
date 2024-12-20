@@ -6,7 +6,10 @@ function VerificationScreen() {
   const [students, setStudents] = useState([]);
   const [selectedStudent, setSelectedStudent] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [displayStudentId, setDisplayStudentId] = useState(null); // Store the ID to display
+  
   let serialNumber = 1;
+
   useEffect(() => {
     const fetchStudents = async () => {
       try {
@@ -14,7 +17,6 @@ function VerificationScreen() {
         const studentsWithCustomId = response.data.map((student, index) => {
           const randomIncrement = Math.floor(Math.random() * 1000) + 1; 
           const customId = `PSS${index + randomIncrement}`; 
-  
           return {
             ...student,
             customId, 
@@ -28,19 +30,23 @@ function VerificationScreen() {
     };
     fetchStudents();
   }, []);
-  
- 
+
   const handleViewDetails = (studentId) => {
     const student = students.find((s) => s.id === studentId);
     setSelectedStudent(student);
     setShowModal(true);
   };
- 
+
   const handleBackToTable = () => {
     setShowModal(false);
     setSelectedStudent(null);
+    setDisplayStudentId(null); // Hide the ID card as well
   };
- 
+
+  const handleDisplayStudentId = () => {
+    setDisplayStudentId(selectedStudent.customId); // Set the ID to display
+  };
+
   const handleApprove = () => {
     if (selectedStudent) {
       selectedStudent.status = "Approved";
@@ -48,7 +54,7 @@ function VerificationScreen() {
       axios.put(`http://localhost:8080/api/students/${selectedStudent.id}`, selectedStudent);
     }
   };
- 
+
   const handleReject = () => {
     if (selectedStudent) {
       selectedStudent.status = "Rejected";
@@ -56,11 +62,12 @@ function VerificationScreen() {
       axios.put(`http://localhost:8080/api/students/${selectedStudent.id}`, selectedStudent);
     }
   };
+
   return (
     <div className="app-container">
       <h1 className="verificationscreen-h1">Check Student Enrollment Information</h1>
       <div className="student-table-container">
-        <table className="student-table" >
+        <table className="student-table">
           <thead>
             <tr>
               <th>S.No</th>
@@ -74,39 +81,68 @@ function VerificationScreen() {
             </tr>
           </thead>
           <tbody>
-  {students.map((student) => (
-    <tr key={student.id}>
-      <td>{serialNumber++}</td>
-      <td>{student.customId}</td> {/* Display the custom ID */}
-      <td>{student.fullname}</td>
-      <td>{student.country}</td>
-      <td>{student.email}</td>
-      <td>{new Date(student.enrollDate).toLocaleDateString()}</td>
-      <td>{student.status}</td>
-      <td>
-        <button onClick={() => handleViewDetails(student.id)}>
-          View Details
-        </button>
-      </td>
-    </tr>
-  ))}
-</tbody>
-
+            {students.map((student) => (
+              <tr key={student.id}>
+                <td>{serialNumber++}</td>
+                <td>{student.customId}</td>
+                <td>{student.fullname}</td>
+                <td>{student.country}</td>
+                <td>{student.email}</td>
+                <td>{new Date(student.enrollDate).toLocaleDateString()}</td>
+                <td>{student.status}</td>
+                <td>
+                  <button onClick={() => handleViewDetails(student.id)}>
+                    View Details
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
+
         {showModal && selectedStudent && (
           <div className="modal">
             <div className="student-details-container">
               <h3 className="student-details-header">Student Details</h3>
-              <div><strong>Name:</strong> <span>{selectedStudent.fullname}</span></div>
-              <div><strong>Email:</strong> <span>{selectedStudent.email}</span></div>
-              <div><strong>Phone:</strong> <span>{selectedStudent.mobile}</span></div> 
-              <div><strong>Country:</strong> <span>{selectedStudent.country}</span></div>
-              <div><strong>Enroll Date:</strong> <span>{new Date(selectedStudent.enrollDate).toLocaleDateString()}</span></div>
-              <div><strong>Status:</strong> <span>{selectedStudent.status}</span></div>
+              <div>
+                <strong>Student ID:</strong>{' '}
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleDisplayStudentId(); // Show the ID card
+                  }}
+                >
+                  Display StudentId
+                </a>
+              </div>
+              <div>
+                <strong>Name:</strong> <span>{selectedStudent.fullname}</span>
+              </div>
+              <div>
+                <strong>Email:</strong> <span>{selectedStudent.email}</span>
+              </div>
+              <div>
+                <strong>Phone:</strong> <span>{selectedStudent.mobile}</span>
+              </div>
+              <div>
+                <strong>Country:</strong> <span>{selectedStudent.country}</span>
+              </div>
+              <div>
+                <strong>Enroll Date:</strong>{' '}
+                <span>{new Date(selectedStudent.enrollDate).toLocaleDateString()}</span>
+              </div>
+              <div>
+                <strong>Status:</strong> <span>{selectedStudent.status}</span>
+              </div>
               {selectedStudent.status === "Pending" && (
                 <div className="approval-buttons">
-                  <button onClick={handleApprove} style={{ backgroundColor: 'green' }}>Approve</button>
-                  <button onClick={handleReject} style={{ backgroundColor: 'red' }}>Reject</button>
+                  <button onClick={handleApprove} style={{ backgroundColor: 'green' }}>
+                    Approve
+                  </button>
+                  <button onClick={handleReject} style={{ backgroundColor: 'red' }}>
+                    Reject
+                  </button>
                 </div>
               )}
               <div className="student-details-back-btn-container">
@@ -117,9 +153,17 @@ function VerificationScreen() {
             </div>
           </div>
         )}
+
+        {displayStudentId && (
+          <div className="id-card">
+            <h3>Student ID</h3>
+            <p>{displayStudentId}</p>
+            <button onClick={() => setDisplayStudentId(null)}>Close</button>
+          </div>
+        )}
       </div>
     </div>
   );
 }
- 
+
 export default VerificationScreen;

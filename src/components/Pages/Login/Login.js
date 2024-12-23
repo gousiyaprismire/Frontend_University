@@ -20,13 +20,15 @@ const RegisterPage = () => {
         password,
       });
 
-      if (response.status === 200 && response.data.success) {
+      console.log(response);
+
+      if (response.status === 200 && response.data.status === "success") {
         Modal.success({
           title: 'Login Successful',
           content: 'You have logged in successfully.',
           centered: true,
           onOk: () => {
-            navigate('/dashboard'); // Redirect to a dashboard or home page after login
+            navigate('/');
           },
         });
       } else {

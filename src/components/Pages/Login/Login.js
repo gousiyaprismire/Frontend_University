@@ -13,29 +13,37 @@ const RegisterPage = () => {
 
   const handleSubmit = async (values) => {
     try {
-     
-      const response = await axios.post('http://localhost:8080/api/students/login', values);
-      
-      if (response.status === 200) {
+      const { username, password } = values;
+
+      const response = await axios.post('http://localhost:8080/api/students/login', {
+        username,
+        password,
+      });
+
+      if (response.status === 200 && response.data.success) {
         Modal.success({
           title: 'Login Successful',
           content: 'You have logged in successfully.',
           centered: true,
           onOk: () => {
-            navigate('/');
+            navigate('/dashboard'); // Redirect to a dashboard or home page after login
           },
+        });
+      } else {
+        Modal.error({
+          title: 'Login Failed',
+          content: response.data.message || 'Invalid username or password.',
+          centered: true,
         });
       }
     } catch (error) {
-     
       Modal.error({
         title: 'Login Failed',
-        content: error.response?.data?.message || 'An error occurred. Please try again.',
+        content: error.response?.data?.message || 'An error occurred. Please try again later.',
         centered: true,
       });
     }
   };
-
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Content>
